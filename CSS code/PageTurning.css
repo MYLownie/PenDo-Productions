@@ -12,8 +12,11 @@ body{
 
  }
  main{
-    max-width: 800px;
+    max-width: 100%;
     background-color: brown ;
+    padding-left: 100px;
+    padding-right: 100px;
+
 
  }
  
