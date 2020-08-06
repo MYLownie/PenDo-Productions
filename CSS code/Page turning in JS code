@@ -1,0 +1,18 @@
+Idea on how to change the images
+the clickable zones have a counter on them. and everytime you click on one or the other the counter updates.
+IE. if you click on next page, the counter goes from #1 to #2.
+  coding would be: if(click==true && nextPage==true){
+                      ++PageNumber;
+                      }else{}
+                   if{click==true && prevPage==true){
+                    --PageNumber;
+                    }
+if you click on prev page it subtracts one from the current page.
+
+to update the image wed have to orginize the images to display like so
+
+img = PageNumber + "comic.png"
+
+the comic pages will have to be named Page number then comic.png, like so (1comic.png, 2comic.png)
+that way when we click and the page number is updated, it will force the image to be different.
+
