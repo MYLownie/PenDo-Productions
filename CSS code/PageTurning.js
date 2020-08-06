@@ -4,4 +4,4 @@ newImg.onload = function(){
     img.src= this.src;
 
 }
-newImg.src = "https://raw.githubusercontent.com/MYLownie/PenDo-Productions/master/images/Sample%20Page%20Crop.png"
+newImg.src = "https://raw.githubusercontent.com/MYLownie/PenDo-Productions/master/images/Sample%20Page%20Crop.png" ;
