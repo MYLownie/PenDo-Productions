@@ -4,5 +4,16 @@ body{
 }
  header{
      background-color: blue;
+     font-family: cursive;
+     
+ }
+ header h1{
+    color: cyan;
+
+ }
+ main{
+    max-width: 800px;
+    background-color: brown ;
+
  }
  
