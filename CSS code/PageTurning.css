@@ -15,11 +15,9 @@ body{
      margin: 0px auto;
  }
 
- main img{
-    display: block;
-    width:75%;
-    margin-left: auto;
-    margin-right: auto;
+ .d3, img{
+    vertical-align: middle;
+    border: 0;
    
  }
  div#preloaded-images {
@@ -32,3 +30,7 @@ body{
  }
 
  
+.mI img{
+    max-width: 100%;
+
+}
