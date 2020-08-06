@@ -20,10 +20,10 @@ body{
     
  }
  main img{
-    /*max-width: 100%;*/
-    margin-left: auto;
+    max-width: 100%;
+    /*margin-left: auto;
     margin-right: auto;
-    /*padding-left: 100px;
+    padding-left: 100px;
     padding-right: 100px;*/
 
  }
