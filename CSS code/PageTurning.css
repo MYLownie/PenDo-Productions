@@ -12,11 +12,14 @@ body{
 
  }
  main{
-    max-width: 100%;
+    margin: 0 auto;
     background-color: brown ;
-    padding-left: 100px;
-    padding-right: 100px;
-
+    
+ }
+ main img{
+    max-width: 100%;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
 
  }
  
