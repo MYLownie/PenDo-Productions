@@ -14,23 +14,10 @@ body{
  main{
      margin: 0px auto;
  }
-
- .d3, img{
-    vertical-align: middle;
-    border: 0;
-   
+ .d2, .d3 {
+     margin: 0px auto;
  }
- div#preloaded-images {
-    position: absolute;
-    overflow: hidden;
-    left: -9999px; 
-    top: -9999px;
-    height: 1px;
-    width: 1px;
- }
-
- 
 .mI img{
-    max-width: 100%;
+    margin: 0px auto;
 
 }
