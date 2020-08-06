@@ -5,6 +5,7 @@ body{
  header{
      background-color: blue;
      font-family: cursive;
+     padding: 0 100px 0 0;
      
  }
  header h1{
