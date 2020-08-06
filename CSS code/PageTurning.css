@@ -14,6 +14,7 @@ body{
  main{
     margin: 0, auto;
     background-color: brown ;
+    padding-left: 100px;
     
  }
  main img{
