@@ -6,10 +6,13 @@
     color: inherit;
 }
 
+
 body{
     background-color: #1b1b1b
 }
 
+
+/*Start of Nav Styling */
 nav{
     display: flex;
     justify-content: space-around;
@@ -145,11 +148,6 @@ nav{
     }
 }
 
-
-
-/*original traslate location*/
-
-
 /*burger to X*/
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
@@ -160,3 +158,6 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
+/*End of Nav Styling*/
+
