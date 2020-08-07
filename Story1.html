@@ -53,17 +53,23 @@
   </div>
   <script>
       var counter = 1;
+      var pc =1;
       /*for chapters, naming Chap#page#.png. for changing chapter. check next page for naming. and if naming is 
       EndOfChapter#, go into a different if statement loop, to update chapter. first thing to check is
       if(document.getElementById("ci").src == "EndOfChapter#.png"){}*/
         function changeImage() {
           if(counter<3){
             counter++;
+            pc++;
           }else if (counter>=3){
            counter=1;
           }
+          if(pc==6){
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+          }else {
           document.getElementById("ci").src = "images/page"+counter+".png";
     }
+  }
   </script>
 </body>
 </html>
