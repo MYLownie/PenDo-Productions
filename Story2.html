@@ -3,110 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P&P Productions</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-        <style>
-
-          nav img {
-            height: 80px;
-            margin-left: 40px;
-            float: left;
-          }
-
-          header {
-            background-color: grey;
-            position: fixed;
-            min-width: 600px;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            box-shadow: 0 0 25px 0 black;
-          }
-
-          header * {
-            display: inline;
-            
-          }
-
-          header li {
-            margin: 25px;
-            float: left;
-          }
-
-          header li a {
-            color: black;
-            
-          }
-
-          header #store {
-            color: black;
-            background-color:darkgray;
-            margin: 15px 30px;
-            border-radius: 10px;
-            padding: 10px;
-            display: block;
-            float: right;
-        
-          }
-
-          main img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 75%;
-            max-width: 1500px;
-            min-width: 500px;
-          }
-
-        </style>
-   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>PenDo Studio</title>
    
 </head>
+
 <body>
 
     <header>
+      <!-- This is the Nav Bar-->
         <nav>
-            <img src ='https://github.com/MYLownie/PenDo-Productions/blob/master/images/Old%20Logo%20Crop.png?raw=true'>
-            <ul>
-                <li class="item">
-                    <a href="index.html" title= "Read Comic"> Fusion story</a>
-                  
-                </li>
-                <li class="item">
-                  <a href="#" title= "Read Comic">That one Story</a>
-                </li>
-                <!--<li class="item">
-                  <a href="#">Story 3</a>
-                </li>
-                <li class="item">
-                  <a href="#">Story 4</a>
-                </li>-->
-            </ul>
-            <a href="store" id="store">Visit Our Store</a>
-            
+
+          <!-- Logo Picture and Text -->
+          <div class="logo">
+            <a href="#" onclick="location.reload()">
+                <img src="images/New Logo.png">
+            </a>
+            <h4><a href="#" onclick="location.reload()">PENDO PRODUCTIONS</a></h4>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+              <li>
+                  <a href="Story1.html" title="Read Comic">Fusion Comic</a>
+              </li>
+              <li>
+                  <a href="#" title="Read Comic">That One Story</a>
+              </li>
+              <li>
+                  <a href="#">Extra</a>
+              </li>
+              <li>
+                  <a href="store" id="store">Store</a>
+              </li>
+          </ul>
+
+          <!-- Burger Icom -->
+          <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
 
         </nav>
-
-        
     </header>
 
+    <!--This is where the comic will be displayed-->
     <main>
-      <img src='images/page3.png'>
-
+      <img src= "images/page3.png">
     </main>
     
 
-    <script>
-
-       
-        
-
-    </script>
+    <script src="app.js"></script>
    
 
 
 </body>
-</html>
+</html
