@@ -132,6 +132,7 @@ nav{
     }
 
     .burger {
+        z-index: 3;
         display: block;
     }
      
