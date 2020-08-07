@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    /*background-color: blueviolet;*/
+}
+ header{
+     background-color: blue;
+     font-family: cursive;
+     
+ }
+ header h1{
+    color: cyan;
+    text-align: center;
+
+ }
+ main{
+     margin: 0px auto;
+ }
+ .d2, h2 {
+     text-align: center;
+     margin: 0px auto;
+ }
+.mI img{
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0px auto;
+    height: auto;
+}
