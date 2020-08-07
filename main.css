@@ -161,3 +161,15 @@ nav{
 
 /*End of Nav Styling*/
 
+/* Comic Image*/
+.d2, h2 {
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+}
+.mI img{
+   vertical-align: middle;
+   max-width: 100%;
+   margin: 0px auto;
+   height: auto;
+}

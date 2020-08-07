@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>P&P Productions</title>
+    <title>PenDo Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS code/PageTurning.css">
+    <!--<link rel="stylesheet" href="CSS code/PageTurning.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="images/page1.png">
     <link rel="preconnect" href="images/page2.png">
     <link rel="preconnect" href="images/page3.png">
 
-        <style>
-          .ClickMe {
-            display: inline-block;
-            
-          }
-          
-        </style>
-   
-   
+  
 </head>
-<body>
-<header>
-  <h1>Test PageTurning</h1>
-
-</header>
-<!-- <form action="https://mylownie.github.io/PenDo-Productions/index.html" method="get">
-  <button type="submit">Return to index</button>
-</form> -->
-
-<a href="index.html">
-  <button class="btn default">Return to Index</button>
-</a>
-
-<a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-  <button class= "ClickMe"> :) </button>
-</a>
-
-
-
-   <main>
-    
-  </main>
-  <div id = 'main' class= "d1">
-    <div class = "d2">
-      <h2 class="d3"> Fusion 1 </h2>
-      <div id="ic">
-        <div class="mI">
-          <div id="mci" data-id="1" class></div>
-          <img alt="" width="784" height="1145" data-id="1" src="images/page1.png" id="ci"style="cursor: pointer;" onclick="changeImage()">
-        </div>
-      </div>
-      <div id="in" style="display: none;"></div>
-    </div>
-  </div>
+  <body>
+      <header>
+        <!-- This is the Nav Bar-->
+          <nav>
+  
+            <!-- Logo Picture and Text -->
+            <div class="logo">
+              <a href="#" onclick="location.reload()">
+                  <img src="images/New Logo.png">
+              </a>
+              <h4><a href="#" onclick="location.reload()">PENDO PRODUCTIONS</a></h4>
+            </div>
+  
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li>
+                    <a href="Story1.html" title="Read Comic">Fusion Comic</a>
+                </li>
+                <li>
+                    <a href="Story2.html" title="Read Comic">That One Story</a>
+                </li>
+                <li>
+                    <a href="#">Extra</a>
+                </li>
+                <li>
+                    <a href="store" id="store">Store</a>
+                </li>
+            </ul>
+  
+            <!-- Burger Icom -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+  
+          </nav>
+      </header>
+          <main> 
+            <div id = 'main' class= "d1">
+              <div class = "d2">
+                <h2 class="d3"> Fusion 1 </h2>
+                <div id="ic">
+                  <div class="mI">
+                  <div id="mci" data-id="1" class></div>
+                  <img alt="" width="784" height="1145" data-id="1" src="images/page1.png" id="ci"style="cursor: pointer;" onclick="changeImage()">
+                  </div>
+                </div>
+                <div id="in" style="display: none;"></div>
+              </div>
+            </div>
+          </main>
   
   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="cc" onclick="changeImage()"></a>
   
@@ -76,5 +88,6 @@
     }
   }
   </script>
+  <script src="app.js"></script>
 </body>
 </html>
