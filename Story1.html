@@ -52,6 +52,8 @@
       <div id="in" style="display: none;"></div>
     </div>
   </div>
+
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="cc" onclick="changeImage()"></a>
   <script>
       var counter = 1;
       var pc =1;
@@ -65,9 +67,10 @@
           }else if (counter>=3){
            counter=1;
           }
-          if(pc==6){
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-          }else {
+          if(pc>=6){
+            document.getElementById("cc").click();
+          }else
+           {
           document.getElementById("ci").src = "images/page"+counter+".png";
     }
   }
