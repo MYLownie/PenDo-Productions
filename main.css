@@ -14,6 +14,7 @@ body{
 
 /*Start of Nav Styling */
 nav{
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -23,6 +24,7 @@ nav{
     }
 
 .logo{
+    z-index: 2;
     color: rgb(226,226,226);
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -143,6 +145,7 @@ nav{
     }
 
     .nav-active{
+        z-index: 1;
         transition: transform 0.5s ease-in;
         transform: translateY(0%);
     }
@@ -168,8 +171,8 @@ nav{
     margin: 0px auto;
 }
 .mI img{
-   vertical-align: middle;
-   max-width: 100%;
-   margin: 0px auto;
-   height: auto;
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0px auto;
+    height: auto;
 }
