@@ -11,6 +11,10 @@ body{
     background-color: #1b1b1b
 }
 
+main {
+    z-index: 100;
+}
+
 
 /*Start of Nav Styling */
 nav{
