@@ -87,6 +87,7 @@ nav{
         letter-spacing: 3px;
         font-weight: bold;
         font-size: 14px;
+    }
 }
 
 /* Use for Mobile Device - Hamburger Menu */
@@ -107,7 +108,6 @@ nav{
         flex-direction: column;
         /* align-items: flex-start; */
         transform: translateY(-100%);
-        transition: transform 0.5s ease-in;
         z-index: -1;
     }
     .nav-links li {
@@ -131,18 +131,21 @@ nav{
     @keyframes navLinkFade{
         to {
             opacity: 1;
-            transform: translateY(100%);
+            transform: translateY(50%);
         }
         from {
             opacity: 0;
-            transform: translateY(50%);
+            transform: translateY(25%);
+         }
+    }
+
+    .nav-active{
+        transition: transform 0.5s ease-in;
+        transform: translateY(0%);
     }
 }
-}
 
-.nav-active{
-    transform: translateY(0%);
-}
+
 
 /*original traslate location*/
 
