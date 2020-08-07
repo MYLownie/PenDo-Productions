@@ -4,8 +4,9 @@
     <title>P&P Productions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS code/PageTurning.css">
-    <link rel="preconnect" href="images/Sample Page.png">
-    <link rel="preconnect" href="images/page 2.png">
+    <link rel="preconnect" href="images/page1.png">
+    <link rel="preconnect" href="images/page2.png">
+    <link rel="preconnect" href="images/page3.png">
 
         <style>
 
@@ -35,11 +36,14 @@
     </div>
   </div>
   <script>
-    function changeImage(){
       var counter = 1;
         function changeImage() {
-            counter > 2 ? counter = 1 : counter++; 
-            document.getElementById("ci").src = "assets/img"+counter+".png";
+          if(counter<3){
+            counter++;
+          }else if (counter>=3){
+           counter=1;
+          }
+          document.getElementById("ci").src = "images/page"+counter+".png";
     }
   </script>
 </body>
