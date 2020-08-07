@@ -28,11 +28,19 @@
       <div id="ic">
         <div class="mI">
           <div id="mci" data-id="1" class></div>
-          <img id="ci" width="784" height="1145" data-id="1" src="images/Sample Page.png" style="cursor: pointer;">
+          <img alt="" width="784" height="1145" data-id="1" src="images/page1.png" id="ci"style="cursor: pointer;" onclick="changeImage()">
         </div>
       </div>
       <div id="in" style="display: none;"></div>
     </div>
   </div>
+  <script>
+    function changeImage(){
+      var counter = 1;
+        function changeImage() {
+            counter > 2 ? counter = 1 : counter++; 
+            document.getElementById("imgClickAndChange").src = "assets/img"+counter+".png";
+    }
+  </script>
 </body>
 </html>
