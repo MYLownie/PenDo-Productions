@@ -63,4 +63,28 @@ function chapDropdown() {
           navbar.classList.remove("sticky");
       }
   }
-
+//My master piece of changing page and chapters
+  var pc = 1;
+  /*for chapters, naming Chap#page#.png. for changing chapter. check next page for naming. and if naming is 
+  EndOfChapter#, go into a different if statement loop, to update chapter. first thing to check is
+  if(document.getElementById("ci").src == "EndOfChapter#.png"){}*/
+    function changeImage() {
+      if(pc<=6){
+        pc++;
+        document.getElementById("ci").src = "Chapter"+cc+"/page"+pc+".jpg";
+        //window.open("Chapter2.html","_self");
+      }else if(pc>=7){
+        pc++;
+        cc++;
+      }
+      if(pc>=8){
+          if(cc>=3){
+              cc=1;
+          }
+        document.getElementById("ci").onclick = chapterChange();
+      }
+}
+function chapterChange(){
+  //document.getElementById("ci").src = "Chapter1/EndOfChapter"+pc+".jpg";
+  window.open("chap"+ cc + ".html", "_self");
+}

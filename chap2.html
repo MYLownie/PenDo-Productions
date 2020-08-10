@@ -74,7 +74,7 @@
               <button onclick="chapDropdown()" class="dropbtn">Chapter</button>
               <div id="chapterDrop" class="dropdown-content">
                 <a href="chap1.html">Chapter 1</a>
-                <a href="Chapter2.html">Chapter 2</a>
+                <a href="chap2.html">Chapter 2</a>
                 <a href="#">Chapter 3</a>
               </div>
             </div>
@@ -91,7 +91,7 @@
                 <div id="ic">
                   <div class="mI">
                   <div id="mci" data-id="1" class></div>
-                  <img alt="" width="784" height="1145" data-id="1" src="Chapter2/page1.jpg" id="ci"style="cursor: pointer;" onclick="changeImage()">
+                  <img alt="" width="784" height="1145" data-id="1" src="Chapter2/page1.jpg" id="ci"style="cursor: pointer;" onclick="changeImage(cc=2)">
                   </div>
                 </div>
                 <div id="in" style="display: none;"></div>
@@ -99,25 +99,7 @@
             </div>
           </main>
           <script>
-            var pc = 1;
-            /*for chapters, naming Chap#page#.png. for changing chapter. check next page for naming. and if naming is 
-            EndOfChapter#, go into a different if statement loop, to update chapter. first thing to check is
-            if(document.getElementById("ci").src == "EndOfChapter#.png"){}*/
-              function changeImage() {
-                if(pc<=6){
-                  pc++;
-                  document.getElementById("ci").src = "Chapter2/page"+pc+".jpg";
-                  //window.open("Chapter2.html","_self");
-                }else if(pc>=7){
-                    pc++;
-                }if(pc>=8){
-                    document.getElementById("ci").onclick = chapterChange();
-          }
-        }
-          function chapterChange(){
-            //document.getElementById("ci").src = "Chapter1/EndOfChapter"+pc+".jpg";
-            window.open("chap1.html", "_self");
-          }
+           
         </script>
   <script src="app.js"></script>
 </body>
