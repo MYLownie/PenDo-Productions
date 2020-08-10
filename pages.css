@@ -5,6 +5,18 @@
     text-decoration: none;
     color: inherit;
 }
+/* Comic Image*/
+.d2, h2, .d4, .d5{
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+}
+.mI img, .d4 img{
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0px auto;
+    height: auto;
+}
 
 
 body{
@@ -189,8 +201,13 @@ nav{
     font-size: 16px;
     height: 45px;
     color: white;
+    cursor: pointer;
     /* border: solid 1px white; */
     border-right: solid 1px #515151;
+}
+
+.scroll:hover{
+    background-color: #1f2933;
 }
 
 .active {
@@ -203,7 +220,7 @@ nav{
     padding: 16px 10px;
     font-size: 16px;
     border: none;
-    cursor: pointer;
+    cursor: default;
     /* width: 100px; */
     height: 45px;
     text-align: center;
