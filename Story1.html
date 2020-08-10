@@ -12,7 +12,7 @@
     <link rel="preconnect" href="Chapter1/page4.jpg">
     <link rel="preconnect" href="Chapter1/page5.jpg">
     <link rel="preconnect" href="Chapter1/page6.jpg">
-    <link rel="preconnect" href="Chapter1/EndOfChapter.jpg">
+    <link rel="preconnect" href="Chapter1/page7.jpg">
 
 </head>
   <body>
@@ -89,11 +89,12 @@
             pc++;
             document.getElementById("ci").src = "Chapter1/page"+pc+".jpg";
             //window.open("Chapter2.html","_self");
-          }if(pc>=7){
-            document.getElementById("ci").src = "Chapter1/EndOfChapter.jpg";
+          }else if(pc>=7){
+            pc++;
+          }
+          if(pc>=8){
             document.getElementById("ci").onclick = chapterChange();
-          }else{
-    }
+          }
   }
     function chapterChange(){
       //document.getElementById("ci").src = "Chapter1/EndOfChapter"+pc+".jpg";
