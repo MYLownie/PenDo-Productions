@@ -85,24 +85,19 @@
       EndOfChapter#, go into a different if statement loop, to update chapter. first thing to check is
       if(document.getElementById("ci").src == "EndOfChapter#.png"){}*/
         function changeImage() {
-          if(document.getElementById("ci").src =="Chapter1/EndOfChapter.jpg"){
-            //window.open("Chapter2.html");
-            //window.open("https://www.youtube.com/watch?v=YCUrphpzEqY");
-            document.getElementById("ci").onclick = "chapterChange()";
-          }
-           else if(pc<=6){
+          if(pc<=6){
             pc++;
             document.getElementById("ci").src = "Chapter1/page"+pc+".jpg";
+            //window.open("Chapter2.html","_self");
           }if(pc>=7){
             document.getElementById("ci").src = "Chapter1/EndOfChapter.jpg";
-            //document.getElementById("cc").click();
+            document.getElementById("ci").onclick = chapterChange;
           }else{
-          
     }
   }
     function chapterChange(){
       //document.getElementById("ci").src = "Chapter1/EndOfChapter"+pc+".jpg";
-      window.open("https://www.youtube.com/watch?v=YCUrphpzEqY");
+      window.open("Chapter2.html", "_self");
     }
   </script>
   <script src="app.js"></script>
