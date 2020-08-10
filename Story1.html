@@ -54,14 +54,30 @@
           </nav>
 
           <!-- CHAPTER NAVIGATION BAR -->
-          <div class="chapnav">
-            <div class="logo">
-              <a href="index.html" >
-                  <img src="images/New Logo.png">
-              </a>
-              <h4><a href="index.html" >PENDO PRODUCTIONS</a></h4>
+
+          <div id="chapNav">
+
+            
+            <div class="click active">
+                Click
+            </div>
+            <div class="scroll">
+              Scroll
+            </div>
+           
+
+            <div class="title">
+              <h3>Fusion Comic</h3> <!--Going to need to change this, prob in Java, to fetch the title from somewhere and fill in HTML-->
             </div>
 
+            <div class="dropdown">
+              <button onclick="chapDropdown()" class="dropbtn">Chapter</button>
+              <div id="chapterDrop" class="dropdown-content">
+                <a href="#">Chapter 1</a>
+                <a href="#">Chapter 2</a>
+                <a href="#">Chapter 3</a>
+              </div>
+            </div>
 
           </div>
       </header>

@@ -1,0 +1,274 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+body{
+    background-color: #1b1b1b;
+    height: 3000px;
+}
+
+
+/*Start of Nav Styling */
+nav{
+    position: static;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    }
+
+.logo{
+    color: rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    }
+
+.logo img {
+    width: 92px;
+    height: 90px;
+    float: left;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li{
+    list-style: none;
+    white-space: nowrap;
+}
+
+.nav-links a{
+    color: rgb(226,226,226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links a:hover{
+    color: #627D9B;
+}
+
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226,226,226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1250px){
+    .nav-links{
+        width: 50%;
+    }
+
+    .nav-links a{
+        color: rgb(226,226,226);
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+}
+
+/* Use for Mobile Device - Hamburger Menu */
+@media only screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        /* right: 0px; sticks links to right side */
+        left: 0px;
+        height: 33vh;
+        max-width: 768px;
+        min-width: 768px;
+        top: 8vh; /*Puts right under navbar*/
+        background-color: #121212;
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-start; */
+        transform: translateY(-100%);
+        z-index: -1;
+    }
+    .nav-links li {
+        opacity: 0; /*set to 0 for flashy animation but set to 100 if want to just appear on the slide in function*/ 
+        text-align: left;
+        margin: 0 95% 0 5%; 
+        white-space: nowrap;
+    }
+
+    .nav-links li a {
+        letter-spacing: 5px;
+        font-size: 16px;
+    }
+
+    .burger {
+        display: block;
+    }
+     
+    /*end here for not flashy animation*/
+    /*nav options animation*/
+    @keyframes navLinkFade{
+        to {
+            opacity: 1;
+            transform: translateY(50%);
+        }
+        from {
+            opacity: 0;
+            transform: translateY(25%);
+         }
+    }
+
+    .nav-active{
+        transition: transform 0.5s ease-in;
+        transform: translateY(0%);
+    }
+}
+
+/*burger to X*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/*End of Nav Styling*/
+
+/* Beginning of ChapNav styling */
+
+#chapNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 46.5px;
+    background-color: #121212;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0 0 3px 0;
+    border-bottom: solid 1px #515151;
+    border-top: solid 1px #515151;
+    align-items: baseline;
+    /* font-family: 'Poppins', sans-serif; */
+    
+}
+
+/* Click Button */
+
+.click, .scroll {
+    padding: 16px 10px;
+    font-size: 16px;
+    height: 45px;
+    color: white;
+    /* border: solid 1px white; */
+    border-right: solid 1px #515151;
+}
+
+.active {
+    background-color:#3B3B3B;
+}
+
+.title h3 {
+    background-color: #121212;
+    color: #f5f7fa;
+    padding: 16px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* width: 100px; */
+    height: 45px;
+    text-align: center;
+    /* border-bottom: solid 1px white; */
+    border-right: solid 1px #515151;
+}
+
+
+/* Stick Class - added to chapNav with JS when it reaches scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    width: 100%;
+}
+
+/* Dropdown Styling */
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #121212;
+    color: #f5f7fa;
+    padding: 16px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* width: 100px; */
+    height: 45px;
+    /* border-bottom: solid 1px white; */
+    border-right: solid 1px #515151;
+}
+
+/* Hover & Focus Dropdown Button */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #1f2933;
+}
+
+/* Dropdown Div */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#12121285;
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Chapters inside dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Chapters on hover */
+.dropdown-content a:hover {
+    background-color:  #1f293385
+}
+
+/* JS Reveal dropdown */
+.show {display: block;}

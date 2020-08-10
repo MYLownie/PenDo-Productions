@@ -1,3 +1,5 @@
+
+//For Navigation Burger Drop Down
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -26,3 +28,39 @@ const navSlide = () => {
     
 
 navSlide();
+
+//For Chapter Navigation Dropdown Menu
+//when user click on dropdown, toggle btween hiding and showing the dropdown content
+function chapDropdown() {
+    document.getElementById("chapterDrop").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+
+  //FOR STICK chapNAV
+  window.onscroll = function() {stickyNav()};
+
+  var navbar = document.getElementById("chapNav");
+  var sticky = navbar.offsetTop; //sets sticky to the distance of the chapNav from the top of it's parent node
+
+  function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+      } else {
+          navbar.classList.remove("sticky");
+      }
+  }
+
