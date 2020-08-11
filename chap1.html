@@ -71,11 +71,25 @@
             </div>
 
             <div class="dropdown">
-              <button onclick="chapDropdown()" class="dropbtn">Chapter</button>
+              <button id="cb1" onclick="chapDropdown()" class="dropbtn"> Chapter 1 </button>
               <div id="chapterDrop" class="dropdown-content">
-                <a href="chap1.html">Chapter 1</a>
-                <a href="chap2.html">Chapter 2</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Chapter 3</a>
+                <a value="Chapter 1" href="chap1.html">Chapter 1</a>
+                <a value="Chapter 2" href="chap2.html">Chapter 2</a>
+                <a value="Chapter 3" href="chap2.html">Chapter 3</a>
+                <a value="Chapter 4" href="chap2.html">Chapter 4</a>
+                <a value="Chapter 5" href="chap2.html">Chapter 5</a>
+                <a value="Chapter 6" href="chap2.html">Chapter 6</a>
+                <a value="Chapter 7" href="chap2.html">Chapter 7</a>
+                <a value="Chapter 8" href="chap2.html">Chapter 8</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 9</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 10</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 11</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 12</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 13</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 14</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 15</a>
+                <a value="Chapter 9" href="chap2.html">Chapter 16</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Chapter 10</a>
               </div>
             </div>
 
@@ -85,9 +99,43 @@
             <div id = 'main' class= "d1">
               <div class = "d2">
                 <h2 class="d3"> Chapter1 Page </h2>
+                <!-- This is where all the images are stored, for toggeling Scroll and using the DATA ID-->
+                <!-- to display the images at the proper distances, you can take the value from
+                the previous page, and add it to the current height of the image being displayed-->
+                <div id="ib" style="display: none;"> 
+                  <div class="mI">
+                    <div data-id="1"></div>
+                    <img alt="" width="784" height="1145" data-id="1" src="Chapter1/page1.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="2"></div>
+                    <img alt="" width="784" height="1145" data-id="2" src="Chapter1/page2.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="3"></div>
+                    <img alt="" width="784" height="1145" data-id="3" src="Chapter1/page3.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="4"></div>
+                    <img alt="" width="784" height="1145" data-id="4" src="Chapter1/page4.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="5"></div>
+                    <img alt="" width="784" height="1145" data-id="5" src="Chapter1/page5.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="6"></div>
+                    <img alt="" width="784" height="1145" data-id="6" src="Chapter1/page6.jpg">
+                  </div>
+                  <div class='mI'>
+                    <div data-id="7"></div>
+                    <img alt="" width="784" height="1145" data-id="7" src="Chapter1/page7.jpg">
+                  </div>
+                </div>
+                <!-- This is where the image is Displayed-->
                 <div id="ic">
                   <div class="mI">
-                  <div id="mci" data-id="1" class></div>
+                  <div id="mci" data-id="1" class style></div>
                   <img alt="" width="784" height="1145" data-id="1" src="Chapter1/page1.jpg" id="ci"style="cursor: pointer;" onclick="changeImage(cc=1)">
                   </div>
                 </div>
