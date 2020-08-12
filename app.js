@@ -90,6 +90,7 @@ function chapterChange(){
   window.open("chap"+ cc + ".html", "_self");
 }
 
+<<<<<<< HEAD
 //be scroll mode when checked and click mode when unchecked
 const viewMode = document.getElementById('scrollvsclick');
 console.log(viewMode);
@@ -118,3 +119,7 @@ viewMode.addEventListener('change', function(e) {
 //   }
 // }
 
+=======
+//be scroll when checked
+// const scrollMode = document.querySelector('#mI')
+>>>>>>> parent of 400ad0a... SCROLL CLICK IS FUNCTIONING

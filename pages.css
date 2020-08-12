@@ -247,8 +247,9 @@ nav{
     background-color: red;
     color: white;
 }
-.scrollclick-inner:after {
-    content: "Scroll";
+
+.scrollclick-inner::after {
+    content: "Click";
     padding-right: 10px;
     background-color: blue;
     color: white;
@@ -257,7 +258,11 @@ nav{
 
 .scrollclick-circle {
     display: block;
+<<<<<<< HEAD
     width: 24px;
+=======
+    width: 20px;
+>>>>>>> parent of 400ad0a... SCROLL CLICK IS FUNCTIONING
     margin: 5px;
     background: white;
     position: absolute;
