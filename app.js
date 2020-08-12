@@ -100,11 +100,9 @@ viewMode.addEventListener('change', function(e) {
     scrollMode.style.display = "none";
     clickMode.style.display = "block";
   } else {
-      scroll(0,0)
-      scrollMode.style.display = "block";
-      clickMode.style.display = "none";
-    }
-  });
+    scrollMode.style.display = "block";
+    clickMode.style.display = "none";
+  }
 });
 
 // This stores the location of the scrollY on the page after refresh

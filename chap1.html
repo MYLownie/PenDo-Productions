@@ -58,21 +58,21 @@
           <div id="chapNav">
 
    <!-- Rounded switch -->
-   <!-- <div class= "sc">
+   <div class= "sc">
    <label class="switch">
     <input type="checkbox" id="Toggle">
     <span class="slider round"></span>
     </label>
-  </div> -->
+  </div>
 
   <!-- testing checkbox-->
-      <!-- <input type="checkbox"> -->
+      <input type="checkbox">
 
             <!-- Scroll VS Click Toggle Switch -->
             <div class="scrollclick">
 
               <div class="scrollclickswitch">
-                <input type="checkbox" name="scrollclickswitch" class="scrollclickswitch-checkbox" id="scrollvsclick" tabindex="0">
+                <input type="checkbox" name="scrollclickswitch" class="scrollclickswitch-checkbox" id="scrollvsclick" tabindex="0" checked>
                 <label class="scrollclickswitch-label" for="scrollvsclick">
                     <span class="scrollclick-inner"></span>
                     <span class="scrollclick-circle"></span>
@@ -117,7 +117,7 @@
                 <!-- This is where all the images are stored, for toggeling Scroll and using the DATA ID-->
                 <!-- to display the images at the proper distances, you can take the value from
                 the previous page, and add it to the current height of the image being displayed-->
-                <div id="ib" style="display: block;"> 
+                <div id="ib" style="display: none;"> 
                   <div class="mI">
                     <div data-id="1"></div>
                     <img alt="" width="784" height="1145" data-id="1" src="Chapter1/page1.jpg">
@@ -148,7 +148,7 @@
                   </div>
                 </div>
                 <!-- This is where the image is Displayed-->
-                <div id="ic" style="display: none;">
+                <div id="ic" style>
                   <div class="mI">
                   <div id="mci" data-id="1" class></div>
                   <img alt="" width="784" height="1145" data-id="1" src="Chapter1/page1.jpg" id="ci"style="cursor: pointer;" onclick="changeImage(cc=1)">
