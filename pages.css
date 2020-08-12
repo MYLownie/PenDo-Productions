@@ -258,7 +258,7 @@ nav{
 
 .scrollclick-circle {
     display: block;
-    width: 20px;
+    width: 24px;
     margin: 5px;
     background: white;
     position: absolute;
@@ -281,7 +281,7 @@ nav{
 /* Title Of Comic */
 .title h3 {
     color: #f5f7fa;
-    padding: 14px 10px 18px;
+    padding: 14px 10px 20px;
     font-size: 18px;
     border: none;
     cursor: default;
@@ -360,8 +360,8 @@ nav{
 .switch {
     position: relative;
     display: inline-block;
-    width: 70px;
-    height: 34px;
+    width: 76px;
+    height: 32px;
   }
   
   /* Hide default HTML checkbox */
@@ -387,8 +387,8 @@ nav{
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 24px;
+    width: 24px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -407,7 +407,7 @@ nav{
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
-    transform: translateX(36px);
+    transform: translateX(44px);
   }
   
   /* Rounded sliders */

@@ -54,7 +54,8 @@ function chapDropdown() {
   window.onscroll = function() {stickyNav()};
 
   var navbar = document.getElementById("chapNav");
-  var sticky = navbar.offsetTop; //sets sticky to the distance of the chapNav from the top of it's parent node
+  var sticky = navbar.offsetTop; 
+  //sets sticky to the distance of the chapNav from the top of it's parent node
 
   function stickyNav() {
       if (window.pageYOffset >= sticky) {
@@ -97,15 +98,36 @@ document.addEventListener('input', function () {
 
   checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
-      // do this
      document.getElementById("ib").style="display";
      document.getElementById("ic").style="display:none";
     } else {
-      // do that
       scroll(0,0)
       document.getElementById("ic").style="display";
       document.getElementById("ib").style="display:none";
     }
   });
 });
-// const scrollMode = document.querySelector('#mI')
+
+// This stores the location of the scrollY on the page after refresh
+function refreshPage () {
+  var page_y = document.getElementsByTagName("body")[0].scrollTop;
+  window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
+}
+window.onload = function () {
+  setTimeout(refreshPage, 35000);
+  if ( window.location.href.indexOf('page_y') != -1 ) {
+      var match = window.location.href.split('?')[1].split("&")[0].split("=");
+      document.getElementsByTagName("body")[0].scrollTop = match[1];
+  }
+}
+
+//Store button Value
+$(function(){
+  var test = localStorage.input === 'true'? true: false;
+  $('input').prop('checked', test || false);
+});
+
+$('input').on('change', function() {
+  localStorage.input = $(this).is(':checked');
+  console.log($(this).is(':checked'));
+});
