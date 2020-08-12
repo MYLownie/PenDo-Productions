@@ -89,5 +89,17 @@ function chapterChange(){
   window.open("chap"+ cc + ".html", "_self");
 }
 
-//be scroll when checked
-// const scrollMode = document.querySelector('#mI')
+//be scroll mode when checked and click mode when unchecked
+const viewMode = document.getElementById('scrollvsclick');
+console.log(viewMode);
+var scrollMode = document.getElementById('ib');
+var clickMode = document.getElementById('ic');
+viewMode.addEventListener('change', function(e) {
+  if(viewMode.checked){
+    scrollMode.style.display = "none";
+    clickMode.style.display = "block";
+  } else {
+    scrollMode.style.display = "block";
+    clickMode.style.display = "none";
+  }
+});
