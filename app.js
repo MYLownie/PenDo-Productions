@@ -90,4 +90,21 @@ function chapterChange(){
 }
 
 //be scroll when checked
+
+//Crude way of making the scroll and click toggle.
+document.addEventListener('input', function () {
+  var checkbox = document.querySelector('input[type="checkbox"]');
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      // do this
+     document.getElementById("ib").style="display";
+     document.getElementById("ic").style="display:none";
+    } else {
+      // do that
+      document.getElementById("ic").style="display";
+      document.getElementById("ib").style="display:none";
+    }
+  });
+});
 // const scrollMode = document.querySelector('#mI')
