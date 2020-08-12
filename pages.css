@@ -196,7 +196,7 @@ nav{
 
 
 /* SCROLL VS CLICK TOGGLE SWITCH */
-.scrollclick {
+.scrollclick, .sc {
     padding: 5px 4px;
     border-right: solid 1px #515151;
 }
@@ -360,7 +360,7 @@ nav{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 70px;
     height: 34px;
   }
   
@@ -397,17 +397,17 @@ nav{
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #1b1b1b;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #1b1b1b;
   }
   
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    transform: translateX(36px);
   }
   
   /* Rounded sliders */
@@ -418,3 +418,20 @@ nav{
   .slider.round:before {
     border-radius: 50%;
   }
+  .slider:after{
+ content:'Click';
+ color: black;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 70%;
+ font-size: 14px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+input:checked + .slider:after{  
+    color: white;
+  content:'Scroll';
+  left: 30%;
+}

@@ -102,6 +102,7 @@ document.addEventListener('input', function () {
      document.getElementById("ic").style="display:none";
     } else {
       // do that
+      scroll(0,0)
       document.getElementById("ic").style="display";
       document.getElementById("ib").style="display:none";
     }
