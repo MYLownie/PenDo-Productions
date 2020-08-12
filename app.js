@@ -54,8 +54,7 @@ function chapDropdown() {
   window.onscroll = function() {stickyNav()};
 
   var navbar = document.getElementById("chapNav");
-  var sticky = navbar.offsetTop; 
-  //sets sticky to the distance of the chapNav from the top of it's parent node
+  var sticky = navbar.offsetTop; //sets sticky to the distance of the chapNav from the top of it's parent node
 
   function stickyNav() {
       if (window.pageYOffset >= sticky) {
