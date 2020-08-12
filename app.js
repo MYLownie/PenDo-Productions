@@ -88,3 +88,6 @@ function chapterChange(){
   //document.getElementById("ci").src = "Chapter1/EndOfChapter"+pc+".jpg";
   window.open("chap"+ cc + ".html", "_self");
 }
+
+//be scroll when checked
+// const scrollMode = document.querySelector('#mI')
