@@ -100,9 +100,11 @@ viewMode.addEventListener('change', function(e) {
     scrollMode.style.display = "none";
     clickMode.style.display = "block";
   } else {
-    scrollMode.style.display = "block";
-    clickMode.style.display = "none";
-  }
+      scroll(0,0)
+      scrollMode.style.display = "block";
+      clickMode.style.display = "none";
+    }
+  });
 });
 
 // This stores the location of the scrollY on the page after refresh
@@ -118,12 +120,3 @@ viewMode.addEventListener('change', function(e) {
 //   }
 // }
 
-//Store button Value
-// $(function(){
-//   var test = localStorage.input === 'true'? true: false;
-//   $('input').prop('checked', test || false);
-// });
-
-// $('input').on('change', function() {
-//   localStorage.input = $(this).is(':checked');
-//   console.log($(this).is(':checked'));
