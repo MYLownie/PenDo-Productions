@@ -16,6 +16,8 @@
     max-width: 100%;
     margin: 0px auto;
     height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -319,6 +321,8 @@ nav{
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
+    overflow-y: scroll ;
+    max-height: 210px;
     position: absolute;
     background-color:#12121285;
     min-width: 160px;
