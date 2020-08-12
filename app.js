@@ -90,44 +90,40 @@ function chapterChange(){
   window.open("chap"+ cc + ".html", "_self");
 }
 
-//be scroll when checked
-
-//Crude way of making the scroll and click toggle.
-document.addEventListener('input', function () {
-  var checkbox = document.querySelector('input[type="checkbox"]');
-
-  checkbox.addEventListener('change', function () {
-    if (checkbox.checked) {
-     document.getElementById("ib").style="display";
-     document.getElementById("ic").style="display:none";
-    } else {
-      scroll(0,0)
-      document.getElementById("ic").style="display";
-      document.getElementById("ib").style="display:none";
-    }
-  });
+//be scroll mode when checked and click mode when unchecked
+const viewMode = document.getElementById('scrollvsclick');
+console.log(viewMode);
+var scrollMode = document.getElementById('ib');
+var clickMode = document.getElementById('ic');
+viewMode.addEventListener('change', function(e) {
+  if(viewMode.checked){
+    scrollMode.style.display = "none";
+    clickMode.style.display = "block";
+  } else {
+    scrollMode.style.display = "block";
+    clickMode.style.display = "none";
+  }
 });
 
 // This stores the location of the scrollY on the page after refresh
-function refreshPage () {
-  var page_y = document.getElementsByTagName("body")[0].scrollTop;
-  window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
-}
-window.onload = function () {
-  setTimeout(refreshPage, 35000);
-  if ( window.location.href.indexOf('page_y') != -1 ) {
-      var match = window.location.href.split('?')[1].split("&")[0].split("=");
-      document.getElementsByTagName("body")[0].scrollTop = match[1];
-  }
-}
+// function refreshPage () {
+//   var page_y = document.getElementsByTagName("body")[0].scrollTop;
+//   window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
+// }
+// window.onload = function () {
+//   setTimeout(refreshPage, 35000);
+//   if ( window.location.href.indexOf('page_y') != -1 ) {
+//       var match = window.location.href.split('?')[1].split("&")[0].split("=");
+//       document.getElementsByTagName("body")[0].scrollTop = match[1];
+//   }
+// }
 
 //Store button Value
-$(function(){
-  var test = localStorage.input === 'true'? true: false;
-  $('input').prop('checked', test || false);
-});
+// $(function(){
+//   var test = localStorage.input === 'true'? true: false;
+//   $('input').prop('checked', test || false);
+// });
 
-$('input').on('change', function() {
-  localStorage.input = $(this).is(':checked');
-  console.log($(this).is(':checked'));
-});
+// $('input').on('change', function() {
+//   localStorage.input = $(this).is(':checked');
+//   console.log($(this).is(':checked'));

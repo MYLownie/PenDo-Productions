@@ -202,80 +202,74 @@ nav{
 }
 
 .scrollclickswitch {
-    position: relative;
+    position: relative; 
     width: 80px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
 }
-
 .scrollclickswitch-checkbox {
     position: absolute;
-    pointer-events: none;
     opacity: 0;
+    pointer-events: none;
 }
-
 .scrollclickswitch-label {
-    display: block;
-    overflow: hidden;
+    display: block; 
+    overflow: hidden; 
     cursor: pointer;
-    border: 2px solid #999999;
+    border: 2px solid #999999; 
     border-radius: 20px;
 }
-
 .scrollclick-inner {
-    display: block;
-    width: 200%;
+    display: block; 
+    width: 200%; 
     margin-left: -100%;
-    transition: 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
 }
-
-.scrollclick-inner::before, .scrollclick-inner::after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: 30px;
-    padding: 0px;
+.scrollclick-inner:before, .scrollclick-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%; 
+    height: 30px; 
+    padding: 0; 
     line-height: 30px;
-    font-size: 14px;
-    color: white;
+    font-size: 14px; 
+    color: white; 
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     box-sizing: border-box;
 }
-
-.scrollclick-inner::before {
-    content: "Scroll";
-    padding-left: 10px;
-    background-color: red;
-    color: white;
-}
-
-.scrollclick-inner::after {
+.scrollclick-inner:before {
     content: "Click";
+    padding-left: 10px;
+    background-color: #34A7C1; 
+    color: #FFFFFF;
+}
+.scrollclick-inner:after {
+    content: "Scroll";
     padding-right: 10px;
-    background-color: blue;
-    color: white;
+    background-color: #EEEEEE; 
+    color: #999999;
     text-align: right;
 }
-
 .scrollclick-circle {
-    display: block;
-    width: 24px;
-    margin: 5px;
-    background: white;
-    position: absolute;
-    top:0;
-    bottom:0;
+    display: block; 
+    width: 18px; 
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
     right: 46px;
-    border: 2px solid white;
+    border: 2px solid #999999; 
     border-radius: 20px;
-    transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s; 
 }
-
 .scrollclickswitch-checkbox:checked + .scrollclickswitch-label .scrollclick-inner {
     margin-left: 0;
 }
-
 .scrollclickswitch-checkbox:checked + .scrollclickswitch-label .scrollclick-circle {
-    right: 0px;
+    right: 0px; 
 }
 
 /* Title Of Comic */
