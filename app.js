@@ -120,7 +120,6 @@ window.onload = function () {
       document.getElementsByTagName("body")[0].scrollTop = match[1];
   }
 }
-
 //Store button Value
 $(function(){
   var test = localStorage.input === 'true'? true: false;
@@ -131,3 +130,4 @@ $('input').on('change', function() {
   localStorage.input = $(this).is(':checked');
   console.log($(this).is(':checked'));
 });
+
