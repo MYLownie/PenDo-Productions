@@ -96,6 +96,8 @@ nav{
     cursor: pointer;
 }
 
+
+
 @media only screen and (max-width:1250px){
     .nav-links{
         width: 50%;
@@ -336,8 +338,123 @@ nav{
     background-color:  #1f293385
 }
 
+/* JS Reveal CHAPTERS dropdown */
+.show {display: block;}
+
+
+.mini-dropdown {
+    height: 20vh;
+    display: block;
+    margin-left: auto;
+}
+
+.stories {
+    position: relative;
+}
+
+.mini-dropdown button {
+    background-image: url('https://raw.githubusercontent.com/MYLownie/PenDo-Productions/master/images/InvLogoMaster.png');
+    height: 45px;
+    width: 55px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(100%) scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.dragonbtn.active {
+    opacity: 1;
+    transform:translateX(0%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.mini-dropdown button:hover {
+    background: #1f2933;
+}
+
+.mini-dropdown .miniDrop-content {
+    background:  #303030;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0; /*HEEEEERE*/
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.1s ease;
+}
+
+.stories li {
+    width: 100%;
+    height: 100%;
+    background: #303030;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.stories li:hover {
+background: #1f2933;
+}
+
+.stories a {
+    color: white;
+    text-decoration: none;
+}
+
+.mini-dropdown .appear {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .nav-icon {
+    margin-left: auto;
+    width: 50px;
+    cursor: pointer;
+    border-left: solid 1px #515151;
+    padding-left: 10px;
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+.nav-icon.active {
+    opacity: 1;
+    transform:translateX(0%) scale(1);
+    transition: all 0.3s ease;
+}
+
 /* JS Reveal dropdown */
 .show {display: block;}
+
+
 
 /* Stick Class - added to chapNav with JS when it reaches scroll position */
 .sticky {
@@ -346,86 +463,4 @@ nav{
     width: 100%;
     background-color: #121212;
     width: 100%;
-}
-
-/* Cleaner way of doing buttons? */
-
-/* The switch - the box around the slider */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 76px;
-    height: 32px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #1b1b1b;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #1b1b1b;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(44px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  .slider:after{
- content:'Click';
- color: black;
- display: block;
- position: absolute;
- transform: translate(-50%,-50%);
- top: 50%;
- left: 70%;
- font-size: 14px;
- font-family: Arial, Helvetica, sans-serif;
-}
-
-input:checked + .slider:after{  
-    color: white;
-  content:'Scroll';
-  left: 30%;
 }

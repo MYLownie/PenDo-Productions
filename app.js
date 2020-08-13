@@ -25,8 +25,6 @@ const navSlide = () => {
     
     });
 }
-    
-
 navSlide();
 
 //For Chapter Navigation Dropdown Menu
@@ -50,19 +48,50 @@ function chapDropdown() {
   }
 
 
+  //SAME FUNCTION AS ^^ just using the Image button instead of the Chapter 1 button.
+function miniDropdown() {
+  var miniMenu = document.getElementById("menuDrop");
+  miniMenu.classList.toggle("appear")  
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dragonbtn')) {
+      var dropdowns = document.getElementsByClassName("miniDrop-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('appear')) {
+          openDropdown.classList.remove('appear');
+        }
+      }
+    }
+  }
+
+
+
+
   //FOR STICK chapNAV
   window.onscroll = function() {stickyNav()};
 
   var navbar = document.getElementById("chapNav");
   var sticky = navbar.offsetTop; //sets sticky to the distance of the chapNav from the top of it's parent node
+  var logo = document.getElementsByClassName("dragonbtn");
+  var contentbar = document.getElementById("menuDrop");
+  console.log(contentbar);
 
   function stickyNav() {
       if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky")
+          navbar.classList.add("sticky");
+          logo[0].classList.add("active");
       } else {
           navbar.classList.remove("sticky");
+          logo[0].classList.remove("active");
+          contentbar.classList.remove("appear");
       }
   }
+  
+
 //My master piece of changing page and chapters
   var pc = 1;
   /*for chapters, naming Chap#page#.png. for changing chapter. check next page for naming. and if naming is 
@@ -91,7 +120,6 @@ function chapterChange(){
 
 //be scroll mode when checked and click mode when unchecked
 const viewMode = document.getElementById('scrollvsclick');
-console.log(viewMode);
 var scrollMode = document.getElementById('ib');
 var clickMode = document.getElementById('ic');
 viewMode.addEventListener('change', function(e) {
