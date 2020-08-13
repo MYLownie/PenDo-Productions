@@ -10,6 +10,7 @@
     color: white;
     text-align: center;
     margin: 0px auto;
+    padding-top: 10px;
 }
 .mI img, .d4 img{
     vertical-align: middle;
@@ -275,6 +276,18 @@ nav{
 /* Title Of Comic */
 .title h3 {
     color: #f5f7fa;
+    padding: 14px 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: default;
+    width: 130px;
+    height: 45px;
+    text-align: center;
+    border-right: solid 1px #515151;
+}
+
+h5 {
+    color: #999999;
     padding: 14px 10px 20px;
     font-size: 18px;
     border: none;

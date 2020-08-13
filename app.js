@@ -64,21 +64,26 @@ function chapDropdown() {
       }
   }
 //My master piece of changing page and chapters
-  var pc = 1;
-  /*for chapters, naming Chap#page#.png. for changing chapter. check next page for naming. and if naming is 
-  EndOfChapter#, go into a different if statement loop, to update chapter. first thing to check is
-  if(document.getElementById("ci").src == "EndOfChapter#.png"){}*/
+  var pc = 1; //Counts the pages
+  var min = 6; //Amount of pages -1
+  var max = 7; //Amount of pages
+  var nc= max+1; //This countrols the chapter update at end of chapter
+  var maxC = 3; //Update with newest Chapter amount
+  var ct =true; //Checks if click to turn is on
     function changeImage() {
-      if(pc<=6){
+      if(pc<=min){
         pc++;
         document.getElementById("ci").src = "Chapter"+cc+"/page"+pc+".jpg";
+        if(ct==true){//This updates the Page number
+          document.getElementById("pgn").textContent = pc;
+        }
         //window.open("Chapter2.html","_self");
-      }else if(pc>=7){
+      }else if(pc>=max){
         pc++;
         cc++;
       }
-      if(pc>=8){
-          if(cc>=3){
+      if(pc>=nc){
+          if(cc>=maxC){
               cc=1;
           }
         document.getElementById("ci").onclick = chapterChange();
@@ -96,13 +101,27 @@ var scrollMode = document.getElementById('ib');
 var clickMode = document.getElementById('ic');
 viewMode.addEventListener('change', function(e) {
   if(viewMode.checked){
+    //Click enabled
     scrollMode.style.display = "none";
     clickMode.style.display = "block";
+    ct =true; // if Click is set, ct is true
+    console.log(ct);
   } else {
+    //Scroll enabled
     scrollMode.style.display = "block";
     clickMode.style.display = "none";
+    ct =false; // check if its on scroll to change the Page counter
+    console.log(ct);  
+    //Checks for things in the Viewport
   }
 });
+
+
+
+
+
+
+
 
 // This stores the location of the scrollY on the page after refresh
 // function refreshPage () {
