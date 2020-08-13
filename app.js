@@ -123,10 +123,13 @@ function chapterChange(){
   window.open("chap"+ cc + ".html", "_self");
 }
 
+
+
 //be scroll mode when checked and click mode when unchecked
-const viewMode = document.getElementById('scrollvsclick');
+const vm = document.getElementById('scrollvsclick');
 var scrollMode = document.getElementById('ib');
 var clickMode = document.getElementById('ic');
+
 vm.addEventListener('change', function(e) {
   if(vm.checked){
     //Click enabled
