@@ -112,7 +112,9 @@ vm.addEventListener('change', function(e) {
     clickMode.style.display = "none";
     ct =false; // check if its on scroll to change the Page counter
   }
+  
 });
+
 /*
 //Testing Viewport stuff
 const numSteps = 20.0;
@@ -158,6 +160,7 @@ function buildThresholdList() {
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
+      document.getElementById("pgn").textContent = "Scroll";
       entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
@@ -167,7 +170,7 @@ function handleIntersect(entries, observer) {
   });
 }
 
-*/
+//*/
 
 
 
