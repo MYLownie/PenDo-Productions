@@ -10,6 +10,7 @@
     color: white;
     text-align: center;
     margin: 0px auto;
+    padding-top: 10px;
 }
 .mI img, .d4 img{
     vertical-align: middle;
@@ -287,6 +288,18 @@ nav{
     border-right: solid 1px #515151;
 }
 
+h5 {
+    color: #999999;
+    padding: 14px 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: default;
+    width: 130px;
+    height: 45px;
+    text-align: center;
+    border-right: solid 1px #515151;
+}
+
 /* Dropdown Styling */
 
 /* Dropdown Button */
@@ -415,40 +428,6 @@ background: #1f2933;
     opacity: 1;
     pointer-events: all;
     transform: translateX(0%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .nav-icon {
-    margin-left: auto;
-    width: 50px;
-    cursor: pointer;
-    border-left: solid 1px #515151;
-    padding-left: 10px;
-    transform: translateX(100%) scale(0.95);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-
-.nav-icon.active {
-    opacity: 1;
-    transform:translateX(0%) scale(1);
-    transition: all 0.3s ease;
 }
 
 /* JS Reveal dropdown */
