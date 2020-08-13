@@ -104,6 +104,7 @@ viewMode.addEventListener('change', function(e) {
     //Click enabled
     scrollMode.style.display = "none";
     clickMode.style.display = "block";
+    scroll(0,0);
     ct =true; // if Click is set, ct is true
     console.log(ct);
   } else {
