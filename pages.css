@@ -6,6 +6,11 @@
     color: inherit;
 }
 /* Comic Image*/
+
+.running {
+    display: block;
+}
+
 .d2, h2, .d4, .d5{
     color: white;
     text-align: center;

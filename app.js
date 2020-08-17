@@ -128,8 +128,8 @@ function chapterChange(){
 //be scroll mode when checked and click mode when unchecked
 const vm = document.getElementById('scrollvsclick');
 var scrollMode = document.getElementById('ib');
+console.log(scrollMode);
 var clickMode = document.getElementById('ic');
-
 vm.addEventListener('change', function(e) {
   if(vm.checked){
     //Click enabled
@@ -145,6 +145,17 @@ vm.addEventListener('change', function(e) {
   }
   
 });
+// vm.addEventListener('change', function(e) {
+//   if(vm.checked) {
+//     scrollMode.classList.remove('running');
+//     clickMode.classList.add('running')
+//     scroll(0,0);
+//     ct = true //if Click is set, ct is true
+//   } else {
+//     scrollMode.classList.add('running');
+//     clickMode.classList.remove('running')
+//   }
+// });
 
 /*
 //Testing Viewport stuff
