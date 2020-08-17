@@ -1,4 +1,4 @@
-
+src="https://code.jquery.com/jquery-2.2.3.min.js";
 //For Navigation Burger Drop Down
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -145,89 +145,6 @@ vm.addEventListener('change', function(e) {
   }
   
 });
-// vm.addEventListener('change', function(e) {
-//   if(vm.checked) {
-//     scrollMode.classList.remove('running');
-//     clickMode.classList.add('running')
-//     scroll(0,0);
-//     ct = true //if Click is set, ct is true
-//   } else {
-//     scrollMode.classList.add('running');
-//     clickMode.classList.remove('running')
-//   }
-// });
 
-/*
-//Testing Viewport stuff
-const numSteps = 20.0;
-
-let boxElement;
-let prevRatio = 0.0;
-let increasingColor = "rgba(40, 40, 190, ratio)";
-let decreasingColor = "rgba(190, 40, 40, ratio)";
-
-// Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
-
-  createObserver();
-}, false);
-
-function createObserver() {
-  let observer;
-
-  let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: buildThresholdList()
-  };
-
-  observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(boxElement);
-}
-
-function buildThresholdList() {
-  let thresholds = [];
-  let numSteps = 20;
-
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
-    thresholds.push(ratio);
-  }
-
-  thresholds.push(0);
-  return thresholds;
-}
-
-function handleIntersect(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio > prevRatio) {
-      document.getElementById("pgn").textContent = "Scroll";
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
-    } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
-    }
-
-    prevRatio = entry.intersectionRatio;
-  });
-}
-
-//*/
-
-
-
-
-
-// This stores the location of the scrollY on the page after refresh
-// function refreshPage () {
-//   var page_y = document.getElementsByTagName("body")[0].scrollTop;
-//   window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
-// }
-// window.onload = function () {
-//   setTimeout(refreshPage, 35000);
-//   if ( window.location.href.indexOf('page_y') != -1 ) {
-//       var match = window.location.href.split('?')[1].split("&")[0].split("=");
-//       document.getElementsByTagName("body")[0].scrollTop = match[1];
-//   }
-// }
+//Storing Data in Local Storage
 

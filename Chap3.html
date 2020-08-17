@@ -58,8 +58,8 @@
           <div id="chapNav">
             
             <!-- Scroll VS Click Toggle Switch -->
+            
             <div class="scrollclick">
-
               <div class="scrollclickswitch">
                 <input type="checkbox" name="scrollclickswitch" class="scrollclickswitch-checkbox" id="scrollvsclick" tabindex="0" checked>
                 <label class="scrollclickswitch-label" for="scrollvsclick">
@@ -101,7 +101,21 @@
             <div class= "pn">
               <h5 id="pgn">1</h5>
             </div>
-          
+            
+            <!-- check boxes test -->
+            <div id="ccc">
+                <div>
+                  <label for="option1">Option 1</label>
+                  <input type="checkbox" id="option1">
+                </div>
+                <div>
+                  <label for="option2">Option 2</label>
+                  <input type="checkbox" id="option2">
+                </div>
+                <div>
+                  <label for="option3">Option 3</label>
+                  <input type="checkbox" id="option3">
+                </div>
 
             <!-- Mini Logo -->
             <div class="mini-dropdown">
@@ -169,6 +183,28 @@
               </div>
             </div>
           </main>
-  <script src="app.js"></script>
+         
+          <!-- jQuary for the check boxes -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js">
+         $("#ccc :checkbox").on("change", function(){
+            alert("check box id'" + this.id + "' changed");
+            });
+        //stores the valuies for the checkbox
+        var checkboxValues = JSON.parse(localStorage.getItem('checkboxValues')) || {};
+        var $checkboxes = $("#ccc :checkbox");
+            //this is storing the value of the checkbox
+        $checkboxes.on("change", function(){
+             $checkboxes.each(function(){
+                checkboxValues[this.id] = this.checked;
+            });
+                localStorage.setItem("checkboxValues", JSON.stringify(checkboxValues));
+        });
+        //when page loads, pushes the value of the checkbox that was stored
+        $.each(checkboxValues, function(key, value) {
+             $("#" + key).prop('checked', value);
+        });
+        </script>
+
+ <script src="app.js"></script>
 </body>
 </html>
