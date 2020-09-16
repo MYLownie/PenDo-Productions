@@ -197,7 +197,7 @@ nav{
 #chapNav {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     height: 46.5px;
     background-color: #303030;
     width: 100%;
@@ -206,6 +206,33 @@ nav{
     border-bottom: solid 1px #515151;
     border-top: solid 1px #515151;
     font-family: 'Helvetica', sans-serif;
+}
+
+/*page counter styling*/
+.pn {
+    color: rgba(255, 255, 255, 0.671);
+    align-self: stretch;
+    text-align: right;
+    font-size: 22px;
+    padding: 14px 30px;
+}
+
+/* Page arrows*/
+
+.arrows .left, .arrows .right {
+    align-self: stretch;
+    width: 15px;
+    height: 15px;
+    box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.arrows .left {
+    transform: rotate(45deg);
+}
+
+.arrows .right {
+    transform: rotate(225deg);
 }
 
 
@@ -293,7 +320,6 @@ nav{
     font-size: 18px;
     border: none;
     cursor: default;
-    width: 130px;
     height: 45px;
     text-align: center;
     border-right: solid 1px #515151;
@@ -304,7 +330,7 @@ nav{
     color: #f5f7fa;
 }
 
-h5 {
+/* h5 {
     color: #999999;
     padding: 14px 10px 20px;
     font-size: 18px;
@@ -314,7 +340,7 @@ h5 {
     height: 45px;
     text-align: center;
     border-right: solid 1px #515151;
-}
+} */
 
 /* Dropdown Styling */
 
@@ -371,6 +397,8 @@ h5 {
 .show {display: block;}
 
 
+
+/*dragonbtn dropdown*/
 .mini-dropdown {
     height: 20vh;
     display: block;
