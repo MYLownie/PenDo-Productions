@@ -100,16 +100,32 @@ function miniDropdown() {
   var maxC = 3; //Update with newest Chapter amount
   var ct =true; //Checks if click to turn is on
     function changeImage() {
+      // if(pc<=min){
+      //   pc++;
+      //   document.getElementById("ci").src = "Chapter"+cc+"/page"+pc+".jpg";
+      //   if(ct==true){//This updates the Page number
+      //     document.getElementById("pgn").textContent = pc;
+      //   }
+      //   //window.open("Chapter2.html","_self");
+      // }else if(pc>=max){
+      //   pc++;
+      //   cc++;
+      // }
+      // if(pc>=nc){
+      //     if(cc>=maxC){
+      //         cc=1;
+      //     }
+      //   document.getElementById("ci").onclick = chapterChange();
+      // }
       if(pc<=min){
         pc++;
-        document.getElementById("ci").src = "Chapter"+cc+"/page"+pc+".jpg";
+        document.getElementById("ci").src = "Test"+cc+"/Test"+pc+".png";
         if(ct==true){//This updates the Page number
           document.getElementById("pgn").textContent = pc;
         }
         //window.open("Chapter2.html","_self");
       }else if(pc>=max){
         pc++;
-        cc++;
       }
       if(pc>=nc){
           if(cc>=maxC){
