@@ -727,6 +727,20 @@
    .footer .content .empty {
        width: 20%;
    }
+
+   .ripbtn .btn-ripple {
+       background: rgba(225, 225, 225, 0.3);
+       position: absolute;
+       transform: scale(0);
+       animation: ripple 1s;
+   }
+
+   @keyframes ripple {
+       100%{
+           transform: scale(100%);
+           opacity: 0;
+       }
+    }
 }
 
 

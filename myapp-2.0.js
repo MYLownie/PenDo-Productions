@@ -7,16 +7,19 @@ const sunBtn = document.querySelector("#sun");
 
 const theme = document.querySelector("#theme-link");
 
+const logo = document.getElementById('dragon');
+
 
 //if the sun is clicked and the the stylesheet link's href is already light theme, set to dark, else set to light
 sunBtn.addEventListener("click", function() {
     if (theme.getAttribute("href") == "light-theme.css") {
         theme.href = "dark-theme.css";
+        logo.src = 'img/InvLogoMaster.png';
     } else {
         theme.href = "light-theme.css";
+        logo.src = 'img/LogoMaster.png'
     }
 });
-
 
 //Hidden Burger Menu appear and disappear function
 const menuAppear = () => {
@@ -42,3 +45,5 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
