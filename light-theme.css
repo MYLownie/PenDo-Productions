@@ -6,6 +6,179 @@
    font-size: 62.5%;
 }
 
+@media only screen and (max-width: 767px) {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* TOP NAVIGATION BAR - includes burger svg, burger menu, logo, dark mode svg */
+    nav {
+        width: 100%;
+        height: 12vw;
+        display: inline-grid;
+        background-color: #512CA8;
+        grid-template-columns: 10% 20% 60% 10%;
+        grid-template-rows: auto;
+        padding: 0 2vw 0 2vw;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    }
+
+    #logo {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #dark {
+        display: none;
+        
+    }
+    #logo img {
+        width: 18vw;
+        height: 11.5vw;
+    }
+
+    .hidden-menu {
+        display: none;
+    }
+
+    nav #burger {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        fill: white;
+        align-self: center;
+        justify-self: center;
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+
+    nav #sun {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        fill: white;
+        align-self: center;
+        justify-self: center;
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+
+    /* MOST RECENT SECTION - includes the container name, most recent chapter image, icon, chapter number and name, comic name, date released and READ ME button */
+    .most-recent {
+        display: none;
+    }
+
+    .most-recent-mobile {
+        display: inline-grid;
+        width: 100%;
+        height: 74vw;
+        /* background-color: red; */
+        grid-template-columns: 18% 60% 22%;
+        grid-template-rows: 12% 70% 18%;
+    }
+
+    .most-recent-mobile h3 {
+        grid-column: 1 / 3;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 2.8vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 1.5vw 3vw;
+        color: rgba(0, 0, 0, .56)
+    }
+
+    .most-recent-mobile .main-image {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+        padding: 0 3vw;
+        border-radius: 2rem;
+    }
+
+    .most-recent-mobile .update-info {
+        grid-column-start: 1/3;
+        grid-row: 3 / 4;
+        display: flex;
+    }
+
+    .most-recent-mobile .comic-icon {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        width: 12vw;
+        height: 12vw;
+        justify-self: start;
+        align-self: end;
+        margin-left: 3vw;
+        border-radius: 1rem;
+    }
+
+    .most-recent-mobile .written-info {
+        grid-column: 2 / span 1;
+        grid-row: 3 / 4;
+    }
+
+    .most-recent-mobile .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 3vw;
+        padding-top: 3vw;
+        padding-bottom: 1.8vw;
+    }
+
+    .most-recent-mobile .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.5vw;
+        color: rgba(0, 0, 0, 0.54)
+    }
+
+    .most-recent-mobile .written-info .sub-title p {
+        padding-right: 2vw;
+    }
+
+    .most-recent-mobile .written-info .sub-title i {
+        padding-right: 2vw;
+        font-size: 2vw;
+        color: rgba(0, 0, 0, .84)
+    }
+
+    .most-recent-mobile button {
+        grid-column: 3 / span 1;
+        grid-row: 3 / 4;
+        justify-self: center;
+        width: 14vw;
+        height: 7vw;
+        align-self: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #8558DA;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, .35);
+        font-size: 2vw;
+        padding: 0 2vw;
+    }
+
+    .most-recent-mobile button i {
+        font-size: 2vw;
+        
+    }
+
+    .recent-updates, .library, .aboutartist, .footer {
+        display: none;
+    }
+
+
+}
+
+
+    
+
 @media only screen and (min-width: 768px) {
    nav {
        width: 100%;
@@ -23,11 +196,13 @@
        align-self: center; 
    }
 
-   #logo h1 {
-       font-family: 'Roboto', sans-serif;
-       font-weight: bold;
-       font-size: 3rem;
-       color: black;
+   #logo img {
+       width: 15rem;
+       height: 8rem;
+   }
+
+   #invert {
+       display: none;
    }
 
    #logo:hover {
@@ -192,6 +367,10 @@
        margin-bottom: 9rem;
        margin-left: 15%;
        margin-right: 15%;
+   }
+
+   .most-recent-mobile {
+       display: none;
    }
 
    
@@ -761,11 +940,10 @@
        align-self: center; 
    }
 
-   #logo h1 {
-       font-family: 'Roboto', sans-serif;
-       font-weight: bold;
-       font-size: 4rem;
-   }
+   #logo img {
+    width: 18rem;
+    height: 10rem;
+}
 
    #burger {
        grid-column-start: 5;
@@ -1361,12 +1539,10 @@
        align-self: center; 
    }
 
-   #logo h1 {
-       font-family: 'Roboto', sans-serif;
-       font-weight: bold;
-       font-size: 4.7rem;
-       color: black;
-   }
+   #logo img {
+    width: 18rem;
+    height: 10rem;
+    }
 
    #burger {
        grid-column-start: 5;
@@ -1950,12 +2126,10 @@
        align-self: center; 
    }
 
-   #logo h1 {
-       font-family: 'Roboto', sans-serif;
-       font-weight: bold;
-       font-size: 4.9rem;
-       color: black;
-   }
+   #logo img {
+    width: 18rem;
+    height: 10rem;
+    }
 
    #burger {
        grid-column-start: 5;
