@@ -20,20 +20,22 @@
    }
 
    #logo {
-       grid-column-start: 2;
-       grid-column-end: 3;
-       grid-row-start: 1;
-       display: flex;
-       justify-content: start;
-       align-self: center; 
-   }
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: start;
+    align-self: center; 
+    }
 
-   #logo h1 {
-       font-family: 'Roboto', sans-serif;
-       font-weight: bold;
-       font-size: 3rem;
-       color: #FCFCFC;
-   }
+    #logo img {
+        width: 15rem;
+        height: 8rem;
+    }
+
+    #dark {
+        display: none;
+    }
 
    #logo:hover {
        cursor:pointer;
@@ -191,6 +193,10 @@
    /* MOST RECENT SECTION */
    /* includes: picture background, title of comic text box, chapter number and name text box, date updated */
 
+   .most-recent-mobile {
+       display: none;
+   }
+
    .most-recent {
        width: 70%;
        height: 28rem;
@@ -313,6 +319,10 @@
 
    /* RECENT UPDATES SECTION
    includes the recent updates title, 4 selections of recent chapters (image, title, chapter number and name) */
+
+   .recent-updates-mobile {
+       display: none;
+   }
 
    .recent-updates {
        width: 70%;

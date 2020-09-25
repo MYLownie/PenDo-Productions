@@ -76,6 +76,8 @@
         /* background-color: red; */
         grid-template-columns: 18% 60% 22%;
         grid-template-rows: 12% 70% 18%;
+        padding: 0 3vw;
+        margin-bottom: 6vw;
     }
 
     .most-recent-mobile h3 {
@@ -94,8 +96,7 @@
         grid-row: 2 / 3;
         width: 100%;
         height: 100%;
-        padding: 0 3vw;
-        border-radius: 2rem;
+        border-radius: 1rem;
     }
 
     .most-recent-mobile .update-info {
@@ -149,8 +150,8 @@
         grid-column: 3 / span 1;
         grid-row: 3 / 4;
         justify-self: center;
-        width: 14vw;
-        height: 7vw;
+        width: 18vw;
+        height: 10vw;
         align-self: center;
         display: flex;
         justify-content: space-around;
@@ -160,12 +161,13 @@
         border-radius: 1rem;
         color: white;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, .35);
-        font-size: 2vw;
+        font-size: 3vw;
         padding: 0 2vw;
+        margin-top: 1vw;
     }
 
     .most-recent-mobile button i {
-        font-size: 2vw;
+        font-size: 3vw;
         
     }
 
@@ -173,6 +175,103 @@
         display: none;
     }
 
+    /* RECENT UPDATES SECTION 
+    includes the recent updates title (h6) a main image for each update, comic icons, chapter titles and date updated */
+    .recent-updates {
+        display: none;
+    }
+
+    .recent-updates-mobile {
+        display: inline-grid;
+        height: 50vw;
+        grid-template-columns: 1vw 1fr 1vw;
+        grid-template-rows: 5vw 1fr;
+    }
+    
+    .recent-updates-mobile h3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 2.8vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 1.5vw 6vw;
+        color: rgba(0, 0, 0, .56)
+    }
+    
+    .recent-updates-mobile .option {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        display: inline-grid;
+        height: 46vw;
+        grid-template-columns: .01vw repeat(4, calc(55%)) .01vw;
+        grid-template-rows: minmax(150px, 1fr);
+        grid-gap: 4.5vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+    }
+    
+    .recent-updates-mobile .option:before, .recent-updates-mobile .option:after {
+        content: '';
+    }
+    
+    .recent-updates-mobile .option > div {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 80% 20%;
+    }
+    
+    .recent-updates-mobile .option div .main-image {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        width: 100%;
+        height: 80%;
+        border-radius: 1rem;
+        justify-self: center;
+    }
+    
+    .recent-updates-mobile .option div .comic-icon {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        justify-self: center;
+        align-self: center;
+        width: 10vw;
+        height: 10vw;
+        padding: 1vw;
+        border-radius: 1rem;
+    }
+    
+    .recent-updates-mobile .option div .written-info {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        padding-left: 1.5vw;
+    }
+    
+    .recent-updates-mobile .option div .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 2.6vw;
+        padding-top: 1.8vw;
+        padding-bottom: .6vw;
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.6vw;
+        color: rgba(0, 0, 0, 0.54)
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title p{
+       padding-right: 1vw; 
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title i {
+        padding-right: 1vw;
+        font-size: 1.3vw;
+        color: rgba(0, 0, 0, .84)
+    }
 
 }
 
@@ -357,6 +456,10 @@
 
    /* MOST RECENT SECTION */
    /* includes: picture background, title of comic text box, chapter number and name text box, date updated */
+   
+   .most-recent-mobile {
+    display: none;
+}
 
    .most-recent {
        width: 70%;
@@ -367,10 +470,6 @@
        margin-bottom: 9rem;
        margin-left: 15%;
        margin-right: 15%;
-   }
-
-   .most-recent-mobile {
-       display: none;
    }
 
    
@@ -484,6 +583,10 @@
 
    /* RECENT UPDATES SECTION
    includes the recent updates title, 4 selections of recent chapters (image, title, chapter number and name) */
+
+   .recent-updates-mobile {
+       display: none;
+   }
 
    .recent-updates {
        width: 70%;
