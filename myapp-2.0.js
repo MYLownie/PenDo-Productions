@@ -39,7 +39,7 @@ const menuAppear = () => {
 //function must be called
 menuAppear();
 
-
+//SCROLL TO TOP ON DESKTOP
 //two different values, top for Safari, bottom for others (chrome etc.)
 function topFunction() {
     document.body.scrollTop = 0;
