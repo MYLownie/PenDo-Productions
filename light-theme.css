@@ -72,22 +72,22 @@
     .most-recent-mobile {
         display: inline-grid;
         width: 100%;
-        height: 74vw;
+        height: 84vw;
         /* background-color: red; */
         grid-template-columns: 18% 60% 22%;
-        grid-template-rows: 12% 70% 18%;
+        grid-template-rows: 15% 67% 18%;
         padding: 0 3vw;
-        margin-bottom: 6vw;
+        margin-bottom: 5vw;
     }
 
     .most-recent-mobile h3 {
         grid-column: 1 / 3;
         grid-row: 1 / span 1;
         font-family:  'Roboto', sans-serif;
-        font-size: 2.8vw;
+        font-size: 3.7vw;
         text-transform: uppercase;
         align-self: end;
-        padding: 0 0 1.5vw 3vw;
+        padding: 0 0 2vw 3vw;
         color: rgba(0, 0, 0, .56)
     }
 
@@ -108,8 +108,8 @@
     .most-recent-mobile .comic-icon {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        width: 12vw;
-        height: 12vw;
+        width: 14vw;
+        height: 14vw;
         justify-self: start;
         align-self: end;
         margin-left: 3vw;
@@ -119,20 +119,21 @@
     .most-recent-mobile .written-info {
         grid-column: 2 / span 1;
         grid-row: 3 / 4;
+        padding-left: 2vw;
     }
 
     .most-recent-mobile .written-info h6 {
         font-family:  'Roboto', sans-serif;
-        font-size: 3vw;
+        font-size: 3.8vw;
         padding-top: 3vw;
-        padding-bottom: 1.8vw;
+        padding-bottom: 1.3vw;
     }
 
     .most-recent-mobile .written-info .sub-title {
         display: flex;
         align-items: center;
         font-family:  'Roboto', sans-serif;
-        font-size: 3.5vw;
+        font-size: 4.3vw;
         color: rgba(0, 0, 0, 0.54)
     }
 
@@ -183,19 +184,19 @@
 
     .recent-updates-mobile {
         display: inline-grid;
-        height: 50vw;
+        height: 70vw;
         grid-template-columns: 1vw 1fr 1vw;
-        grid-template-rows: 5vw 1fr;
+        grid-template-rows: 15% 1fr;
     }
     
     .recent-updates-mobile h3 {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
         font-family:  'Roboto', sans-serif;
-        font-size: 2.8vw;
+        font-size: 3.7vw;
         text-transform: uppercase;
         align-self: end;
-        padding: 0 0 1.5vw 6vw;
+        padding: 0 0 2vw 6vw;
         color: rgba(0, 0, 0, .56)
     }
     
@@ -203,7 +204,7 @@
         grid-column: 1 / -1;
         grid-row: 2 / span 1;
         display: inline-grid;
-        height: 46vw;
+        height: 55vw;
         grid-template-columns: .01vw repeat(4, calc(55%)) .01vw;
         grid-template-rows: minmax(150px, 1fr);
         grid-gap: 4.5vw;
@@ -226,7 +227,7 @@
         grid-column: 1 / span 2;
         grid-row: 1;
         width: 100%;
-        height: 80%;
+        height: 78%;
         border-radius: 1rem;
         justify-self: center;
     }
@@ -236,8 +237,8 @@
         grid-row: 2 / span 1;
         justify-self: center;
         align-self: center;
-        width: 10vw;
-        height: 10vw;
+        width: 13vw;
+        height: 13vw;
         padding: 1vw;
         border-radius: 1rem;
     }
@@ -250,7 +251,7 @@
     
     .recent-updates-mobile .option div .written-info h6 {
         font-family:  'Roboto', sans-serif;
-        font-size: 2.6vw;
+        font-size: 3.1vw;
         padding-top: 1.8vw;
         padding-bottom: .6vw;
     }
@@ -259,7 +260,7 @@
         display: flex;
         align-items: center;
         font-family:  'Roboto', sans-serif;
-        font-size: 3.6vw;
+        font-size: 4.2vw;
         color: rgba(0, 0, 0, 0.54)
     }
     
@@ -269,7 +270,7 @@
     
     .recent-updates-mobile .option div .written-info .sub-title i {
         padding-right: 1vw;
-        font-size: 1.3vw;
+        font-size: 2vw;
         color: rgba(0, 0, 0, .84)
     }
 
