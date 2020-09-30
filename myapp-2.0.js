@@ -47,3 +47,21 @@ function topFunction() {
 }
 
 
+//Mobile Burger menu appear function
+const mobileBurg = document.getElementById('burger');
+const mobileHidMenu = document.getElementsByClassName('hidden-menu-mobile');
+const scrim = document.getElementsByClassName('scrim');
+
+const mobileDrawer = () => {
+burger.addEventListener('click', ()=>{
+    for (a = 0; a <mobileHidMenu.length; a++) {
+        mobileHidMenu[a].classList.toggle('is-open');
+        scrim[a].classList.toggle('closed-scrim');
+    }
+});
+}
+
+mobileDrawer();
+
+
+console.log(scrim);
