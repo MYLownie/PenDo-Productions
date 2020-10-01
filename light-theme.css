@@ -168,7 +168,6 @@
         display: inline-grid;
         width: 100%;
         height: 84vw;
-        /* background-color: red; */
         grid-template-columns: 18% 60% 22%;
         grid-template-rows: 15% 67% 18%;
         padding: 0 3vw;
@@ -282,6 +281,7 @@
         height: 70vw;
         grid-template-columns: 1vw 1fr 1vw;
         grid-template-rows: 15% 1fr;
+        margin-bottom: 5vw;
     }
     
     .recent-updates-mobile h3 {
@@ -364,6 +364,92 @@
     }
     
     .recent-updates-mobile .option div .written-info .sub-title i {
+        padding-right: 1vw;
+        font-size: 2vw;
+        color: rgba(0, 0, 0, .84)
+    }
+
+    /* LIBRARY SECTION - very similar to recent updates section, just less letters and bigger */
+    .library {
+        display: none;
+    }
+    .library-mobile {
+        display: inline-grid;
+        height: 120vw;
+        grid-template-columns: 1vw 1fr 1vw;
+        grid-template-rows: 5% 1fr;
+        margin-bottom: 5vw;
+    }
+
+    .library-mobile h3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.7vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 2vw 6vw;
+        color: rgba(0, 0, 0, .56)
+    }
+
+    .library-mobile .option {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        display: inline-grid;
+        height: 100%;
+        grid-template-columns: .01vw repeat(2, calc(75%)) .01vw;
+        grid-template-rows: minmax(150px, 1fr);
+        grid-gap: 4.5vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+    }
+
+    .library-mobile .option:before, .library-mobile .option:after {
+        content: '';
+    }
+    
+    .library-mobile .option > div {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 90% 10%;
+    }
+    
+    .library-mobile .option div .main-image {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        width: 100%;
+        height: 90%;
+        border-radius: 1rem;
+        justify-self: center;
+    }
+
+    .library-mobile .option div .written-info {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        padding-left: 1.5vw;
+    }
+    
+    .library-mobile .option div .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 4vw;
+        padding-top: 1.8vw;
+        padding-bottom: .6vw;
+    }
+    
+    .library-mobile .option div .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(0, 0, 0, 0.54)
+    }
+    
+    .library-mobile .option div .written-info .sub-title p{
+       padding-right: 1vw; 
+    }
+    
+    .library-mobile .option div .written-info .sub-title i {
         padding-right: 1vw;
         font-size: 2vw;
         color: rgba(0, 0, 0, .84)
