@@ -4,6 +4,7 @@
    box-sizing: border-box;
    font-weight: normal;
    font-size: 62.5%;
+   font-family:   'Roboto', sans-serif;
 }
 
 @media only screen and (max-width: 767px) {
@@ -127,6 +128,10 @@
         padding: 3vw 2vw 3vw 2vw;
     }
 
+    .hidden-menu-mobile .line:hover {
+        cursor: pointer;
+    }
+
     .hidden-menu-mobile .iden {
         display: flex;
         align-items: center;
@@ -157,6 +162,63 @@
     .hidden-menu-mobile .im-angle-right {
         font-size: 4vw;
     }
+
+    .story1-menu-mobile {
+        position: absolute;
+        top: 0vh;
+        background-color: white;
+        width: 75%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+    }
+
+    .open-drawer {
+        transform: translateX(0);
+    }
+
+    .story1-menu-mobile .title {
+        width: 100%;
+        margin-bottom: 2vw;
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3vw 2vw 3vw 2vw;
+    }
+
+    .story1-menu-mobile .title h5 {
+        font-size: 4.5vw;
+        color: rgba(0, 0, 0, .56);
+    }
+
+    .story1-menu-mobile .title button {
+        color: #512CA8;
+        font-size: 3.5vw;
+        background-color: #FFF;
+        border: none;
+    }
+
+    .story1-menu-mobile .iden:hover {
+        cursor: pointer;
+    }
+
+    .story1-menu-mobile .iden {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
+
+    .story1-menu-mobile .iden p {
+        font-size: 4vw;
+    }
+
+    .story1-menu-mobile .iden i {
+        font-size: 4vw;
+        color: rgba(0, 0, 0, .56);
+    }
+    
 
 
     /* MOST RECENT SECTION - includes the container name, most recent chapter image, icon, chapter number and name, comic name, date released and READ ME button */

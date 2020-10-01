@@ -65,11 +65,37 @@ burger.addEventListener('click', ()=>{
 
 mobileDrawer();
 
+const storyOp1 = document.getElementsByClassName('story1');
+const storyOp2 = document.getElementsByClassName('story2');
+const story1Menu = document.getElementsByClassName ('story1-menu-mobile');
+
+const story1Drawer = () => {
+    storyOp1[0].addEventListener('click', ()=>{
+        for(a = 0; a < story1Menu.length; a++)  {
+            story1Menu[a].classList.add('open-drawer');
+        }
+    });
+}
+story1Drawer();
+
+const backBtn = document.getElementById('drawer-back');
+
+const goBack = () => {
+    backBtn.addEventListener('click', ()=> {
+        story1Menu[0].classList.remove('open-drawer');
+    });
+}
+goBack();
+
 const drawerShut = () => {
     backScrim[0].addEventListener('click', ()=>{
     for (a = 0; a <mobileHidMenu.length; a++) {
-        mobileHidMenu[a].classList.toggle('is-open');
-        backScrim[a].classList.toggle('closed-scrim');
+        if (story1Menu[0].classList.contains('open-drawer')) {
+            pass
+        } else {
+            mobileHidMenu[a].classList.toggle('is-open');
+            backScrim[a].classList.toggle('closed-scrim');
+        }   
     }
 });
 }
