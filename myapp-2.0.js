@@ -50,18 +50,27 @@ function topFunction() {
 //Mobile Burger menu appear function
 const mobileBurg = document.getElementById('burger');
 const mobileHidMenu = document.getElementsByClassName('hidden-menu-mobile');
-const scrim = document.getElementsByClassName('scrim');
+const backScrim = document.getElementsByClassName('scrim');
 
+
+//open the side drawer
 const mobileDrawer = () => {
 burger.addEventListener('click', ()=>{
     for (a = 0; a <mobileHidMenu.length; a++) {
         mobileHidMenu[a].classList.toggle('is-open');
-        scrim[a].classList.toggle('closed-scrim');
+        backScrim[a].classList.toggle('closed-scrim');
     }
 });
 }
 
 mobileDrawer();
 
-
-console.log(scrim);
+const drawerShut = () => {
+    backScrim[0].addEventListener('click', ()=>{
+    for (a = 0; a <mobileHidMenu.length; a++) {
+        mobileHidMenu[a].classList.toggle('is-open');
+        backScrim[a].classList.toggle('closed-scrim');
+    }
+});
+}
+drawerShut();
