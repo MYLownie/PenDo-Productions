@@ -124,8 +124,16 @@ const popUp = document.getElementsByClassName('firstcomic-popup')
 const coverPopup = () => {
     coverOne.addEventListener('click', () => {
         popUp[0].classList.toggle('open');
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        body[0].classList.toggle('locked-scroll');
     })
 }
 coverPopup();
+
+const backCircle = document.getElementById('back-btn');
+
+const popupBack = () => {
+    backCircle.addEventListener('click', () => {
+        popUp[0].classList.toggle('open');
+        body[0].classList.toggle('locked-scroll');
+    });
+}
