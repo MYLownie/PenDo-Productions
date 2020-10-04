@@ -489,6 +489,10 @@
         justify-self: center;
     }
 
+    .library-mobile .option div .main-image:hover {
+        cursor: pointer;
+    }
+
     .library-mobile .option div .written-info {
         grid-column: 1 / span 2;
         grid-row: 2 / span 1;
@@ -519,14 +523,23 @@
         font-size: 2vw;
         color: rgba(0, 0, 0, .84)
     }
-
-    .open {
+    .firstcomic-popup {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-color: white;
+        transform: translateY(50px);
+        transition: all 0.4s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .open {
+        transform: translateY(0);
+        opacity: 100%;
+        pointer-events: all;
     }
 
     .firstcomic-popup img {

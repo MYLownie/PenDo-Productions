@@ -117,3 +117,15 @@ const drawerShut = () => {
 });
 }
 drawerShut();
+
+const coverOne = document.getElementById('comic-one');
+const popUp = document.getElementsByClassName('firstcomic-popup')
+
+const coverPopup = () => {
+    coverOne.addEventListener('click', () => {
+        popUp[0].classList.toggle('open');
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+}
+coverPopup();
