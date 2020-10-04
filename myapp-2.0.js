@@ -65,9 +65,12 @@ burger.addEventListener('click', ()=>{
 
 mobileDrawer();
 
+
 const storyOp1 = document.getElementsByClassName('story1');
 const storyOp2 = document.getElementsByClassName('story2');
 const story1Menu = document.getElementsByClassName ('story1-menu-mobile');
+const story2Menu = document.getElementsByClassName ('story2-menu-mobile');
+
 
 const story1Drawer = () => {
     storyOp1[0].addEventListener('click', ()=>{
@@ -78,11 +81,24 @@ const story1Drawer = () => {
 }
 story1Drawer();
 
-const backBtn = document.getElementById('drawer-back');
+const story2Drawer = () => {
+    storyOp2[0].addEventListener('click', ()=> {
+        for(i = 0; i < story2Menu.length; i++)  {
+            story2Menu[i].classList.add("open-drawer");
+        }
+    });
+}
+story2Drawer();
+
+var backBtn = document.getElementsByClassName('drawer-back');
+console.log(backBtn);
 
 const goBack = () => {
-    backBtn.addEventListener('click', ()=> {
+    backBtn[0].addEventListener('click', () => {
         story1Menu[0].classList.remove('open-drawer');
+    });
+    backBtn[1].addEventListener('click', () => {
+        story2Menu[0].classList.remove('open-drawer');
     });
 }
 goBack();
@@ -90,7 +106,7 @@ goBack();
 const drawerShut = () => {
     backScrim[0].addEventListener('click', ()=>{
     for (a = 0; a <mobileHidMenu.length; a++) {
-        if (story1Menu[0].classList.contains('open-drawer')) {
+        if (story1Menu[0].classList.contains('open-drawer') || story2Menu[0].classList.contains('open-drawer')) {
             pass
         } else {
             mobileHidMenu[a].classList.toggle('is-open');

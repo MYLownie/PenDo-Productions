@@ -163,7 +163,7 @@
         font-size: 4vw;
     }
 
-    .story1-menu-mobile {
+    .story1-menu-mobile, .story2-menu-mobile {
         position: absolute;
         top: 0vh;
         background-color: white;
@@ -177,7 +177,7 @@
         transform: translateX(0);
     }
 
-    .story1-menu-mobile .title {
+    .story1-menu-mobile .title, .story2-menu-mobile .title {
         width: 100%;
         margin-bottom: 2vw;
         border-bottom: 1px solid rgba(0, 0, 0, .12);
@@ -187,34 +187,34 @@
         padding: 3vw 2vw 3vw 2vw;
     }
 
-    .story1-menu-mobile .title h5 {
+    .story1-menu-mobile .title h5, .story2-menu-mobile .title h5 {
         font-size: 4.5vw;
         color: rgba(0, 0, 0, .56);
     }
 
-    .story1-menu-mobile .title button {
+    .story1-menu-mobile .title button, .story2-menu-mobile .title button {
         color: #512CA8;
         font-size: 3.5vw;
         background-color: #FFF;
         border: none;
     }
 
-    .story1-menu-mobile .iden:hover {
+    .story1-menu-mobile .iden:hover, .story2-menu-mobile .iden:hover {
         cursor: pointer;
     }
 
-    .story1-menu-mobile .iden {
+    .story1-menu-mobile .iden, .story2-menu-mobile .iden {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 2vw;
     }
 
-    .story1-menu-mobile .iden p {
+    .story1-menu-mobile .iden p, .story2-menu-mobile .iden p {
         font-size: 4vw;
     }
 
-    .story1-menu-mobile .iden i {
+    .story1-menu-mobile .iden i, .story2-menu-mobile .iden i {
         font-size: 4vw;
         color: rgba(0, 0, 0, .56);
     }
