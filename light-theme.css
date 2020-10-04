@@ -532,7 +532,7 @@
     .firstcomic-popup img {
         top: 0;
         width: 100vw;
-        height: 60vh;
+        height: 55vh;
         z-index: 900;
         border-radius: 0 0 5rem 5rem;
     }
@@ -567,7 +567,7 @@
     }
 
     .firstcomic-popup .written-info p {
-        margin: 0 12vw 0 12vw;
+        margin: 5vw 10vw 0 10vw;
         font-size: 3.5vw;
         color: #512CA8;
         opacity: .75
@@ -580,9 +580,22 @@
 
     .firstcomic-popup .written-info .btns button {
         padding: 3vw 8vw 3vw 8vw;
-        margin: 15vw 2vw 1vw 2vw;
+        margin: 12vw 2vw 1vw 2vw;
         font-size: 4vw;
         border-radius: 1.4rem;
+    }
+
+    .firstcomic-popup .written-info .btns #learn-more {
+        color: #512CA8;
+        background-color: #FFF;
+        border: 1.4px solid #512CA8
+    }
+
+    .firstcomic-popup .written-info .btns #read-here {
+        color: #FFF;
+        background-color: #512CA8;
+        border: 1.4px solid #512CA8;
+        font-weight: normal;
     }
 }
 
