@@ -543,15 +543,15 @@
         top: 4vw;
         left: 4vw;
         z-index: 800;
-        width: 10vw;
-        height: 10vw;
+        width: 13vw;
+        height: 13vw;
         background-color: rgba(0, 0, 0, .70);
         border: none;
     }
 
     .firstcomic-popup #back-btn span {
         color: white;
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
     .firstcomic-popup .written-info {
@@ -563,7 +563,8 @@
         color: #512CA8;
         font-size: 10vw;
         font-weight: bold;
-        padding: 4vw
+        padding: 4vw;
+        margin-top: 4vw;
     }
 
     .firstcomic-popup .written-info p {
@@ -583,6 +584,7 @@
         margin: 12vw 2vw 1vw 2vw;
         font-size: 4vw;
         border-radius: 1.4rem;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     }
 
     .firstcomic-popup .written-info .btns #learn-more {
