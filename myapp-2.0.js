@@ -51,6 +51,7 @@ function topFunction() {
 const mobileBurg = document.getElementById('burger');
 const mobileHidMenu = document.getElementsByClassName('hidden-menu-mobile');
 const backScrim = document.getElementsByClassName('scrim');
+const body = document.getElementsByTagName("BODY");
 
 
 //open the side drawer
@@ -59,10 +60,10 @@ burger.addEventListener('click', ()=>{
     for (a = 0; a <mobileHidMenu.length; a++) {
         mobileHidMenu[a].classList.toggle('is-open');
         backScrim[a].classList.toggle('closed-scrim');
+        body[0].classList.toggle('locked-scroll');
     }
 });
 }
-
 mobileDrawer();
 
 
@@ -91,7 +92,6 @@ const story2Drawer = () => {
 story2Drawer();
 
 var backBtn = document.getElementsByClassName('drawer-back');
-console.log(backBtn);
 
 const goBack = () => {
     backBtn[0].addEventListener('click', () => {
@@ -111,6 +111,7 @@ const drawerShut = () => {
         } else {
             mobileHidMenu[a].classList.toggle('is-open');
             backScrim[a].classList.toggle('closed-scrim');
+            body[0].classList.toggle('locked-scroll');
         }   
     }
 });
