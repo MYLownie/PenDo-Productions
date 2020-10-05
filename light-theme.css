@@ -649,7 +649,7 @@
     
 
 @media only screen and (min-width: 768px) {
-    .hidden-menu-mobile, .story1-menu-mobile, .story2-menu-mobile, .most-recent-mobile, .recent-updates-mobile, .library-mobile {
+    .hidden-menu-mobile, .story1-menu-mobile, .story2-menu-mobile, .most-recent-mobile, .recent-updates-mobile, .library-mobile, .firstcomic-popup, .secondcomic-popup {
         display: none;
     }
 
