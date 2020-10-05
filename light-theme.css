@@ -106,14 +106,23 @@
     
     .hidden-menu-mobile .title {
         width: 100%;
+        height: 15vw;
         margin-bottom: 2vw;
         border-bottom: 1px solid rgba(0, 0, 0, .12);
         padding-left: 2vw;
     }
 
     .hidden-menu-mobile .title img {
-        width: 22vw;
-        height: 13vw;
+        width: 27vw;
+        height: 16vw;
+    }
+
+    .hidden-menu-mobile .title #dark {
+        display: block;
+    }
+
+    .hidden-menu-mobile .title #invert {
+        display: none;
     }
     
     .hidden-menu-mobile .comics {
@@ -191,6 +200,7 @@
 
     .story1-menu-mobile .title, .story2-menu-mobile .title {
         width: 100%;
+        height: 15vw;
         margin-bottom: 2vw;
         border-bottom: 1px solid rgba(0, 0, 0, .12);
         display: flex;
@@ -200,13 +210,13 @@
     }
 
     .story1-menu-mobile .title h5, .story2-menu-mobile .title h5 {
-        font-size: 4.5vw;
+        font-size: 6.5vw;
         color: rgba(0, 0, 0, .56);
     }
 
     .story1-menu-mobile .title button, .story2-menu-mobile .title button {
         color: #512CA8;
-        font-size: 3.5vw;
+        font-size: 5vw;
         background-color: #FFF;
         border: none;
     }
@@ -332,7 +342,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: #8558DA;
+        background-color: #512CA8;
         border: none;
         border-radius: 1rem;
         color: white;
@@ -603,7 +613,7 @@
 
     .firstcomic-popup .written-info p, .secondcomic-popup .written-info p {
         margin: 5vw 10vw 0 10vw;
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         color: #512CA8;
         opacity: .75
     }

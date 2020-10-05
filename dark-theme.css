@@ -4,6 +4,661 @@
    box-sizing: border-box;
    font-weight: normal;
    font-size: 62.5%;
+   font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    ::-webkit-scrollbar {
+        display: none;
+      }
+
+    body {
+        background-color: #121212;
+      }
+
+    .locked-scroll {
+        overflow-y: hidden;
+    }
+
+    .closed-scrim {
+        display: none;
+    }
+
+    body .scrim {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, .70);
+        z-index: 1000;
+        
+    }
+
+      /* TOP NAVIGATION BAR - includes burger svg, burger menu, logo, dark mode svg */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 15vw;
+        display: inline-grid;
+        background-color: #292929;
+        grid-template-columns: 10% 20% 60% 10%;
+        grid-template-rows: auto;
+        padding: 0 2vw 0 2vw;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .nav-up {
+        top: -15vw;
+    }
+
+    #logo {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #dark {
+        display: none;
+        
+    }
+    #logo img {
+        width: 27vw;
+        height: 15vw;
+    }
+
+    .hidden-menu {
+        display: none;
+    }
+
+    nav #burger {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        fill: white;
+        align-self: center;
+        justify-self: center;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    nav #sun {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        fill: white;
+        align-self: center;
+        justify-self: center;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    /* Hidden Menu Styling */
+    
+    .hidden-menu-mobile {
+        position: fixed;
+        top: 0vh;
+        background-color: #121212;
+        width: 75%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+        z-index: 1001;
+    }
+
+    .is-open {
+        transform: translateX(0);
+    }
+    
+    .hidden-menu-mobile .title {
+        width: 100%;
+        height: 15vw;
+        margin-bottom: 2vw;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-left: 2vw;
+    }
+
+    .hidden-menu-mobile .title img {
+        width: 27vw;
+        height: 16vw;
+    }
+
+    .hidden-menu-mobile .title #dark {
+        display: none;
+    }
+    
+    .hidden-menu-mobile .comics {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .hidden-menu-mobile .social-media-mobile {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hidden-menu-mobile h6 {
+        font-family:   'Roboto', sans-serif;
+        font-size: 4.2vw;
+        color: rgba(255, 255, 255, 0.56);
+        padding: 1vw 0 1vw 1vw;
+    }
+
+    .hidden-menu-mobile .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3vw 2vw 3vw 2vw;
+    }
+
+    .hidden-menu-mobile .line:hover {
+        cursor: pointer;
+    }
+
+    .hidden-menu-mobile .iden {
+        display: flex;
+        align-items: center;
+    }
+    .hidden-menu-mobile .comic-icon {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 1rem;
+        margin-right: 2vw;
+    }
+
+    .hidden-menu-mobile p {
+        font-family:   'Roboto', sans-serif;
+        font-size: 4.6vw;
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .hidden-menu-mobile i{
+        margin-right: 3vw;
+        font-size: 5vw;
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .hidden-menu-mobile .im-angle-right, .hidden-menu-mobile span {
+        margin-right: 0;
+        color: rgba(255, 255, 255, 0.56);
+        font-size: 5vw;
+    }
+
+    .hidden-menu-mobile .im-angle-right {
+        font-size: 4vw;
+    }
+
+    .story1-menu-mobile, .story2-menu-mobile {
+        position: fixed;
+        top: 0vh;
+        background-color: #121212;
+        width: 75%;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+        z-index: 1002;
+    }
+
+    .open-drawer {
+        transform: translateX(0);
+    }
+
+    .story1-menu-mobile .title, .story2-menu-mobile .title {
+        width: 100%;
+        height: 15vw;
+        margin-bottom: 2vw;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3vw 2vw 3vw 2vw;
+    }
+
+    .story1-menu-mobile .title h5, .story2-menu-mobile .title h5 {
+        font-size: 6.5vw;
+        color: rgba(255, 255, 255, 0.56);
+    }
+
+    .story1-menu-mobile .title button, .story2-menu-mobile .title button {
+        color: #8558DA;
+        font-size: 5vw;
+        background-color: #121212;
+        border: none;
+    }
+
+    .story1-menu-mobile .iden:hover, .story2-menu-mobile .iden:hover {
+        cursor: pointer;
+    }
+
+    .story1-menu-mobile .iden, .story2-menu-mobile .iden {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4vw 2vw;
+    }
+
+    .story1-menu-mobile .iden > div, .story2-menu-mobile .iden > div {
+        display: flex;
+    }
+
+    .story1-menu-mobile .iden p, .story2-menu-mobile .iden p {
+        font-size: 4vw;
+        color: rgba(255, 255, 255, .75);
+        }
+
+    .story1-menu-mobile .iden i, .story2-menu-mobile .iden i {
+        font-size: 4vw;
+        color: rgba(255, 255, 255, 0.56);
+    }
+    
+    .story1-menu-mobile span, .story2-menu-mobile span {
+        color: rgba(255, 255, 255, 0.56);
+        padding-right: 2.5vw;
+    }
+
+
+    /* MOST RECENT SECTION - includes the container name, most recent chapter image, icon, chapter number and name, comic name, date released and READ ME button */
+    .most-recent {
+        display: none;
+    }
+
+    .most-recent-mobile {
+        display: inline-grid;
+        width: 100%;
+        height: 84vw;
+        grid-template-columns: 18% 60% 22%;
+        grid-template-rows: 15% 67% 18%;
+        padding: 0 3vw;
+        margin-top: 14vw;
+        margin-bottom: 5vw;
+    }
+
+    .most-recent-mobile h3 {
+        grid-column: 1 / 3;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.7vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 2vw 3vw;
+        color: rgba(255, 255, 255, 0.56)
+    }
+
+    .most-recent-mobile .main-image {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        filter: brightness(70%);
+    }
+
+    .most-recent-mobile .update-info {
+        grid-column-start: 1/3;
+        grid-row: 3 / 4;
+        display: flex;
+    }
+
+    .most-recent-mobile .comic-icon {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        width: 14vw;
+        height: 14vw;
+        justify-self: start;
+        align-self: end;
+        border-radius: 1rem;
+        filter: brightness(70%);
+    }
+
+    .most-recent-mobile .written-info {
+        grid-column: 2 / span 1;
+        grid-row: 3 / 4;
+    }
+
+    .most-recent-mobile .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.8vw;
+        padding-top: 3vw;
+        padding-bottom: 1.3vw;
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .most-recent-mobile .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(255, 255, 255, 0.54)
+    }
+
+    .most-recent-mobile .written-info .sub-title p {
+        padding-right: 2vw;
+    }
+
+    .most-recent-mobile .written-info .sub-title i {
+        padding-right: 2vw;
+        font-size: 2vw;
+        color: rgba(255, 255, 255, 0.84)
+    }
+
+    .most-recent-mobile button {
+        grid-column: 3 / span 1;
+        grid-row: 3 / 4;
+        justify-self: center;
+        width: 18vw;
+        height: 10vw;
+        align-self: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #8558DA;
+        border: none;
+        border-radius: 1rem;
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, .35);
+        font-size: 3vw;
+        padding: 0 2vw;
+        margin-top: 1vw;
+    }
+
+    .most-recent-mobile button i {
+        font-size: 3vw;
+        
+    }
+
+    .recent-updates, .library, .aboutartist, .footer {
+        display: none;
+    }
+
+    /* RECENT UPDATES SECTION 
+    includes the recent updates title (h6) a main image for each update, comic icons, chapter titles and date updated */
+    .recent-updates {
+        display: none;
+    }
+
+    .recent-updates-mobile {
+        display: inline-grid;
+        height: 70vw;
+        grid-template-columns: 1vw 1fr 1vw;
+        grid-template-rows: 15% 1fr;
+        margin-bottom: 5vw;
+    }
+    
+    .recent-updates-mobile h3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.7vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 2vw 6vw;
+        color: rgba(255, 255, 255, 0.56)
+    }
+    
+    .recent-updates-mobile .option {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        display: inline-grid;
+        height: 55vw;
+        grid-template-columns: .01vw repeat(4, calc(55%)) .01vw;
+        grid-template-rows: minmax(150px, 1fr);
+        grid-gap: 4.5vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+    }
+    
+    .recent-updates-mobile .option:before, .recent-updates-mobile .option:after {
+        content: '';
+    }
+    
+    .recent-updates-mobile .option > div {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 80% 20%;
+    }
+    
+    .recent-updates-mobile .option div .main-image {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        width: 100%;
+        height: 78%;
+        border-radius: 1rem;
+        justify-self: center;
+        filter: brightness(70%);
+    }
+    
+    .recent-updates-mobile .option div .comic-icon {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        justify-self: center;
+        align-self: center;
+        width: 13vw;
+        height: 13vw;
+        padding: 1vw;
+        border-radius: 1rem;
+        filter: brightness(70%);
+    }
+    
+    .recent-updates-mobile .option div .written-info {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+        padding-left: 1.5vw;
+    }
+    
+    .recent-updates-mobile .option div .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.6vw;
+        padding-top: 1.8vw;
+        padding-bottom: .6vw;
+        color: rgba(255, 255, 255, 0.75)
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 4.6vw;
+        color: rgba(255, 255, 255, 0.54)
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title p{
+       padding-right: 1vw; 
+    }
+    
+    .recent-updates-mobile .option div .written-info .sub-title i {
+        padding-right: 1vw;
+        font-size: 2vw;
+        color: rgba(255, 255, 255, 0.84)
+    }
+
+    /* LIBRARY SECTION - very similar to recent updates section, just less letters and bigger */
+    .library {
+        display: none;
+    }
+    .library-mobile {
+        display: inline-grid;
+        height: 130vw;
+        grid-template-columns: 1vw 1fr 1vw;
+        grid-template-rows: 5% 1fr;
+        margin-bottom: 5vw;
+    }
+
+    .library-mobile h3 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        font-family:  'Roboto', sans-serif;
+        font-size: 3.7vw;
+        text-transform: uppercase;
+        align-self: end;
+        padding: 0 0 2vw 6vw;
+        color: rgba(255, 255, 255, 0.56)
+    }
+
+    .library-mobile .option {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+        display: inline-grid;
+        height: 100%;
+        grid-template-columns: .01vw repeat(2, calc(75%)) .01vw;
+        grid-template-rows: minmax(150px, 1fr);
+        grid-gap: 4.5vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+    }
+
+    .library-mobile .option:before, .library-mobile .option:after {
+        content: '';
+    }
+    
+    .library-mobile .option > div {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 90% 10%;
+    }
+    
+    .library-mobile .option div .main-image {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+        width: 100%;
+        height: 90%;
+        border-radius: 1rem;
+        justify-self: center;
+        filter: brightness(70%);
+    }
+
+    .library-mobile .option div .main-image:hover {
+        cursor: pointer;
+    }
+
+    .library-mobile .option div .written-info {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+        padding-left: 1.5vw;
+    }
+    
+    .library-mobile .option div .written-info h6 {
+        font-family:  'Roboto', sans-serif;
+        font-size: 4vw;
+        padding-top: 1.8vw;
+        padding-bottom: .6vw;
+        color: rgba(255, 255, 255, 0.75)
+    }
+    
+    .library-mobile .option div .written-info .sub-title {
+        display: flex;
+        align-items: center;
+        font-family:  'Roboto', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(255, 255, 255, 0.54)
+    }
+    
+    .library-mobile .option div .written-info .sub-title p{
+       padding-right: 1vw; 
+    }
+    
+    .library-mobile .option div .written-info .sub-title i {
+        padding-right: 1vw;
+        font-size: 2vw;
+        color: rgba(255, 255, 255, 0.84)
+    }
+    .firstcomic-popup, .secondcomic-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #121212;
+        transition: all 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .open {
+        transform: translateY(0);
+        opacity: 100%;
+        pointer-events: all;
+    }
+
+    .firstcomic-popup img, .secondcomic-popup img {
+        top: 0;
+        width: 100vw;
+        height: 55vh;
+        z-index: 900;
+        border-radius: 0 0 5rem 5rem;
+        filter: brightness(70%);
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14)
+    }
+
+    .firstcomic-popup #back-btn, .secondcomic-popup #back-btn {
+        border-radius: 100%;
+        position: absolute;
+        top: 4vw;
+        left: 4vw;
+        z-index: 800;
+        width: 13vw;
+        height: 13vw;
+        background-color: rgba(0, 0, 0, .70);
+        border: none;
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0,0,0,.12);
+    }
+
+    #back-btn:focus {
+        outline: none;
+    }
+
+    .firstcomic-popup #back-btn span, .secondcomic-popup #back-btn span {
+        color: white;
+        font-size: 7vw;
+    }
+
+    .firstcomic-popup .written-info, .secondcomic-popup .written-info {
+        text-align: center;
+        font-family:  'Roboto', sans-serif;
+    }
+    
+    .firstcomic-popup .written-info h3, .secondcomic-popup .written-info h3 {
+        color: #8558DA;
+        font-size: 10vw;
+        font-weight: bold;
+        padding: 4vw;
+        margin-top: 4vw;
+    }
+
+    .firstcomic-popup .written-info p, .secondcomic-popup .written-info p {
+        margin: 5vw 10vw 0 10vw;
+        font-size: 4.5vw;
+        color: #8558DA;
+        opacity: .75
+    }
+
+    .firstcomic-popup .written-info .btns, .secondcomic-popup .written-info .btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    .firstcomic-popup .written-info .btns button,  .secondcomic-popup .written-info .btns button {
+        padding: 3vw 8vw 3vw 8vw;
+        margin: 12vw 2vw 1vw 2vw;
+        font-size: 4vw;
+        border-radius: 1.4rem;
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0,0,0,.12);
+    }
+
+    .firstcomic-popup .written-info .btns #learn-more, .secondcomic-popup .written-info .btns #learn-more {
+        color: #8558DA;
+        background-color: #121212;
+        border: 1.4px solid #8558DA
+    }
+
+    .firstcomic-popup .written-info .btns #read-here, .secondcomic-popup .written-info .btns #read-here {
+        color: rgba(0, 0, 0, 1);
+        background-color: #8558DA;
+        border: 1.4px solid #8558DA;
+        font-weight: normal;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1125,7 +1780,7 @@
        height: 100%;
        object-fit: cover;
        border-radius: 4em;
-       filter: brightness(70%)
+       filter: brightness(70%);
    }
 
    .library .container .info-content {
