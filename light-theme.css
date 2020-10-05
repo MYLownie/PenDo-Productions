@@ -219,7 +219,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2vw;
+        padding: 4vw 2vw;
+    }
+
+    .story1-menu-mobile .iden > div, .story2-menu-mobile .iden > div {
+        display: flex;
     }
 
     .story1-menu-mobile .iden p, .story2-menu-mobile .iden p {
@@ -231,6 +235,10 @@
         color: rgba(0, 0, 0, .56);
     }
     
+    .story1-menu-mobile span, .story2-menu-mobile span {
+        color: rgb(0, 0, 0);
+        padding-right: 2.5vw;
+    }
 
 
     /* MOST RECENT SECTION - includes the container name, most recent chapter image, icon, chapter number and name, comic name, date released and READ ME button */
@@ -531,7 +539,7 @@
         font-size: 2vw;
         color: rgba(0, 0, 0, .84)
     }
-    .firstcomic-popup {
+    .firstcomic-popup, .secondcomic-popup {
         position: fixed;
         top: 0;
         left: 0;
@@ -549,7 +557,7 @@
         pointer-events: all;
     }
 
-    .firstcomic-popup img {
+    .firstcomic-popup img, .secondcomic-popup img {
         top: 0;
         width: 100vw;
         height: 55vh;
@@ -558,7 +566,7 @@
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14)
     }
 
-    .firstcomic-popup #back-btn {
+    .firstcomic-popup #back-btn, .secondcomic-popup #back-btn {
         border-radius: 100%;
         position: absolute;
         top: 4vw;
@@ -575,17 +583,17 @@
         outline: none;
     }
 
-    .firstcomic-popup #back-btn span {
+    .firstcomic-popup #back-btn span, .secondcomic-popup #back-btn span {
         color: white;
         font-size: 7vw;
     }
 
-    .firstcomic-popup .written-info {
+    .firstcomic-popup .written-info, .secondcomic-popup .written-info {
         text-align: center;
         font-family:  'Roboto', sans-serif;
     }
     
-    .firstcomic-popup .written-info h3 {
+    .firstcomic-popup .written-info h3, .secondcomic-popup .written-info h3 {
         color: #512CA8;
         font-size: 10vw;
         font-weight: bold;
@@ -593,19 +601,19 @@
         margin-top: 4vw;
     }
 
-    .firstcomic-popup .written-info p {
+    .firstcomic-popup .written-info p, .secondcomic-popup .written-info p {
         margin: 5vw 10vw 0 10vw;
         font-size: 3.5vw;
         color: #512CA8;
         opacity: .75
     }
 
-    .firstcomic-popup .written-info .btns {
+    .firstcomic-popup .written-info .btns, .secondcomic-popup .written-info .btns {
         display: flex;
         justify-content: center;
     }
 
-    .firstcomic-popup .written-info .btns button {
+    .firstcomic-popup .written-info .btns button,  .secondcomic-popup .written-info .btns button {
         padding: 3vw 8vw 3vw 8vw;
         margin: 12vw 2vw 1vw 2vw;
         font-size: 4vw;
@@ -613,13 +621,13 @@
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0,0,0,.12);
     }
 
-    .firstcomic-popup .written-info .btns #learn-more {
+    .firstcomic-popup .written-info .btns #learn-more, .secondcomic-popup .written-info .btns #learn-more {
         color: #512CA8;
         background-color: #FFF;
         border: 1.4px solid #512CA8
     }
 
-    .firstcomic-popup .written-info .btns #read-here {
+    .firstcomic-popup .written-info .btns #read-here, .secondcomic-popup .written-info .btns #read-here {
         color: #FFF;
         background-color: #512CA8;
         border: 1.4px solid #512CA8;

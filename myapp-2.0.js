@@ -119,24 +119,36 @@ const drawerShut = () => {
 drawerShut();
 
 const coverOne = document.getElementById('comic-one');
-const popUp = document.getElementsByClassName('firstcomic-popup')
+const popUp1 = document.getElementsByClassName('firstcomic-popup')
+const coverTwo = document.getElementById('comic-two');
+const popUp2 = document.getElementsByClassName('secondcomic-popup');
+
+console.log(coverOne);
 
 const coverPopup = () => {
     coverOne.addEventListener('click', () => {
-        popUp[0].classList.toggle('open');
+        popUp1[0].classList.toggle('open');
         body[0].classList.toggle('locked-scroll');
-    })
+    });
+    coverTwo.addEventListener('click', () => {
+        popUp2[0].classList.toggle('open');
+        body[0].classList.toggle('locked-scroll');
+    });
 }
 coverPopup();
 
 const backCircle = document.getElementById('back-btn');
 
 
-function popupBack() {
-    popUp[0].classList.toggle('open');
+function popupBack1() {
+    popUp1[0].classList.toggle('open');
     body[0].classList.toggle('locked-scroll');
 }
 
+function popupBack2() {
+    popUp2[0].classList.toggle('open');
+    body[0].classList.toggle('locked-scroll');
+}
 
 var lastScrollTop = 0;
 var navbar = document.getElementsByTagName('NAV')[0];
