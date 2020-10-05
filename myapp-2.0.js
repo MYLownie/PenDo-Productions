@@ -131,9 +131,8 @@ coverPopup();
 
 const backCircle = document.getElementById('back-btn');
 
-const popupBack = () => {
-    backCircle.addEventListener('click', () => {
-        popUp[0].classList.toggle('open');
-        body[0].classList.toggle('locked-scroll');
-    });
+
+function popupBack() {
+    popUp[0].classList.toggle('open');
+    body[0].classList.toggle('locked-scroll');
 }

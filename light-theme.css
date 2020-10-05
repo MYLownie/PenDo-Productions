@@ -561,6 +561,10 @@
         border: none;
     }
 
+    #back-btn:focus {
+        outline: none;
+    }
+
     .firstcomic-popup #back-btn span {
         color: white;
         font-size: 7vw;
