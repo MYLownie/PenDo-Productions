@@ -23,7 +23,7 @@
     body .scrim {
         width: 100%;
         height: 100%;
-        position: absolute;
+        position: fixed;
         background-color: rgba(0, 0, 0, .70);
         
     }
@@ -91,7 +91,7 @@
     /* Hidden Menu Styling */
     
     .hidden-menu-mobile {
-        position: absolute;
+        position: fixed;
         top: 0vh;
         background-color: white;
         width: 75%;
@@ -176,7 +176,7 @@
     }
 
     .story1-menu-mobile, .story2-menu-mobile {
-        position: absolute;
+        position: fixed;
         top: 0vh;
         background-color: white;
         width: 75%;
