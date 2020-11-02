@@ -107,17 +107,8 @@
             </div>
         </div>
 
-        <div class="pv-nav-btns">
-            <button type="button" class="mdc-button foo-button" id="prevBtn" onclick="setSliderValue(-1)">
-                <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Previous</span>
-            </button>
-            
-            <button type="button" class="mdc-button foo-button" id="nextBtn" onclick="setSliderValue(1)">
-                <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Next</span>
-            </button>
-        </div>
+        <button class="pv-nav-btns" id="prevBtn" onclick="setSliderValue(-1)">Previous</button>
+        <button class="pv-nav-btns" id="nextBtn" onclick="setSliderValue(1)">Next</button>
 
         <div class="pv-range-wrap">
             <div class="middle">
@@ -128,14 +119,14 @@
           </div>
 
           <div class="pv-chapter-btns">
-            <button type="button" class="mdc-button foo-button" id="prevBtn" onclick="setSliderValue(-1)">
+            <button type="button" class="mdc-button foo-button" id="prevChap">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label"><span class="material-icons">
                     skip_previous
                     </span> Previous</span>
             </button>
             
-            <button type="button" class="mdc-button foo-button" id="nextBtn" onclick="setSliderValue(1)">
+            <button type="button" class="mdc-button foo-button" id="nextChap">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">Next 
                     <span class="material-icons">

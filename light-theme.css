@@ -1531,7 +1531,7 @@
         display: block;
         width: 0;
         height: 100%;
-        background-color: #6200ee;
+        background-color: #512DA8;
     }
 
     .pv-range-wrap .slider {
@@ -1549,7 +1549,7 @@
         -webkit-appearance: none;
         width: 30px;
         height: 30px;
-        background-color: #6200ee;
+        background-color: #512DA8;
         border-radius: 50%;
         cursor: pointer;
         outline: none;
@@ -1569,8 +1569,62 @@
         outline: none;
     }
 
-    /* Page Turn Btns */
+    .bubble {
+        position: relative;
+        background: black;
+        opacity: 50%;
+        color: white;
+        padding: 1.5vw 2vw;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 1.4rem);
+    } 
 
+    .bubble::after {
+        content: "";
+        position: absolute;
+          height: 0;
+          width: 0;
+          top: -5px;
+          left: 19px;
+          border-width: 0 9px 9px;
+          border-style: solid;
+          border-color: transparent transparent black;
+      }
+
+    /* Page Turn Btns */
+    #prevBtn, #nextBtn {
+        position: relative;
+        overflow: hidden;
+        transition: background 400ms;
+        color: #fff;
+        background-color: #512DA8;
+        padding: 1rem 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        outline: 0;
+        border: 0;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+        cursor: pointer;
+    }
+
+    span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
 }
 
 
