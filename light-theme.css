@@ -1622,7 +1622,26 @@
         to {
           transform: scale(4);
           opacity: 0;
+          filter: blur(2px);
         }
+      }
+
+      /* CAROUSEL VIEWBOX */
+
+      .pv-carousel-container {
+        width: 70vw;
+        margin: 5rem 15%;
+        overflow: hidden;
+      }
+      
+      .pv-carousel-slide {
+        display: flex;
+        width: 100%;
+      }
+      
+      .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
       }
       
 }
