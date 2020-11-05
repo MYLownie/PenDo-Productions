@@ -1425,7 +1425,7 @@
     .pv-toolbar {
         display: flex;
         justify-content: space-between;
-        margin: 0 15%;
+        margin: 0 15% 1rem;
     }
     .pv-toolbar button {
         display: flex;
@@ -1453,6 +1453,11 @@
         cursor: pointer;
     }
 
+    .pv-chap-dropdown button:focus {
+        outline: none;
+        background-color: #F5F5F5;
+    }
+
     .pv-toolbar .pv-chap-dropdown button:focus + ul {
         opacity: 1;
         pointer-events: all;
@@ -1461,8 +1466,22 @@
 
     .pv-toolbar #scroll-btn {
         border-radius: 30px;
+        width: 8rem;
+        justify-content: center;
         background-color: #512DA8;
-        color: #f1f1f1;
+        color: white;
+        letter-spacing: 0.1rem;
+        transition: all 0.3s ease-out;
+    }
+
+    #scroll-btn:hover {
+        cursor: pointer;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        background-color: #673AB7;
+    }
+
+    #scroll-btn:focus {
+        outline: none;
     }
 
     .pv-toolbar .pv-menu-content {
@@ -1506,9 +1525,9 @@
    /* Range Slider */
    .pv-range-wrap {
     position: relative;
-    margin: 10rem auto 0;
-    width: 50%;
-    height: 10rem;
+    margin: 5rem auto 0;
+    width: 55%;
+    height: 4rem;
     }
 
     .range {
@@ -1562,7 +1581,7 @@
     }
     
     .pv-range-wrap .slider:active::-webkit-slider-thumb {
-        box-shadow: 0 0 0 40px rgba(98,0,238,.2);
+        box-shadow: 0 0 0 30px rgba(98,0,238,.2);
     }
     
     .pv-range-wrap .slider:focus {
@@ -1593,6 +1612,13 @@
       }
 
     /* Page Turn Btns */
+
+    .pv-nav-btn-container {
+        margin: 0 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     #prevBtn, #nextBtn {
         position: relative;
         overflow: hidden;
@@ -1608,6 +1634,10 @@
         border-radius: 0.25rem;
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
         cursor: pointer;
+    }
+
+    #prevBtn:hover, #nextBtn:hover {
+        background-color: #673AB7;
     }
 
     span.ripple {
@@ -1630,7 +1660,7 @@
 
       .pv-carousel-container {
         width: 70vw;
-        margin: 5rem 15%;
+        margin: 0 15% ;
         overflow: hidden;
       }
       
@@ -1644,6 +1674,39 @@
         height: auto;
       }
       
+    /* Chapter Nav Buttons */
+
+    .pv-chapter-btns-container {
+        margin: 0 15% 5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pv-chapter-btns {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        border: none;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        border-radius: 0.4rem;
+        background-color: white;
+    }
+
+    .pv-chapter-btns:hover {
+        background-color: #F1f1f1;
+        cursor: pointer;
+    }
+}
+    .pv-chapter-btns:focus {
+        background-color: #F1f1f1;
+        cursor: pointer;
+        outline: none;
+    }
 }
 
 
