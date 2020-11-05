@@ -1660,7 +1660,7 @@
 
       .pv-carousel-container {
         width: 70vw;
-        margin: 0 15% ;
+        margin: 0 auto 4rem;
         overflow: hidden;
       }
       
