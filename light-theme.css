@@ -1593,10 +1593,12 @@
         background: black;
         opacity: 50%;
         color: white;
-        padding: 1.5vw 2vw;
+        font-size: 2rem;
+        padding: 1.5rem;
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 1.4rem);
+        transform: translate(-50%, -8.6rem);
+        border-radius: 5px;
     } 
 
     .bubble::after {
@@ -1604,8 +1606,9 @@
         position: absolute;
           height: 0;
           width: 0;
-          top: -5px;
-          left: 19px;
+          top: 54px;
+          left: 12.117px;
+          transform: rotate(180deg);
           border-width: 0 9px 9px;
           border-style: solid;
           border-color: transparent transparent black;
@@ -1706,6 +1709,11 @@
         background-color: #F1f1f1;
         cursor: pointer;
         outline: none;
+    }
+
+    /* PV Footer */
+    .pv-icons {
+        color: white;
     }
 }
 
