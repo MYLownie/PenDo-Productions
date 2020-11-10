@@ -10,6 +10,8 @@ function createRipple(event) {
     circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
     circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
     circle.classList.add("ripple");
+
+    console.log(event.clientX, button.offsetLeft, circle.style.left);
   
     const ripple = button.getElementsByClassName("ripple")[0];
   
@@ -77,6 +79,8 @@ const viewBox = document.getElementsByClassName('pv-carousel-container');
 //grab btns
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
+const invprevBtn = document.getElementById('inv-leftbtn');
+const invnextBtn = document.getElementById('inv-rightbtn');
 
 //counter - should eventually pull from the slider value
 let counter = 0;
@@ -100,10 +104,28 @@ prevBtn.addEventListener('click', () => {
   pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
 });
 
+invnextBtn.addEventListener('click', () => {
+  if(counter >= pages.length -1) return;
+  pageSlider[0].style.transition = "transform 0.4s ease-in-out";
+  counter++
+  pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+});
+
+invprevBtn.addEventListener('click', () => {
+ if(counter <=0) return;
+ pageSlider[0].style.transition = "transform 0.4s ease-in-out";
+ counter--
+ pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+});
+
+
+
 function setPage(range) {
   counter = range.value;
   pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
   pageSlider[0].style.transition = "transform 0.4s ease-in-out";
 };
+
+
 
 console.log(sliderMax);

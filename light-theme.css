@@ -1428,7 +1428,9 @@
         margin: 0 15% 1rem;
     }
     .pv-toolbar button {
-        display: flex;
+       position: relative;
+       overflow: hidden;
+       display: flex;
        font-size: 1.4rem;
        align-items: baseline;
        justify-content: space-between;
@@ -1465,6 +1467,7 @@
     }
 
     .pv-toolbar #scroll-btn {
+        position: relative;
         border-radius: 30px;
         width: 8rem;
         justify-content: center;
@@ -1648,7 +1651,7 @@
         border-radius: 50%;
         transform: scale(0);
         animation: ripple 600ms linear;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
       }
       
       @keyframes ripple {
@@ -1677,17 +1680,32 @@
         width: 100%;
         height: auto;
       }
-      
-      .pv-carousel .invis-btns {
-        position: absolute;
-        display: flex;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-      }
 
       .inv-leftbtn, .inv-rightbtn {
+          position: absolute;
           height: 100%;
+          background-color: transparent;
+          border: none;
+          z-index: 1000;
+      }
+
+      .inv-rightbtn:hover, .inv-leftbtn:hover {
+          cursor: pointer;
+      }
+
+      .inv-rightbtn:focus, .inv-leftbtn:focus {
+          cursor: pointer;
+          outline: none;
+      }
+
+      .inv-rightbtn {
+          right: 0;
+          width: 50%;
+      }
+
+      .inv-leftbtn {
+          left: 0;
+          width: 30%;
       }
     /* Chapter Nav Buttons */
 
