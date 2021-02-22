@@ -1066,7 +1066,7 @@
    }
 
    .linebreak {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -1231,7 +1231,7 @@
 
 
    .linebreak2 {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -1469,7 +1469,7 @@
     .pv-toolbar #scroll-btn {
         position: relative;
         border-radius: 30px;
-        width: 8rem;
+        width: 10rem;
         justify-content: center;
         background-color: #512DA8;
         color: white;
@@ -1528,7 +1528,7 @@
    /* Range Slider */
    .pv-range-wrap {
         position: relative;
-        margin: 7rem auto 0;
+        margin: 7rem auto 4rem;
         width: 55%;
         height: 4rem;
     }
@@ -1640,10 +1640,12 @@
         border-radius: 0.25rem;
         box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
         cursor: pointer;
+        transition: all 0.2s;
     }
 
     #prevBtn:hover, #nextBtn:hover {
         background-color: #673AB7;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     }
 
     span.ripple {
@@ -1710,7 +1712,7 @@
     /* Chapter Nav Buttons */
 
     .pv-chapter-btns-container {
-        margin: 0 15% 2rem;
+        margin: 2rem 15% 2rem;
         display: flex;
         justify-content: center;
     }
@@ -1731,12 +1733,12 @@
     }
 
     .pv-chapter-btns:hover {
-        background-color: #F1f1f1;
+        background-color: #cccccc;
         cursor: pointer;
     }
 }
     .pv-chapter-btns:focus {
-        background-color: #F1f1f1;
+        background-color: #cccccc;
         cursor: pointer;
         outline: none;
     }
@@ -2085,7 +2087,7 @@
    }
 
    .linebreak {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -2249,7 +2251,7 @@
 
 
    .linebreak2 {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -2672,7 +2674,7 @@
    }
 
    .linebreak {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -2836,7 +2838,7 @@
    }
 
    .linebreak2 {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -3260,7 +3262,7 @@
    }
 
    .linebreak {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
@@ -3423,7 +3425,7 @@
    }
 
    .linebreak2 {
-       border-bottom: 1px solid rgba(0, 0, 0, .12);
+       border-bottom: 1px solid rgba(0, 0, 0, .20);
        margin-left: 15%;
        margin-right: 15%;
    }
