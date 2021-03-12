@@ -22,11 +22,6 @@ function createRipple(event) {
     button.appendChild(circle);
   }
   
-  const buttons = document.getElementsByTagName("button");
-  for (const button of buttons) {
-    button.addEventListener("click", createRipple);
-  }
-
 //Setting Max # of Pages to be = to amount of items with class name Pages
 const sliderMax = document.getElementsByClassName('pages').length -1;
 let slider = document.getElementById('slider');
