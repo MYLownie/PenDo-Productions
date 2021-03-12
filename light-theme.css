@@ -688,6 +688,7 @@
        align-self: center;
        justify-self: end;
        grid-row-start: 1;
+       z-index: 900;
        width: 4.3rem;
        height: 4.3rem;
        max-width: 40rem;
@@ -724,6 +725,7 @@
 
    .burger-active {
        opacity: 1 !important;
+       transform: translate(0px) !important;
    }
 
    .hidden-menu-mobile {
@@ -736,8 +738,10 @@
        align-self: center; 
        display: flex;
        opacity: 0;
+       z-index: 600;
        justify-content: space-around;
-       transition: 0.3s ease-out;
+       transform: translate(50px);
+       transition: 0.4s ease-out;
    }
 
    .hidden-menu button:hover {
