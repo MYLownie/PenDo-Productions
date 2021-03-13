@@ -759,6 +759,7 @@
 
    .hidmenu_but {
        opacity: 0;
+       pointer-events: none;
    }
    
    .visible_but{
@@ -766,6 +767,7 @@
     animation-duration: 1.5s;
     animation-timing-function: cubic-bezier(.41,.52,.27,.94);
     animation-fill-mode: forwards;
+    pointer-events: auto;
 }
 
 @keyframes butflip{
