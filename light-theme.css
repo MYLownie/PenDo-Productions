@@ -1814,6 +1814,85 @@
     .pv-footer .copyright p {
         font-size: 1.3rem;
     }
+
+    /* COMIC ABOUT PAGES */
+    /* COMIC ABOUT PAGES */
+    /* COMIC ABOUT PAGES */
+
+    #ap_comic_name {
+        font-size: 2.7rem;
+        font-weight: bold;
+        padding: 2rem 5rem 2.5rem;
+        margin-left: 15%;
+    }
+
+    [data-tab-content] {
+        display: none;
+      }
+      
+      .ap_activetb[data-tab-content] {
+        display: block;
+      }
+      
+      .ap_tabs {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0 15%;
+        padding: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .20);
+      }
+      
+      .ap_tab {
+        cursor: pointer;
+        padding: 0.6rem 2.2rem;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color:black;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+      
+      .ap_tab.ap_activetb {
+        color:#512DA8;
+        border-bottom: 3px solid #512DA8;
+      }
+      
+      .ap_tab:hover {
+        background-color: rgb(235, 235, 235);
+      }
+      
+      .ap_tab-content {
+        margin: 5rem 15%;
+      }
+
+      .ap_tabtitle {
+          font-size: 3rem;
+          color:rgba(0, 0, 0, 0.54);
+          padding: 0 0 3rem;
+      }
+
+      .ap_overcontent {
+          display: flex;
+      }
+
+      .ap_overcontent > img {
+          width: 40%;
+          height: auto;
+          max-width: 768px;
+          max-height: 1366px;
+          border-radius: 2%;
+      }
+
+      .ap_overpara {
+          font-size: 1.6rem;
+          width: 60%;
+          padding-right: 6rem;
+          line-height: 1.6;
+      }
+
+
 }
 
 

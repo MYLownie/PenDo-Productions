@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fusion Comic</title>
+
+    <link rel="stylesheet" type="text/css" href="light-theme.css" id="theme-link">
+    <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id=logo>
+                <img id="dark" src ="img/NewLogo.png">
+                <img id="invert" src ="img/NewLogoInvert.png">
+            </div>
+
+            <div class="hidden-menu">
+                <div class="fusion-comic">
+                    <button class="hidmenu_but">Fusion Comic 
+                        <i class="im im-care-down"></i>
+                    </button>
+                        <ul class=menu-content>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Chapter 1</a></li>
+                            <li><a href="#">Chapter 2</a></li>
+                            <li><a href="#">Chapter 3</a></li>
+                            <li><a href="#">Chapter 4</a></li>
+                            <li><a href="#">Chapter 5</a></li>
+                        </ul>
+                </div>
+
+                <div class="one-story">
+                    <button class="hidmenu_but">One Story
+                        <i class="im im-care-down"></i>
+                    </button>
+                        <ul class=menu-content>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Chapter 1</a></li>
+                            <li><a href="#">Chapter 2</a></li>
+                            <li><a href="#">Chapter 3</a></li>
+                            <li><a href="#">Chapter 4</a></li>
+                            <li><a href="#">Chapter 5</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <svg id="burger" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+
+            <svg id="sun" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12.29 7c-.74 0-1.45.17-2.08.46 1.72.79 2.92 2.53 2.92 4.54s-1.2 3.75-2.92 4.54c.63.29 1.34.46 2.08.46 2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+            </svg>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="ap_comic_name">Fusion Comic</h1>
+
+        <ul class="ap_tabs">
+            <li data-tab-target="#ap_overviewtb" class="ap_activetb ap_tab">Overview</li>
+            <li data-tab-target="#ap_characterstb" class="ap_tab">Character</li>
+            <li data-tab-target="#ap_gallerytb" class="ap_tab">Gallery</li>
+          </ul>
+          
+          <div class="ap_tab-content">
+            <div id="ap_overviewtb" data-tab-content class="ap_activetb">
+              <h1 class="ap_tabtitle">Overview</h1>
+              <div class ="ap_overcontent">
+                <p class="ap_overpara">Text about what the story is about, oh so cool, what an amazing plot you should definitely check this shit out. text text text text text text text text tex ttex ttex ttext text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat sed cras. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi. Fermentum leo vel orci porta non pulvinar neque. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi.
+                </p>
+                <img src="https://via.placeholder.com/768x1366.png">
+            </div>
+            </div>
+            <div id="ap_characterstb" data-tab-content>
+              <h1>Pricing</h1>
+              <p>Some information on pricing</p>
+            </div>
+            <div id="ap_gallerytb" data-tab-content>
+              <h1>Gallery</h1>
+              <p>Let me tell you about me</p>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="content">
+                <div class="copyright">
+                    <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 15.781c-2.084 0-3.781-1.696-3.781-3.781s1.696-3.781 3.781-3.781c1.172 0 2.306.523 3.136 1.669l1.857-1.218c-1.281-1.826-3.133-2.67-4.993-2.67-3.308 0-6 2.692-6 6s2.691 6 6 6c1.881 0 3.724-.859 4.994-2.67l-1.857-1.218c-.828 1.14-1.959 1.669-3.137 1.669z"/></svg>
+                    <p>PENDO STUDIOS</p>
+                </div>  
+                <button type="button" onclick="topFunction()">Return to Top</button>
+                <div class="empty"></div>
+            </div>
+        </div>
+
+
+    <script src="ap_app.js"></script>
+    </main>
+
+
+</body>
+</html>
