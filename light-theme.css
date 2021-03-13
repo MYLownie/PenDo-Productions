@@ -724,7 +724,6 @@
    }
 
    .burger-active {
-       opacity: 1 !important;
        transform: translate(0px) !important;
    }
 
@@ -737,12 +736,37 @@
        grid-row-start: 1;
        align-self: center; 
        display: flex;
-       opacity: 0;
        z-index: 600;
        justify-content: space-around;
-       transform: translate(50px);
-       transition: 0.4s ease-out;
+       transform: translate(70px);
+       transition: 0.8s ease-in;
    }
+
+   .hidmenu_but {
+       opacity: 0
+   }
+
+   .visible_but{
+       animation-name: butflip;
+       animation-duration: 1.5s;
+       animation-timing-function: cubic-bezier(.41,.52,.27,.94);
+       animation-fill-mode: forwards;
+   }
+
+   @keyframes butflip{
+       0% {
+           transform: rotateY(0deg);
+           opacity:0
+       }
+       100% {
+            transform: rotateY(360deg);
+            opacity:1;
+        }
+   }
+
+   .burger-active .one-story .visible_but{
+        animation-delay: 0.3s;
+    }
 
    .hidden-menu button:hover {
        background-color: #F5F5F5;
@@ -869,7 +893,7 @@
        text-transform: uppercase;
        letter-spacing: .1em;
        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-       z-index: 700;
+       z-index: 550;
        transition: color 0.3s ease;
    }
 

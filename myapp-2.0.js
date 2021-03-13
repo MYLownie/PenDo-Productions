@@ -27,17 +27,25 @@ const menuAppear = () => {
     //selects the burger svg and the hidden menu element
     const burger = document.getElementById('burger');
     const hiddenMenu = document.getElementsByClassName('hidden-menu');
+    const hidmenu_but = document.getElementsByClassName('hidmenu_but')
+    const visible_but = document.getElementsByClassName('visible_but')
+
 
     //uses a loop because the hidden menu is an array
     //toggles a new "burger-active" class to the buttons when burger is clicked
     burger.addEventListener('click',()=>{
         for (a = 0; a < hiddenMenu.length; a++) {
             hiddenMenu[a].classList.toggle('burger-active');
+            hidmenu_but[a].classList.toggle('visible_but')
+            hidmenu_but[a+1].classList.toggle('visible_but')
         }
     });
 }
 //function must be called
 menuAppear();
+
+
+
 
 //SCROLL TO TOP ON DESKTOP
 //two different values, top for Safari, bottom for others (chrome etc.)
