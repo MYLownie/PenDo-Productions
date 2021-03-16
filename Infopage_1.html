@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/576c267623.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -68,8 +69,9 @@
           </ul>
           
           <div class="ap_tab-content">
-            <div id="ap_overviewtb" data-tab-content class="ap_activetb">
+            <div id="ap_overviewtb" data-tab-content>
               <div class ="ap_overcontent">
+
                 <h1 class="ap_tabtitle">Overview</h1>
                 <p id="ap_overpara">Text about what the story is about, oh so cool, what an amazing plot you should definitely check this shit out. text text text text text text text text tex ttex ttex ttext text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat sed cras. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi. Fermentum leo vel orci porta non pulvinar neque. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi. Commodo odio aenean sed adipiscing diam. Egestas maecenas pharetra convallis posuere morbi.
                 </p>
@@ -78,21 +80,73 @@
                 <img id="ap_overimg" src="https://via.placeholder.com/768x1366.png">
             </div>
             </div>
-            <div id="ap_characterstb" data-tab-content>
-              <h1>Pricing</h1>
-              <p>Some information on pricing</p>
+
+            <div id="ap_characterstb" data-tab-content class="ap_activetb">
+              <div class="ap_character" id="ap_chara1">
+                  <div class="ap_ismodal">
+                      <img src="https://via.placeholder.com/680x530.png">
+                      <p>I AM MODAL ONE. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur a diam auctor egestas. Duis mollis lorem sit amet quam laoreet, at pellentesque lectus vulputate. Quisque condimentum arcu ac eros consequat imperdiet. Suspendisse ut elit eget ex auctor consectetur ut a mi.
+                      </p>
+                      <i class="im im-x-mark-circle-o ap_isclose"></i>
+                  </div>
+                  <img src="https://via.placeholder.com/150.png">
+                  <h5>Ihave Name</h5>
+              </div>
+              <div class="ap_character" id="ap_chara2">
+                <div class="ap_ismodal">
+                    <img src="https://via.placeholder.com/680x530.png">
+                    <p>I AM MODAL TWO. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur a diam auctor egestas. Duis mollis lorem sit amet quam laoreet, at pellentesque lectus vulputate. Quisque condimentum arcu ac eros consequat imperdiet. Suspendisse ut elit eget ex auctor consectetur ut a mi.
+                    </p>
+                    <i class="im im-x-mark-circle-o ap_isclose"></i>
+                </div>
+                <img src="https://via.placeholder.com/150.png">
+                <h5>Ihave Name Too</h5>
             </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara3">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara4">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara5">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara6">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara7">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara8">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            <div class="ap_character ap_unknownchara" id="ap_chara9">
+                <img src="https://via.placeholder.com/150.png">
+                <h5>???</h5>
+            </div>
+            </div>
+
             <div id="ap_gallerytb" data-tab-content>
               <h1>Gallery</h1>
               <p>Let me tell you about me</p>
             </div>
           </div>
 
+
+
           <div class="ap_footer">
+
                 <div class="ap_footcopyright">
                     <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 15.781c-2.084 0-3.781-1.696-3.781-3.781s1.696-3.781 3.781-3.781c1.172 0 2.306.523 3.136 1.669l1.857-1.218c-1.281-1.826-3.133-2.67-4.993-2.67-3.308 0-6 2.692-6 6s2.691 6 6 6c1.881 0 3.724-.859 4.994-2.67l-1.857-1.218c-.828 1.14-1.959 1.669-3.137 1.669z"/></svg>
                     <p>PENDO STUDIOS</p>
                 </div>  
+
                 <div class="ap_footertag">Read Fusion Comic Here
                     <div class="ap_footerbtns">
                         <button type="button" id="ap_footbeg">Beginning</button>
@@ -100,20 +154,24 @@
                             <button type="button" id="ap_footchpt">Chapter 1 
                                 <i class="im im-care-down"></i>
                             </button>
-                                <ul class=menu-content>
-                                    <li><a href="#">Overview</a></li>
-                                    <li><a href="#">Chapter 1</a></li>
-                                    <li><a href="#">Chapter 2</a></li>
-                                    <li><a href="#">Chapter 3</a></li>
-                                    <li><a href="#">Chapter 4</a></li>
+                                <ul class=ap_footchap_menu>
                                     <li><a href="#">Chapter 5</a></li>
+                                    <li><a href="#">Chapter 4</a></li>
+                                    <li><a href="#">Chapter 3</a></li>
+                                    <li><a href="#">Chapter 2</a></li>
+                                    <li><a href="#">Chapter 1</a></li>
                                 </ul>
                         </div>
                         <button type="button" id="ap_footlat">Latest</button>
                     </div>
                 </div>
-                <div class="ap_footicon">
 
+                <div class="ap_footicon">
+                    <i class="im im-twitter"></i>
+                    <i class="im im-instagram"></i>
+                    <i class="im im-facebook"></i>
+                    <i class="im im-linkedin"></i>
+                    <i class="fab fa-patreon"></i>
                 </div>
             </div>
         </div>

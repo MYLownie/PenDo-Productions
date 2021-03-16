@@ -1867,6 +1867,10 @@
         margin: 5rem 15%;
       }
 
+      /* Overview Content */
+      /* Overview Content */
+      /* Overview Content */
+
       .ap_overcontent {
           width: 100%;
           display: inline-grid;
@@ -1918,6 +1922,71 @@
         justify-self: end;
       }
 
+      /* Character Content */
+      /* Character Content */
+      /* Character Content */
+
+      #ap_characterstb {
+          width: 100%;
+          display: inline-grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          justify-items: center;
+          align-items: center;
+          row-gap: 3rem;
+      }
+
+      #ap_characterstb img {
+        border-top-left-radius: 4em;
+        border-top-right-radius: 4em;
+      }
+
+      #ap_characterstb h5 {
+          font-size: 1.2rem;
+          color: #512DA8;
+          padding: 1rem 0;
+          text-align: center;
+      }
+
+      .ap_character {
+          border-radius: 4em;
+          background-color: #FFF;
+          border: 0.13px solid rgba(0, 0, 0, .10);
+          cursor: pointer;
+          transition: box-shadow 0.2s ease-out;
+      }
+
+      .ap_character:hover {
+          box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+      }
+
+      .ap_unknownchara {
+          filter: brightness(25%);
+          cursor: default;
+      }
+
+      .ap_unknownchara:hover {
+          box-shadow: none;
+      }
+
+      .ap_chara_infosheet img {
+        width: 150px;
+        height: 150px;
+        border-radius: 4em;
+      }
+
+      .ap_ismodal {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+      }
+
+      .ap_isactive {
+          opacity: 1;
+          pointer-events: all;
+      }
+
+
       /* FOOTER */
       /* FOOTER */
       /* FOOTER */
@@ -1933,11 +2002,12 @@
     }
 
     .ap_footcopyright {
+        width: 15%;
         display: flex;
         flex: 1 1 auto;
         align-self: flex-end;
         align-items: baseline;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         align-items: center;
         color: white;
         fill: white;
@@ -1966,16 +2036,11 @@
 
     .ap_footerbtns button {
         margin: 0.8rem;
-        padding: 0.5rem;
+        padding: 1rem;
         transition: all 0.3s ease;
+        background-color:#FFF
     }
-
-    #ap_footbeg:hover, #ap_footlat:hover, #ap_footchpt:hover {
-        background-color: #F5F5F5;
-        cursor: pointer;
-        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 1);
-    }
-
+    
     .ap_footicon {
         flex: 1 1 auto;
     }
@@ -1984,8 +2049,19 @@
         font-size: 1rem;
         width: 9rem;
         border-radius: 1.5rem;
-        border: 1px solid black;
-        box-shadow: 0px 4px 1px rgba(0, 0, 0, .25);
+        border: 1px solid #512DA8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, .15);
+    }
+
+    #ap_footbeg:hover, #ap_footlat:hover, #ap_footchpt:hover {
+        background-color: #F5F5F5;
+        cursor: pointer;
+        border: 1px solid #512DA8;
+        box-shadow: 0px 5px 13px rgba(0, 0, 0, .25);
+    }
+
+    #ap_footbeg:focus, #ap_footlat:focus, #ap_footchpt:focus {
+        outline: none;
     }
 
     #ap_footchpt {
@@ -1995,18 +2071,74 @@
         align-items: baseline;
         justify-content: space-around;
         box-shadow: 0px 4px 1px rgba(0, 0, 0, .25);
+        border: 1px solid #512DA8;
     }
 
     #ap_footchpt i {
         font-size: .8rem;
     }
 
+    .ap_footicon {
+        width: 15%;
+        flex: 1 1 auto;
+        display: flex;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
 
+    .ap_footicon i {
+        padding: 0.9rem;
+        transition: transform 0.3s ease;
+    }
 
+    .ap_footicon i:hover {
+        transform: rotate(20deg);
+    }
 
+    .ap_footchap_menu {
+        opacity: 0;
+        background-color: #FFF;
+        position: absolute;
+        width: 9.83rem;
+        max-height: 166px;
+        display: flex;
+        flex-direction: column;
+        z-index: 9999;
+        text-align: left;
+        cursor: pointer;
+        overflow-y: scroll;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        bottom: 49px;
+        transform: translateX(9px) translateY(10px);
+        box-shadow: 0px -8px 10px 1px rgba(0, 0, 0, 0.14), 0px -3px 10px 1px rgba(0, 0, 0, 0.12);
+    }
 
+    .ap_footchap_menu li {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        font-size: 1.8rem
+    }
 
+    .ap_footchap_menu li a {
+        text-decoration: none;
+        font-weight: normal;
+        color: rgba(0, 0, 0, .84)
+    }
 
+    .ap_footchap_menu li:hover {
+        background-color: #F5F5F5;
+    }
+ 
+    #ap_footchpt:focus + ul {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(9px) translateY(0px);
+    }
 
 }
 
