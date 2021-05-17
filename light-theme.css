@@ -1819,6 +1819,14 @@
     /* COMIC ABOUT PAGES */
     /* COMIC ABOUT PAGES */
 
+    body {
+        overflow-x: hidden;
+    }
+
+    #ap_main {
+        margin-bottom: 15rem;
+    }
+
     #ap_comic_name {
         font-size: 2.7rem;
         font-weight: bold;
@@ -1926,7 +1934,7 @@
       /* Character Content */
       /* Character Content */
 
-      #ap_characterstb {
+      #ap_characterstb_main {
           width: 100%;
           display: inline-grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -1981,7 +1989,8 @@
           pointer-events: none;
       }
 
-      .ap_isactive {
+      .ap_modalActive {
+          display: block;
           opacity: 1;
           pointer-events: all;
       }
@@ -1997,7 +2006,7 @@
         position: fixed;
         bottom: 0px;
         width: 100%;
-        height: 9rem;
+        height: 12rem;
         background-color: #512DA8;
     }
 
@@ -2024,7 +2033,7 @@
         flex: 2 1 auto;
         align-self: center;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         color: white;
     }
 
@@ -2046,8 +2055,8 @@
     }
 
     #ap_footbeg, #ap_footlat {
-        font-size: 1rem;
-        width: 9rem;
+        font-size: 1.3rem;
+        width: 11rem;
         border-radius: 1.5rem;
         border: 1px solid #512DA8;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, .15);
@@ -2065,11 +2074,11 @@
     }
 
     #ap_footchpt {
-        width: 10rem;
+        width: 13rem;
         display: flex;
-        font-size: 1rem;
+        font-size: 1.3rem;
         align-items: baseline;
-        justify-content: space-around;
+        justify-content: space-between;
         box-shadow: 0px 4px 1px rgba(0, 0, 0, .25);
         border: 1px solid #512DA8;
     }
