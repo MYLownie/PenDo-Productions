@@ -1985,16 +1985,50 @@
 
       .ap_ismodal {
           position: absolute;
-          opacity: 0;
+          width: 150px;
+          height: auto;
+          opacity: 1;
           pointer-events: none;
       }
 
-      .ap_modalActive {
-          display: block;
-          opacity: 1;
-          pointer-events: all;
+      .ap_ismodal p, .ap_ismodal i {
+          opacity: 0;
       }
 
+      .ap_ismodal img {
+          height: 150px;
+          width: 150px;
+      }
+
+      .ap_modalActive {
+          position: fixed;
+          margin: 0 0 0 0;
+          width: 680px;
+          height: 600px;
+          z-index: 1111;
+          opacity: 1;
+          pointer-events: all;
+          animation-name: modalExpand;
+          animation-duration: 1.5s;
+          animation-fill-mode: forwards;
+      }
+
+      .ap_modalActive img {
+          width: 680px;
+          height: 530px;
+      }
+
+      @keyframes modalExpand {
+          0% {
+              width: 150px;
+              height: 150px;
+          }
+
+          100% {
+              width: 680px;
+              height: 600px;
+          }
+      }
 
       /* FOOTER */
       /* FOOTER */
@@ -2002,6 +2036,7 @@
 
     .ap_footer {
         display: flex;
+        z-index: 11111;
         justify-content: space-between;
         position: fixed;
         bottom: 0px;

@@ -40,6 +40,7 @@ for (i = 0; i < charcs.length; i++) {
 
 window.onclick = function(event) {
   for (i = 0; i < modals.length; i++) {
+    var elementIndex = this.getAttribute('data-index', i);
     if (event.target == modal[i]) {
       modal[i].classList.remove('ap_modalActive');
     }
