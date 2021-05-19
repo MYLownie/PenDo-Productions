@@ -15,30 +15,9 @@ tabs.forEach(tab => {
   });
 });
 
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.ap_activeChara');
 
-		// this is the old and much hackier solution
-// 		const toggleExpansion = (element, to, duration = 350) => {
-// 		  return new Promise((res) => {
-// 		    requestAnimationFrame(() => {
-// 		      element.style.transition = `
-// 			width ${duration}ms ease-in-out,
-// 			height ${duration}ms ease-in-out,
-// 			left ${duration}ms ease-in-out,
-// 			top ${duration}ms ease-in-out
-// 		      `;
-// 		      requestAnimationFrame(() => {
-// 			element.style.top = to.top;
-// 			element.style.left = to.left;
-// 			element.style.width = to.width;
-// 			element.style.height = to.height;
-// 		      })
-// 		    });
-// 		    setTimeout(res, duration);
-// 		  })
-// 		}
-		
-		const toggleExpansion = (element, to, duration = 350) => {
+		const toggleExpansion = (element, to, duration = 300) => {
 		  return new Promise((res) => {
 		    element.animate([
 		      {
@@ -52,7 +31,7 @@ const cards = document.querySelectorAll('.card');
 		  })
 		}
 
-		const fadeContent = (element, opacity, duration = 300) => {
+		const fadeContent = (element, opacity, duration = 120) => {
 			return new Promise(res => {
 				[...element.children].forEach((child) => {
 					requestAnimationFrame(() => {
@@ -65,34 +44,12 @@ const cards = document.querySelectorAll('.card');
 		}
 
 		const getCardContent = (title, type) => {
+      // under the img src will be the path to where the character card pngs are saved
+      // should be saved with a name which is listed in the infopage html under data-type
 			return `
 				<div class="card-content">
 					<h2>${title}</h2>
 					<img src="./assets/${type}.png" alt="${title}">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-						cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-						provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-						corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-						cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-						provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-						corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-					</p>
 				</div>
 			`;
 		}
@@ -104,7 +61,7 @@ const cards = document.querySelectorAll('.card');
 			// get the location of the card in the view
 			const {top, left, width, height} = card.getBoundingClientRect();
 			// position the clone on top of the original
-			cardClone.style.position = 'fixed';
+			cardClone.style.position = 'absolute';
 			cardClone.style.top = top + 'px';
 			cardClone.style.left = left + 'px';
 			cardClone.style.width = width + 'px';
@@ -114,17 +71,19 @@ const cards = document.querySelectorAll('.card');
 			// add card to the same container
 			card.parentNode.appendChild(cardClone);
 			// create a close button to handle the undo
-			const closeButton = document.createElement('button');
+			const closeButton = document.createElement('I');
+      closeButton.className = "im im-x-mark-circle-o";
 			// position the close button top corner
 			closeButton.style = `
-				position: fixed;
+				position: absolute;
 				z-index: 10000;
 				top: 35px;
 				right: 35px;
 				width: 35px;
 				height: 35px;
-				border-radius: 50%;
-				background-color: #e25656;
+        font-size: 3.5rem;
+        opacity: 80%;
+        color: #512DA8;
 			`;
 			// attach click event to the close button
 			closeButton.addEventListener('click', async () => {
@@ -149,7 +108,7 @@ const cards = document.querySelectorAll('.card');
 					[...cardClone.children].forEach(child => child.style.display = 'none');
 				});
 			// expand the clone card
-			await toggleExpansion(cardClone, {top: 0, left: 0, width: '100vw', height: '100vh'});
+			await toggleExpansion(cardClone, {top: '229px', left: 0, width: '100vw', height: '100vh', margin: '25%'});
 			const content = getCardContent(card.textContent, card.dataset.type)
 			// set the display block so the content will follow the normal flow in case the original card is not display block
 			cardClone.style.display = 'block';
@@ -160,34 +119,3 @@ const cards = document.querySelectorAll('.card');
 		};
 
 		cards.forEach(card => card.addEventListener('click', onCardClick));
-// //Get the modals
-// var modals = document.getElementsByClassName('ap_ismodal');
-
-// //Get buttons that open modal
-// var charcs = document.getElementsByClassName('ap_character') 
-
-// function setDataIndex() {
-//   for (i = 0; i < modals.length; i++) {
-//     charcs[i].setAttribute('data-index', i);
-//     modals[i].setAttribute('data-index', i);
-//   }
-// }
-
-// setDataIndex();
-
-
-// for (i = 0; i < charcs.length; i++) {
-//   charcs[i].onclick = function() {
-//     var elementIndex = this.getAttribute('data-index', i);
-//     modals[elementIndex].classList.add('ap_modalActive');
-//   }
-// }
-
-// window.onclick = function(event) {
-//   for (i = 0; i < modals.length; i++) {
-//     var elementIndex = this.getAttribute('data-index', i);
-//     if (event.target == modal[i]) {
-//       modal[i].classList.remove('ap_modalActive');
-//     }
-//   }
-// }

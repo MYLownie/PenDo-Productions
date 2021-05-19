@@ -1942,24 +1942,34 @@
         }
     }
 
-    .card {
-        width: calc(50% - 13px);
-        height: 150px;
-        background-color: #222;
-        color: #dc7b7b;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 10px;
-        border: 3px solid #e25656;
-        box-shadow: 0 0 9px #4c0505;
+    .ap_characters_main {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        row-gap: 3rem;
     }
 
-    .card h2 {
-        margin: 0;
+    .ap_characters_main .ap_character {
+        border-radius: 4em;
+          background-color: #FFF;
+          border: 0.13px solid rgba(0, 0, 0, .10);
+          cursor: pointer;
+          transition: box-shadow 0.2s ease-out;
+    }
+
+    .ap_characters_main .ap_character img {
+        border-top-left-radius: 4em;
+        border-top-right-radius: 4em;
+    }
+
+    .ap_characters_main .ap_character h2 {
+        font-size: 1.2rem;
+          color: #512DA8;
+          padding: 1rem 0;
+          text-align: center;
     }
 
     .card-content {
@@ -1967,13 +1977,15 @@
         overflow: auto;
         height: 100%;
         color: #fff;
+        cursor: default;
     }
     .card-content > * {
         transform: translateY(-35px);
         opacity: 0;
     }
-    .card-content h2 {
-        font-size: 32px;
+    .ap_characters_main .card-content h2 {
+        font-size: 4rem;
+        text-align: left;
         margin-bottom: 35px !important;
         animation: slideDown 0.5s ease-out forwards;
     }
@@ -1983,20 +1995,6 @@
         margin-bottom: 10px;
         animation: slideDown 0.5s ease-out 0.2s forwards;
     }
-    .card-content p {
-        color: #999;
-        animation: slideDown 0.5s ease-out 0.4s forwards;
-    }
-
-      #ap_characterstb_main {
-          width: 100%;
-          display: inline-grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
-          justify-items: center;
-          align-items: center;
-          row-gap: 3rem;
-      }
 
       #ap_characterstb img {
         border-top-left-radius: 4em;
@@ -2022,12 +2020,12 @@
           box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
       }
 
-      .ap_unknownchara {
+      .ap_character.ap_unknownChara {
           filter: brightness(25%);
           cursor: default;
       }
 
-      .ap_unknownchara:hover {
+      .ap_unknownChara:hover {
           box-shadow: none;
       }
 
@@ -2089,7 +2087,7 @@
       /* FOOTER */
 
     .ap_footer {
-        display: none;
+        display: flex;
         z-index: 11111;
         justify-content: space-between;
         position: fixed;
