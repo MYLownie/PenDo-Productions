@@ -1400,6 +1400,396 @@
        width: 20%;
    }
 
+    /* PAGEVIEWER */
+   /* PAGEVIEWER */
+   /* PAGEVIEWER */
+
+    /* Header */
+    .pv-comic-heading {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .pv-comic-heading h1 {
+        font-size: 4.5rem;
+    }
+
+    .pv-comic-heading h3 {
+        font-size: 3rem;
+        color: #512CA8
+    }
+
+    /* Toolbar */
+    .pv-toolbar {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15% 1rem;
+    }
+    .pv-toolbar button {
+       position: relative;
+       overflow: hidden;
+       display: flex;
+       font-size: 1.4rem;
+       align-items: baseline;
+       justify-content: space-between;
+       background-color: transparent;
+       padding: 1rem;
+       color: #512DA8;
+       border: 1px solid #512DA8;
+       border-radius: 0.4em;
+    }
+
+    .pv-toolbar button i {
+        font-size: .8rem;
+        padding-left: .8rem;
+    }
+    
+    .pv-toolbar .pv-chap-dropdown button {
+        width: 13rem;
+    }
+    
+    .pv-toolbar .pv-chap-dropdown button:hover {
+        background-color: #F5F5F5;
+        cursor: pointer;
+    }
+
+    .pv-chap-dropdown button:focus {
+        outline: none;
+        background-color: #F5F5F5;
+    }
+
+    .pv-toolbar .pv-chap-dropdown button:focus + ul {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
+    }
+
+    .pv-toolbar #scroll-btn {
+        position: relative;
+        border-radius: 30px;
+        width: 10rem;
+        justify-content: center;
+        background-color: #512DA8;
+        color: white;
+        letter-spacing: 0.1rem;
+        transition: all 0.3s ease-out;
+    }
+
+    #scroll-btn:hover {
+        cursor: pointer;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        background-color: #673AB7;
+    }
+
+    #scroll-btn:focus {
+        outline: none;
+    }
+
+    .pv-toolbar .pv-menu-content {
+        position: absolute;
+       background-color: white;
+       list-style: none;
+       width: 13rem;
+       max-height: 184px;
+       display: flex;
+       flex-direction: column;
+       z-index: 9999;
+       font-size: 2.2rem;
+       text-align: left;
+       cursor: pointer;
+       overflow-y: scroll;
+       opacity: 0;
+       pointer-events: none;
+       transform: translateY(-5px);
+       transition: all 0.4s ease;
+       box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    .pv-menu-content li {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        font-size: 2.2rem;
+    }
+ 
+    .pv-menu-content li a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        color: rgba(0, 0, 0, .84)
+    }
+    
+    .pv-menu-content li:hover {
+        background-color: #F5F5F5;
+    }
+
+   /* Range Slider */
+   .pv-range-wrap {
+        position: relative;
+        margin: 7rem auto 4rem;
+        width: 55%;
+        height: 4rem;
+    }
+
+    .range {
+        width: 100%;
+    }
+
+    .pv-range-wrap .bar {
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 7px;
+        border-radius: 5px;
+        background-color: #c6aee7;
+        overflow: hidden;
+    }
+
+    .pv-range-wrap .bar .fill {
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: #512DA8;
+    }
+
+    .pv-range-wrap .slider {
+        position: relative;
+        z-index: 2;
+        appearance: none;
+        width: 100%;
+        height: 7px;
+        border-radius: 5px;
+        appearance: none;
+        background-color: transparent;
+    }
+
+    .pv-range-wrap .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 25px;
+        height: 25px;
+        background-color: #512DA8;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 0 0 0 0 rgba(98 ,0 ,238,.1);
+        transition: .3s ease-in-out;
+    }
+
+    .pv-range-wrap .slider::-webkit-slider-thumb:hover {
+        box-shadow: 0 0 0 20px rgba(98,0,238,.1);
+    }
+    
+    .pv-range-wrap .slider:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 30px rgba(98,0,238,.2);
+    }
+    
+    .pv-range-wrap .slider:focus {
+        outline: none;
+    }
+
+    .bubble {
+        position: relative;
+        background: black;
+        opacity: 50%;
+        color: white;
+        font-size: 2rem;
+        padding: .8rem 1.2rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -6rem);
+        border-radius: 2px;
+    } 
+
+    .bubble::after {
+        content: "";
+        position: absolute;
+          height: 0;
+          width: 0;
+          top: 38px;
+          left: 9px;
+          transform: rotate(180deg);
+          border-width: 0 9px 9px;
+          border-style: solid;
+          border-color: transparent transparent black;
+      }
+
+    /* Page Turn Btns */
+
+    .pv-nav-btn-container {
+        margin: 0 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #prevBtn, #nextBtn {
+        position: relative;
+        overflow: hidden;
+        transition: background 400ms;
+        color: #fff;
+        background-color: #512DA8;
+        padding: 1rem 2rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        outline: 0;
+        border: 0;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    #prevBtn:hover, #nextBtn:hover {
+        background-color: #673AB7;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+          filter: blur(2px);
+        }
+      }
+
+      /* CAROUSEL VIEWBOX */
+
+      .pv-carousel-container {
+            position: relative;
+            width: 70vw;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+      }
+      
+      .pv-carousel-slide {
+        display: flex;
+        width: 100%;
+      }
+      
+      .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
+      }
+
+      .inv-leftbtn, .inv-rightbtn {
+          position: absolute;
+          height: 100%;
+          background-color: transparent;
+          border: none;
+          z-index: 1000;
+      }
+
+      .inv-rightbtn:hover, .inv-leftbtn:hover {
+          cursor: pointer;
+      }
+
+      .inv-rightbtn:focus, .inv-leftbtn:focus {
+          cursor: pointer;
+          outline: none;
+      }
+
+      .inv-rightbtn {
+          right: 0;
+          width: 50%;
+      }
+
+      .inv-leftbtn {
+          left: 0;
+          width: 30%;
+      }
+    /* Chapter Nav Buttons */
+
+    .pv-chapter-btns-container {
+        margin: 2rem 15% 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pv-chapter-btns {
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        border: none;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        border-radius: 0.4rem;
+        background-color: white;
+    }
+
+    .pv-chapter-btns:hover {
+        background-color: #cccccc;
+        cursor: pointer;
+    }
+}
+    .pv-chapter-btns:focus {
+        background-color: #cccccc;
+        cursor: pointer;
+        outline: none;
+    }
+
+    /* PV Footer */
+    .pv-footer {
+        background-color: #512DA8;
+        position: relative;
+        height: 9rem;
+        width: 100%;
+    }
+
+    .pv-icons {
+        width: 100%;
+        height: 9rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pv-icons i {
+        color: white;
+        padding: 3rem 2rem;
+        font-size: 3rem;
+        transition: transform 0.4s ease;
+    }
+
+    .pv-icons i:hover {
+        cursor: pointer;
+        transform: rotate(15deg);
+    }
+
+    .pv-footer .copyright {
+        color: white;
+        fill: white;
+        display: flex;
+        float: left;
+        position: absolute;
+        bottom: 1rem;
+        align-items: center;
+    }
+
+    .pv-footer svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-right: 0.2rem;
+    }
+
+    .pv-footer .copyright p {
+        font-size: 1.3rem;
+    }
+
    /* COMIC ABOUT PAGES */
     /* COMIC ABOUT PAGES */
     /* COMIC ABOUT PAGES */
