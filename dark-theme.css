@@ -772,14 +772,15 @@
 
 @keyframes butflip{
     0% {
-        transform: rotateY(0deg);
+        transform: translateX(100px);
         opacity:0
     }
     100% {
-         transform: rotateY(360deg);
+         transform: translateX(0px);
          opacity:1;
      }
 }
+
 
 .burger-active .one-story .visible_but{
      animation-delay: 0.3s;
@@ -919,12 +920,6 @@
        transition: color 0.3s ease;
    }
 
-   .most-recent .title-block:hover {
-       color: #9575cd;
-       transition: 0.3s ease;
-       cursor: pointer;
-   }
-
    .most-recent .chapter-block {
        grid-column-start: 1;
        grid-column-end: 2;
@@ -944,12 +939,6 @@
        transition: color 0.3s ease;
    }
 
-   .most-recent .chapter-block:hover {
-       color: #9575cd;
-       transition: 0.3s ease;
-       cursor: pointer;
-   }
-
    .most-recent img {
        width: 100%;
        height: 100%;
@@ -959,36 +948,23 @@
        grid-row-end: 5;
        border-radius: 4em;
        z-index: 499;
-       transition: box-shadow 0.5s ease;
-   }
-
-
-   .most-recent .overlay {
-       width: 100%;
-       height: 100%;
-       grid-column-start: 1;
-       grid-column-end: 2;
-       grid-row-start: 1;
-       grid-row-end: 5;
-       border-radius: 4em;
-       background-color: rgba(0, 0, 0, .35);
-       z-index: 500;
-       transition: opacity 1s ease;
+       transition: all 0.5s ease;
+       filter: brightness(0.70);
    }
 
    .most-recent:hover {
        cursor: pointer;
    }
 
-   .most-recent:hover>.overlay {
-       opacity: 0.3;
-   }
-
    .most-recent:hover>img {
        box-shadow: 0 6px 10px rgba(0, 0, 0, 1);
-       transition: box-shadow 0.5s ease;
+       filter: brightness(0.95);
        cursor: pointer;
    }
+
+   .most-recent:hover > h4, .most-recent:hover > h5 {
+    color: #d65600;
+}
 
    .most-recent p {
        grid-column-start: 1;
@@ -1048,13 +1024,6 @@
        justify-content: center;
    }
 
-   .recent-updates .recent-select img {
-       width: 15rem;
-       height: 15rem;
-       border-top-left-radius: 4em;
-       border-top-right-radius: 4em;
-   }
-
    .recent-updates .recent-select .option {
        border: 0.13px solid rgba(255, 255, 255, 0.1);
        border-radius: 4em;
@@ -1062,8 +1031,13 @@
        margin: 1vw;
    }
 
-   .recent-updates .recent-select .option p:hover {
-       cursor: pointer;
+   .recent-updates .recent-select img {
+       width: 15rem;
+       height: 15rem;
+       border-top-left-radius: 4em;
+       border-top-right-radius: 4em;
+       filter: brightness(0.75);
+       transition: all 0.3s ease;
    }
 
    .recent-updates .recent-select .option p {
@@ -1074,12 +1048,7 @@
        letter-spacing: 0.08rem;
        text-transform: capitalize;
        padding-top: 0.1rem;
-   }
-
-   .recent-updates .recent-select .option h6:hover {
-       cursor: pointer;
-       color: #d1c4e9;
-       transition: color 0.3s ease;
+       transition: all 0.3s ease;
    }
 
    .recent-updates .recent-select .option h6 {
@@ -1089,31 +1058,17 @@
        font-size: 1.2rem;
        text-transform: capitalize;
        padding-bottom:0.5rem;
-       transition: color 0.3s ease;
+       transition: all 0.3s ease;
    }
 
-   .recent-updates .recent-select .overlay div:hover  {
-       cursor: pointer;
-       opacity: 0.1;
-       transition: opacity 0.3s ease;
-   }
+   .recent-updates .recent-select .option:hover > img {
+        filter: brightness(0.95);
+        cursor: pointer;
+    }
 
-   .recent-updates .overlay {
-       display: flex;
-       justify-content: center;
-       position: absolute;
-   }
-
-   .recent-updates .overlay div {
-       background-color: rgba(0, 0, 0, .35);
-       width: 15rem;
-       height: 15rem;
-       border: 0.13px solid rgba(0, 0, 0, .10);
-       border-top-left-radius: 4em;
-       border-top-right-radius: 4em;
-       margin: 1.01rem;
-       transition: opacity 0.3s ease;
-   }
+    .recent-updates .recent-select .option:hover > p, .recent-updates .recent-select .option:hover > h6 {
+        color: #f19151;
+    }
 
    .linebreak {
        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -1169,7 +1124,7 @@
        height: 100%;
        object-fit: cover;
        border-radius: 4em;
-       filter: brightness(70%);
+       filter: brightness(0.75);
    }
 
    .library .container .info-content {
@@ -1385,7 +1340,8 @@
    /* FOOTER */
 
    .footer {
-       background-color: #121212;
+    background-color: #2c2c2c;
+    box-shadow: 0px -15px 10px -15px;
        height: 9rem;
        width: 100%;
        
@@ -1394,7 +1350,6 @@
    .footer .content {
        width: 100%;
        height: 9rem;
-       background-color: #161616;
        display: flex;
        justify-content: space-between;
    }
@@ -1403,10 +1358,10 @@
        align-self: center;
        padding: 1rem 1.5rem;
        font-size: 1.5rem;
-       color: black;
-       border: 1px solid #7e57c2;
+       color: #FCFCFC;
+       border: 1px solid #444444;
        border-radius: .8rem;
-       background-color: #7e57c2;
+       background-color: #444444;
        box-shadow: 0px 4px 7px -2px rgba(0, 0, 0, 1);
        transition: all 0.3s ease;
    }
