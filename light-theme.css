@@ -1934,15 +1934,67 @@
       /* Character Content */
       /* Character Content */
 
-      #ap_characterstb_main {
-          width: 100%;
-          display: inline-grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
-          justify-items: center;
-          align-items: center;
-          row-gap: 3rem;
-      }
+
+    @keyframes slideDown {
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .ap_characters_main {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        row-gap: 3rem;
+    }
+
+    .ap_characters_main .ap_character {
+        border-radius: 4em;
+          background-color: #FFF;
+          border: 0.13px solid rgba(0, 0, 0, .10);
+          cursor: pointer;
+          transition: box-shadow 0.2s ease-out;
+    }
+
+    .ap_characters_main .ap_character img {
+        border-top-left-radius: 4em;
+        border-top-right-radius: 4em;
+    }
+
+    .ap_characters_main .ap_character h2 {
+        font-size: 1.2rem;
+          color: #512DA8;
+          padding: 1rem 0;
+          text-align: center;
+    }
+
+    .card-content {
+        padding: 100px 25px 25px;
+        overflow: auto;
+        height: 100%;
+        color: #fff;
+        cursor: default;
+    }
+    .card-content > * {
+        transform: translateY(-35px);
+        opacity: 0;
+    }
+    .ap_characters_main .card-content h2 {
+        font-size: 4rem;
+        text-align: left;
+        margin-bottom: 35px !important;
+        animation: slideDown 0.5s ease-out forwards;
+    }
+    .card-content img {
+        width: 100%;
+        background-color: #fff;
+        margin-bottom: 10px;
+        animation: slideDown 0.5s ease-out 0.2s forwards;
+    }
 
       #ap_characterstb img {
         border-top-left-radius: 4em;
@@ -1968,12 +2020,12 @@
           box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
       }
 
-      .ap_unknownchara {
+      .ap_character.ap_unknownChara {
           filter: brightness(25%);
           cursor: default;
       }
 
-      .ap_unknownchara:hover {
+      .ap_unknownChara:hover {
           box-shadow: none;
       }
 
