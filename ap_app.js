@@ -1,3 +1,50 @@
+//LIGHT MODE || DARK MODE
+//toggles between two diff stylesheets when sun svg is clicked
+
+//grabs the sun svg and the stylesheet link
+const sunBtn = document.querySelector("#sun");
+
+const theme = document.querySelector("#theme-link");
+
+const logo = document.getElementById('dragon');
+
+
+//if the sun is clicked and the the stylesheet link's href is already light theme, set to dark, else set to light
+sunBtn.addEventListener("click", function() {
+    if (theme.getAttribute("href") == "light-theme.css") {
+        theme.href = "dark-theme.css";
+        logo.src = 'img/InvLogoMaster.png';
+    } else {
+        theme.href = "light-theme.css";
+        logo.src = 'img/LogoMaster.png'
+    }
+});
+
+
+//Hidden Burger Menu appear and disappear function
+const menuAppear = () => {
+
+    //selects the burger svg and the hidden menu element
+    const burger = document.getElementById('burger');
+    const hiddenMenu = document.getElementsByClassName('hidden-menu');
+    const hidmenu_but = document.getElementsByClassName('hidmenu_but')
+    const visible_but = document.getElementsByClassName('visible_but')
+
+
+    //uses a loop because the hidden menu is an array
+    //toggles a new "burger-active" class to the buttons when burger is clicked
+    burger.addEventListener('click',()=>{
+        for (a = 0; a < hiddenMenu.length; a++) {
+            hiddenMenu[a].classList.toggle('burger-active');
+            hidmenu_but[a].classList.toggle('visible_but')
+            hidmenu_but[a+1].classList.toggle('visible_but')
+        }
+    });
+}
+//function must be called
+menuAppear();
+
+
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
 
@@ -81,9 +128,9 @@ const cards = document.querySelectorAll('.ap_activeChara');
 				right: 35px;
 				width: 35px;
 				height: 35px;
-        font-size: 3.5rem;
-        opacity: 80%;
-        color: #512DA8;
+        		font-size: 3.5rem;
+        		opacity: 80%;
+        		color: #8b61d3;
 			`;
 			// attach click event to the close button
 			closeButton.addEventListener('click', async () => {
