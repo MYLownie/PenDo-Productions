@@ -96,7 +96,7 @@ const cards = document.querySelectorAll('.ap_activeChara');
 			return `
 				<div class="card-content">
 					<h2>${title}</h2>
-					<img src="./assets/${type}.png" alt="${title}">
+					<img src="img/${type}.png" alt="${title}">
 				</div>
 			`;
 		}
