@@ -30,7 +30,6 @@
         position: fixed;
         background-color: rgba(0, 0, 0, .70);
         z-index: 1000;
-        
     }
 
       /* TOP NAVIGATION BAR - includes burger svg, burger menu, logo, dark mode svg */
@@ -1735,7 +1734,7 @@
         background-color: #cccccc;
         cursor: pointer;
     }
-}
+
     .pv-chapter-btns:focus {
         background-color: #cccccc;
         cursor: pointer;
