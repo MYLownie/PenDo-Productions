@@ -18,6 +18,30 @@ const menuAppear = () => {
       }
   });
 }
+
+//LIGHT MODE || DARK MODE
+//toggles between two diff stylesheets when sun svg is clicked
+
+//grabs the sun svg and the stylesheet link
+const sunBtn = document.querySelector("#sun");
+
+const theme = document.querySelector("#theme-link");
+
+const logo = document.getElementById('dragon');
+
+
+//if the sun is clicked and the the stylesheet link's href is already light theme, set to dark, else set to light
+sunBtn.addEventListener("click", function() {
+    if (theme.getAttribute("href") == "light-theme.css") {
+        theme.href = "dark-theme.css";
+        logo.src = 'img/InvLogoMaster.png';
+    } else {
+        theme.href = "light-theme.css";
+        logo.src = 'img/LogoMaster.png'
+    }
+});
+
+
 //function must be called
 menuAppear();
 
@@ -144,6 +168,42 @@ function setPage(range) {
   pageSlider[0].style.transition = "transform 0.4s ease-in-out";
 };
 
+// RETURN TO TOP BTN
+var returnToTopBtn = document.getElementById('pv_rtt')
+var rootElement = document.documentElement
 
+function returnToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behaviour: "smooth"
+  })
+}
 
-console.log(sliderMax);
+function handleScroll() {
+  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  if ((rootElement.scrollTop / scrollTotal) > 0.02 ) {
+    returnToTopBtn.classList.add("showBtn")
+  } else {
+    returnToTopBtn.classList.remove("showBtn")
+  }
+}
+
+document.addEventListener("scroll", handleScroll)
+
+var pvBtn = document.getElementById("pv-btn")
+var footerGap = document.getElementById("pv_btn_gap")
+var pageView = document.getElementById("page-viewer")
+
+function setView() {
+  if (pageView.classList.contains("click-nav")) {
+    pageView.classList.remove("click-nav")
+    pageView.classList.add("scroll-nav")
+    pvBtn.innerHTML = "CLICK"
+    footerGap.style.display = "block";
+  } else {
+    pageView.classList.remove("scroll-nav")
+    pageView.classList.add("click-nav")
+    pvBtn.innerHTML = "SCROLL"
+    footerGap.style.display = "none";
+  }
+}

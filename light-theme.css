@@ -7,6 +7,10 @@
    font-family:   'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 @media only screen and (max-width: 767px) {
     ::-webkit-scrollbar {
         display: none;
@@ -1394,7 +1398,7 @@
     .pv-comic-heading {
         width: 100%;
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
     }
 
     .pv-comic-heading h1 {
@@ -1410,7 +1414,7 @@
     .pv-toolbar {
         display: flex;
         justify-content: space-between;
-        margin: 0 15% 1rem;
+        margin: 0 15% 2rem;
     }
     .pv-toolbar button {
        position: relative;
@@ -1451,7 +1455,7 @@
         transform: translateY(0px);
     }
 
-    .pv-toolbar #scroll-btn {
+    .pv-toolbar #pv-btn {
         position: relative;
         border-radius: 30px;
         width: 10rem;
@@ -1462,13 +1466,13 @@
         transition: all 0.3s ease-out;
     }
 
-    #scroll-btn:hover {
+    #pv-btn:hover {
         cursor: pointer;
         box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
         background-color: #673AB7;
     }
 
-    #scroll-btn:focus {
+    #pv-btn:focus {
         outline: none;
     }
 
@@ -1510,19 +1514,82 @@
         background-color: #F5F5F5;
     }
 
+    /* CAROUSEL VIEWBOX */
+      /* click navigation */
+
+      .click-nav .pv-carousel-container {
+        position: relative;
+        width: 70vw;
+        margin: 0 auto 2rem;
+        overflow: hidden;
+    }
+    
+    .click-nav .pv-carousel-slide {
+        display: flex;
+        width: 100%;
+    }
+    
+    .click-nav .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .click-nav .inv-leftbtn, .click-nav .inv-rightbtn {
+        position: absolute;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        z-index: 1000;
+    }
+
+    .click-nav .inv-rightbtn:hover, .click-nav .inv-leftbtn:hover {
+        cursor: pointer;
+    }
+
+    .click-nav .inv-rightbtn:focus, .click-nav .inv-leftbtn:focus {
+        cursor: pointer;
+        outline: none;
+    }
+
+    .click-nav .inv-rightbtn {
+        right: 0;
+        width: 50%;
+    }
+
+    .click-nav .inv-leftbtn {
+        left: 0;
+        width: 30%;
+    }
+
+    /* scroll navigation */
+    .scroll-nav .pv-carousel-container {
+        position: relative;
+        width: 70vw;
+        margin:0 auto 2rem
+    }
+    .scroll-nav .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .scroll-nav .inv-leftbtn, .scroll-nav .inv-rightbtn {
+        display: none;
+    }
+
    /* Range Slider */
-   .pv-range-wrap {
+   .click-nav .pv-range-wrap {
         position: relative;
         margin: 7rem auto 4rem;
         width: 55%;
         height: 4rem;
     }
 
-    .range {
+    .click-nav .range {
         width: 100%;
     }
 
-    .pv-range-wrap .bar {
+    .click-nav .pv-range-wrap .bar {
         position: absolute;
         z-index: 1;
         left: 0px;
@@ -1534,14 +1601,14 @@
         overflow: hidden;
     }
 
-    .pv-range-wrap .bar .fill {
+    .click-nav .pv-range-wrap .bar .fill {
         display: block;
         width: 0;
         height: 100%;
         background-color: #512DA8;
     }
 
-    .pv-range-wrap .slider {
+    .click-nav .pv-range-wrap .slider {
         position: relative;
         z-index: 2;
         appearance: none;
@@ -1552,7 +1619,7 @@
         background-color: transparent;
     }
 
-    .pv-range-wrap .slider::-webkit-slider-thumb {
+    .click-nav .pv-range-wrap .slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         width: 25px;
         height: 25px;
@@ -1564,19 +1631,19 @@
         transition: .3s ease-in-out;
     }
 
-    .pv-range-wrap .slider::-webkit-slider-thumb:hover {
+    .click-nav .pv-range-wrap .slider::-webkit-slider-thumb:hover {
         box-shadow: 0 0 0 20px rgba(98,0,238,.1);
     }
     
-    .pv-range-wrap .slider:active::-webkit-slider-thumb {
+    .click-nav .pv-range-wrap .slider:active::-webkit-slider-thumb {
         box-shadow: 0 0 0 30px rgba(98,0,238,.2);
     }
     
-    .pv-range-wrap .slider:focus {
+    .click-nav .pv-range-wrap .slider:focus {
         outline: none;
     }
 
-    .bubble {
+    .click-nav .bubble {
         position: relative;
         background: black;
         opacity: 50%;
@@ -1589,7 +1656,7 @@
         border-radius: 2px;
     } 
 
-    .bubble::after {
+    .click-nav .bubble::after {
         content: "";
         position: absolute;
           height: 0;
@@ -1602,15 +1669,19 @@
           border-color: transparent transparent black;
       }
 
+    .scroll-nav .pv-range-wrap {
+        display: none;
+    }
+
     /* Page Turn Btns */
 
-    .pv-nav-btn-container {
+    .click-nav .pv-nav-btn-container {
         margin: 0 15%;
         display: flex;
         justify-content: space-between;
     }
 
-    #prevBtn, #nextBtn {
+    .click-nav #prevBtn, #nextBtn {
         position: relative;
         overflow: hidden;
         transition: background 400ms;
@@ -1628,12 +1699,16 @@
         transition: all 0.2s;
     }
 
-    #prevBtn:hover, #nextBtn:hover {
+    .click-nav #prevBtn:hover, #nextBtn:hover {
         background-color: #673AB7;
         box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     }
 
-    span.ripple {
+    .scroll-nav #prevBtn, .scroll-nav #nextBtn {
+        display: none;
+    }
+
+    .click-nav span.ripple {
         position: absolute;
         border-radius: 50%;
         transform: scale(0);
@@ -1649,51 +1724,40 @@
         }
       }
 
-      /* CAROUSEL VIEWBOX */
+    .click-nav .pv_rtt {
+        display: none;
+    }
 
-      .pv-carousel-container {
-            position: relative;
-            width: 70vw;
-            margin: 0 auto 2rem;
-            overflow: hidden;
-      }
-      
-      .pv-carousel-slide {
-        display: flex;
-        width: 100%;
-      }
-      
-      .pv-carousel-slide > img {
-        width: 100%;
-        height: auto;
-      }
+    .pv_rtt {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(100px);
+        display: block;
+        background-color: #673AB7;
+        color: #Fcfcfc;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 4rem;
+        padding: 1.5rem;
+        line-height: 1.5rem;
+        -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3), 0 6px 10px 0 rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    }
 
-      .inv-leftbtn, .inv-rightbtn {
-          position: absolute;
-          height: 100%;
-          background-color: transparent;
-          border: none;
-          z-index: 1000;
-      }
+    .showBtn {
+        opacity: 1;
+        transform: translateY(0)
+    }
 
-      .inv-rightbtn:hover, .inv-leftbtn:hover {
-          cursor: pointer;
-      }
+    .scroll-nav #pv_rtt:hover {
+        box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+        background-color: #7744cf;
+    }
 
-      .inv-rightbtn:focus, .inv-leftbtn:focus {
-          cursor: pointer;
-          outline: none;
-      }
-
-      .inv-rightbtn {
-          right: 0;
-          width: 50%;
-      }
-
-      .inv-leftbtn {
-          left: 0;
-          width: 30%;
-      }
     /* Chapter Nav Buttons */
 
     .pv-chapter-btns-container {
@@ -1704,6 +1768,7 @@
 
     .pv-chapter-btns {
         font-size: 1.6rem;
+        margin: 0 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1730,6 +1795,7 @@
 
     /* PV Footer */
     .pv-footer {
+        bottom: 0;
         background-color: #512DA8;
         position: relative;
         height: 9rem;
@@ -1774,6 +1840,17 @@
 
     .pv-footer .copyright p {
         font-size: 1.3rem;
+    }
+
+    #pv_btn_gap {
+        display: none;
+        bottom: 42px;
+        right: 43px;
+        width: 65px;
+        height: 60px;
+        position: fixed;
+        border-radius: 35% 35% 50% 50%;
+        background-color: white;
     }
 
     /* COMIC ABOUT PAGES */

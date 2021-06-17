@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/576c267623.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
+    <nav class ="ap_nav">
         <div id=logo>
             <img id="dark" src ="img/NewLogo.png">
             <img id="invert" src ="img/NewLogoInvert.png">
@@ -73,43 +73,46 @@
                         <li><a href="#">Chapter 5</a></li>
                     </ul>
             </div>
-            <button type="button" id='scroll-btn'>SCROLL</button>
+            <button type="button" id='pv-btn' onclick="setView()">SCROLL</button>
         </div>
 
-        <div class="pv-carousel-container">
-            <button class="inv-leftbtn" id="inv-leftbtn" type="button" onclick="setSliderValue(-1)"></button>
-            <button class="inv-rightbtn" id="inv-rightbtn" type="button" onclick="setSliderValue(1)"></button>
-            <div class="pv-carousel-slide">
-                <img class="pages" src="img/Chapter 1/sample-cov.jpg" alt=""/>
-                <img class="pages" src="img/Chapter 1/001.png" alt=""/>
-                <img class="pages" src="img/Chapter 1/002.png" alt=""/>
-                <img class="pages" src="img/Chapter 1/003.png" alt=""/>
-                <img class="pages" src="img/Chapter 1/004.png" alt=""/>
-                <img class="pages" src="img/Chapter 1/005.png" alt=""/>
-                <img class="pages" src="img/Chapter 1/006.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg1.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg2.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg3.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg4.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg5.png" alt=""/>
-                <img class="pages" src="Chapter8/chp8Pg6.png" alt=""/>
-
-
+        <div class='click-nav' id='page-viewer'>
+            <div class="pv-carousel-container">
+                <button class="inv-leftbtn" id="inv-leftbtn" type="button" onclick="setSliderValue(-1)"></button>
+                <button class="inv-rightbtn" id="inv-rightbtn" type="button" onclick="setSliderValue(1)"></button>
+                <div class="pv-carousel-slide">
+                    <img class="pages" src="img/Chapter 1/sample-cov.jpg" alt=""/>
+                    <img class="pages" src="img/Chapter 1/001.png" alt=""/>
+                    <img class="pages" src="img/Chapter 1/002.png" alt=""/>
+                    <img class="pages" src="img/Chapter 1/003.png" alt=""/>
+                    <img class="pages" src="img/Chapter 1/004.png" alt=""/>
+                    <img class="pages" src="img/Chapter 1/005.png" alt=""/>
+                    <img class="pages" src="img/Chapter 1/006.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg1.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg2.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg3.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg4.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg5.png" alt=""/>
+                    <img class="pages" src="Chapter8/chp8Pg6.png" alt=""/>
+                </div>
             </div>
-        </div>
-        
-        <div class="pv-nav-btn-container">
-            <button class="pv-nav-btns ripple" id="prevBtn" onclick="setSliderValue(-1)">Previous</button>
-            <button class="pv-nav-btns ripple" id="nextBtn" onclick="setSliderValue(1)">Next</button>
-        </div>
-        
-        <div class="pv-range-wrap">
-            <div class="middle">
-              <span class="bar"><span id='fill' class="fill"></span></span>
-              <input id="slider" class="slider" type="range" class="range" min="0" max="10" step="1" value="0">
-              <output class="bubble" id="bubble"></output>
+            
+            <div class="pv-nav-btn-container">
+                <button class="pv-nav-btns ripple" id="prevBtn" onclick="setSliderValue(-1)">Previous</button>
+                <button class="pv-nav-btns ripple" id="nextBtn" onclick="setSliderValue(1)">Next</button>
             </div>
-          </div>
+            
+            <div class="pv-range-wrap">
+                <div class="middle">
+                <span class="bar"><span id='fill' class="fill"></span></span>
+                <input id="slider" class="slider" type="range" class="range" min="0" max="10" step="1" value="0">
+                <output class="bubble" id="bubble"></output>
+                </div>
+            </div>
+
+            <button class="pv_rtt" id="pv_rtt" type="button" onclick ="returnToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
 
           <div class="linebreak"></div>
 
@@ -139,6 +142,8 @@
                 <p>PENDO STUDIO</p>
             </div>
         </div>
+
+        <div id="pv_btn_gap"></div>
 
 
     <script src="pvapp.js"></script>
