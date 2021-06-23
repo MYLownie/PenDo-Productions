@@ -648,6 +648,11 @@ html {
         border: 1.4px solid #512CA8;
         font-weight: normal;
     }
+
+    /* INFOPAGE MOBILE */
+    #ap_main, .ap_footer {
+        display: none;
+    }
 }
 
 
