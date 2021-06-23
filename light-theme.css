@@ -693,7 +693,7 @@ html {
         background-color: transparent;
         color:black;
         margin: 0 auto;
-        padding:15px;
+        padding: 0.5rem;
         cursor:pointer;
         transition: all 0.3s ease;
       }
@@ -701,6 +701,40 @@ html {
       #toggle-button i {
           font-size: 1.8rem;
       }
+
+
+    /* AP Chapter Scroller MOBILE */
+
+    .ap_chapters_mobile {
+        display: flex;
+    }
+
+    #sticky_chapter {
+        width: 90px;
+        height: 90px;
+        margin: 0 2rem;
+    }
+
+    #sticky_chapter a img{
+        max-width: 100%;
+        max-height: auto;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    #sticky_chapter h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+
+    .ap_chapters_mobile .linebreak {
+        width: 2px;
+        height: 90px;
+        background-color: black;
+    }
+
+
 
     
 }
