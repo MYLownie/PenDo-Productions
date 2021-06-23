@@ -200,6 +200,7 @@ function setView() {
     pageView.classList.add("scroll-nav")
     pvBtn.innerHTML = "CLICK"
     footerGap.style.display = "block";
+    // pageSlider[0].style.transform = 'translateX(0)';
   } else {
     pageView.classList.remove("scroll-nav")
     pageView.classList.add("click-nav")
