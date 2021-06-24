@@ -707,12 +707,25 @@ html {
 
     .ap_chapters_mobile {
         display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, .20);
+        height: 125px;
+    }
+
+    .ap_chapters_mobile h2 {
+            font-size: 1.3rem;
+            text-align: center;
+            padding-top: 0.5rem;
     }
 
     #sticky_chapter {
-        width: 90px;
+        display: flex;
+        min-width: 90px;
         height: 90px;
-        margin: 0 2rem;
+        margin-left: 20px;
+    }
+
+    #sticky_chapter a {
+        text-align: center;
     }
 
     #sticky_chapter a img{
@@ -722,21 +735,49 @@ html {
         border-radius: 50%;
     }
 
-    #sticky_chapter h2 {
-        font-size: 1.3rem;
-        text-align: center;
-        padding-top: 0.5rem;
-    }
-
     .ap_chapters_mobile .linebreak {
         width: 2px;
-        height: 90px;
-        background-color: black;
+        height: 80px;
+        background-color: rgba(0, 0, 0, .20);
+        border-radius: 15%;
     }
 
+    .ap_hs_container {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+    }
 
+    .ap_hs_container > * {
+        grid-column: 2 / -2;
+    }
 
-    
+    .ap_hs_container > .scrolling_chapter {
+        grid-column: 1 / -1;
+    }
+
+    .scrolling_chapter {
+        display: grid;
+        grid-gap: 1px;
+        grid-template-columns: 10px;
+        grid-auto-flow: column;
+        grid-auto-columns: 10px repeat(6, calc(460% - 40px)) 10px;
+        grid-template-rows: minmax(150px, 1fr);
+        overflow-x: scroll;
+    }
+
+    .scrolling_chapter::before, .scrolling_chapter::after {
+        content: '';
+        width: 10px;
+    }
+
+    .scrolling_chapter a {
+        justify-self: center;
+        padding: 0 1rem;
+    }
+
+    .scrolling_chapter a img {
+        border-radius: 10%;
+    }
 }
 
 
