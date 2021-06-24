@@ -668,6 +668,146 @@ html {
     #ap_main, .ap_footer {
         display: none;
     }
+
+    .mobile_spacer {
+        width: 100%;
+        height: 15vw;
+    }
+
+    .ap_overview_container .section {
+        overflow: hidden;
+        transition: height 0.3s ease-out;
+        height: auto;
+    }
+
+    .ap_overview_container {
+        box-shadow: 0px 3px 1px -2px rgba(175, 175, 175, 0.2), 
+                    0px 2px 2px 0 rgba(150, 150, 150, 0.14),
+                    0px 1px 5px 0 rgba(207, 207, 207, 0.12);
+        border-radius: 0 0 5em 5em;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+      }
+    
+    .ap_overview_container h1 {
+        font-size: 3.8rem;
+        font-weight: bold;
+        padding: 1rem;
+        color: #FCFCFC;
+    }
+
+    .ap_overview_container p {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+        padding-bottom: 1.5rem;
+        line-height: 2.4rem;
+        color: #FCFCFC;
+    }
+
+      #toggle-button {
+        display:block;
+        --webkit-appearance:none;
+        border:none;
+        border-radius:3px;
+        background-color: transparent;
+        color:black;
+        margin: 0 auto;
+        padding: 0.5rem;
+        cursor:pointer;
+        transition: all 0.3s ease;
+      }
+
+      #toggle-button i {
+          font-size: 1.8rem;
+          color: #FCFCFC;
+      }
+
+
+    /* AP Chapter Scroller MOBILE */
+
+    .ap_chapters_mobile {
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, .20);
+        height: 125px;
+    }
+
+    .ap_chapters_mobile h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-top: 0.5rem;
+        color: #FCFCFC;
+    }
+
+    #sticky_chapter {
+        min-width: 90px;
+        height: 90px;
+        margin: 0 1.5rem;
+        /* margin-left: 25px;
+        margin-right: 8.5px; */
+    }
+
+    #sticky_chapter a {
+        justify-self: center;
+        text-align: center;
+    }
+
+    #sticky_chapter a img{
+        border-radius: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ap_chapters_mobile .linebreak {
+        width: 2px;
+        height: 75px;
+        background-color: rgba(0, 0, 0, .20);
+        border-radius: 15%;
+    }
+
+    .ap_hs_container {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .ap_hs_container > * {
+        grid-column: 2 / -2;
+    }
+
+    .ap_hs_container > .scrolling_chapter {
+        grid-column: 1 / -1;
+    }
+
+    .scrolling_chapter {
+        display: grid;
+        grid-gap: 1px;
+        grid-template-columns: 10px;
+        grid-auto-flow: column;
+        grid-auto-columns: 10px repeat(6, calc(38% - 40px)) 10px;
+        grid-template-rows: minmax(150px, 1fr);
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .scrolling_chapter::before, .scrolling_chapter::after {
+        content: '';
+        width: 10px;
+    }
+
+    .scrolling_chapter a {
+        justify-self: center;
+        margin: 0 1.5rem;
+        min-width: 90px;
+        height: 90px;
+    }
+
+    .scrolling_chapter a  img {
+        border-radius: 10%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media only screen and (min-width: 768px) {

@@ -712,32 +712,35 @@ html {
     }
 
     .ap_chapters_mobile h2 {
-            font-size: 1.3rem;
-            text-align: center;
-            padding-top: 0.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        padding-top: 0.5rem;
     }
 
     #sticky_chapter {
-        display: flex;
-        min-width: 90px;
-        height: 90px;
-        margin-left: 25px;
-        margin-right: 8.5px;
+        min-width: 80px;
+        height: 80px;
+        margin: 0 2rem;
+        /* margin-left: 25px;
+        margin-right: 8.5px; */
     }
 
     #sticky_chapter a {
+        justify-self: center;
         text-align: center;
     }
 
     #sticky_chapter a img{
-        max-width: 100%;
-        max-height: auto;
         border-radius: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .ap_chapters_mobile .linebreak {
         width: 2px;
-        height: 80px;
+        height: 75px;
         background-color: rgba(0, 0, 0, .20);
         border-radius: 15%;
     }
@@ -763,6 +766,7 @@ html {
         grid-auto-columns: 10px repeat(6, calc(38% - 40px)) 10px;
         grid-template-rows: minmax(150px, 1fr);
         overflow-x: scroll;
+        overflow-y: hidden;
     }
 
     .scrolling_chapter::before, .scrolling_chapter::after {
