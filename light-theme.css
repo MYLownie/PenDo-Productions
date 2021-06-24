@@ -721,7 +721,8 @@ html {
         display: flex;
         min-width: 90px;
         height: 90px;
-        margin-left: 20px;
+        margin-left: 25px;
+        margin-right: 8.5px;
     }
 
     #sticky_chapter a {
@@ -731,7 +732,6 @@ html {
     #sticky_chapter a img{
         max-width: 100%;
         max-height: auto;
-        object-fit: contain;
         border-radius: 50%;
     }
 
@@ -760,7 +760,7 @@ html {
         grid-gap: 1px;
         grid-template-columns: 10px;
         grid-auto-flow: column;
-        grid-auto-columns: 10px repeat(6, calc(460% - 40px)) 10px;
+        grid-auto-columns: 10px repeat(6, calc(38% - 40px)) 10px;
         grid-template-rows: minmax(150px, 1fr);
         overflow-x: scroll;
     }
@@ -772,11 +772,17 @@ html {
 
     .scrolling_chapter a {
         justify-self: center;
-        padding: 0 1rem;
+        margin: 0 1.5rem;
+        min-width: 80px;
+        height: 80px;
     }
 
-    .scrolling_chapter a img {
+    .scrolling_chapter a  img {
         border-radius: 10%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
     }
 }
 
