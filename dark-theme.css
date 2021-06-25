@@ -692,7 +692,7 @@ html {
         font-size: 3.8rem;
         font-weight: bold;
         padding: 1rem;
-        color: #FCFCFC;
+        color: #ebebeb;
     }
 
     .ap_overview_container p {
@@ -700,7 +700,7 @@ html {
         padding: 0 1rem;
         padding-bottom: 1.5rem;
         line-height: 2.4rem;
-        color: #FCFCFC;
+        color: #d1d1d1;
     }
 
       #toggle-button {
@@ -710,7 +710,7 @@ html {
         border-radius:3px;
         background-color: transparent;
         color:black;
-        margin: 0 auto;
+        margin: 0 auto 1rem;
         padding: 0.5rem;
         cursor:pointer;
         transition: all 0.3s ease;
@@ -718,7 +718,7 @@ html {
 
       #toggle-button i {
           font-size: 1.8rem;
-          color: #FCFCFC;
+          color: #d1d1d1;
       }
 
 
@@ -726,7 +726,7 @@ html {
 
     .ap_chapters_mobile {
         display: flex;
-        border-bottom: 1px solid rgba(0, 0, 0, .20);
+        border-bottom: 2px solid rgba(145, 145, 145, 0.2);
         height: 125px;
     }
 
@@ -734,13 +734,13 @@ html {
         font-size: 1.3rem;
         text-align: center;
         padding-top: 0.5rem;
-        color: #FCFCFC;
+        color: #d1d1d1;
     }
 
     #sticky_chapter {
-        min-width: 90px;
-        height: 90px;
-        margin: 0 1.5rem;
+        min-width: 80px;
+        height: 80px;
+        margin: 0 2rem;
         /* margin-left: 25px;
         margin-right: 8.5px; */
     }
@@ -759,26 +759,26 @@ html {
     }
 
     .ap_chapters_mobile .linebreak {
-        width: 2px;
+        width: 5px;
         height: 75px;
-        background-color: rgba(0, 0, 0, .20);
+        background-color: rgba(255, 255, 255, 0.2);
         border-radius: 15%;
     }
 
-    .ap_hs_container {
+    .ap_hs_container, .ap_hs_cast_container {
         display: grid;
         grid-template-columns: 20px 1fr 20px;
     }
 
-    .ap_hs_container > * {
+    .ap_hs_container > *, .ap_hs_cast_container > *  {
         grid-column: 2 / -2;
     }
 
-    .ap_hs_container > .scrolling_chapter {
+    .ap_hs_container > .scrolling_chapter, .ap_hs_cast_container > .scrolling_cast {
         grid-column: 1 / -1;
     }
 
-    .scrolling_chapter {
+    .scrolling_chapter, .scrolling_cast {
         display: grid;
         grid-gap: 1px;
         grid-template-columns: 10px;
@@ -789,7 +789,8 @@ html {
         overflow-y: hidden;
     }
 
-    .scrolling_chapter::before, .scrolling_chapter::after {
+    .scrolling_chapter::before, .scrolling_chapter::after,
+    .scrolling_cast::before, .scrolling_cast::after {
         content: '';
         width: 10px;
     }
@@ -797,8 +798,8 @@ html {
     .scrolling_chapter a {
         justify-self: center;
         margin: 0 1.5rem;
-        min-width: 90px;
-        height: 90px;
+        min-width: 80px;
+        height: 80px;
     }
 
     .scrolling_chapter a  img {
@@ -807,6 +808,73 @@ html {
         min-height: 100%;
         width: 100%;
         height: 100%;
+    }
+
+    .ap_cast {
+        margin: 1.4rem 0;
+        border-bottom: 2px solid rgba(145, 145, 145, 0.2);
+        height: 400px;
+    }
+
+    .ap_cast h2 {
+        font-size: 2.7rem;
+        padding: 0 25px 2rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .cast_member {
+        margin: 0 1.5rem;
+        width: 300px;
+        height: 300px;
+    }
+
+    .cast_member img {
+        border-radius: 10%;
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .ap_gallery_bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px 2rem;
+    }
+
+    .ap_gallery_bar h2, .ap_gallery_bar span {
+        font-size: 2.7rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+
+
+    .ap_mobile_footer {
+        background-color: #292929;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 3rem;
+        box-shadow: 0 -4px 4px rgb(0 0 0 / 25%)
+    }
+
+    .ap_mobile_footcopyright {
+        display: flex;
+        flex: 1 1 auto;
+        align-self: flex-end;
+        align-items: baseline;
+        font-size: 2.1rem;
+        align-items: center;
+        color: white;
+        fill: white;
+        padding: .8rem 1rem;
+    }
+
+    .ap_mobile_footcopyright svg {
+        width: 1.2rem;
+       height: 1.2rem;
+       padding-right: .2rem;
     }
 }
 
