@@ -288,7 +288,9 @@ function collapseSection(element) {
 	// mark the section as "currently not collapsed"
 	element.setAttribute('data-collapsed', 'false');
   }
-  
+
+
+  //EXPAND AND SHRINK OVERVIEW SECTION
   document.querySelector('#toggle-button').addEventListener('click', function(e) {
 	var section = document.querySelector('.section.collapsible');
 	var isCollapsed = section.getAttribute('data-collapsed') === 'true';
@@ -304,6 +306,69 @@ function collapseSection(element) {
 	}
   });
 
+  //CHARACTER POPUPS
+  //pop ups disappearing
+  var popupArray = ['charaModal_1', 'charaModal_2', 'charaModal_3']
+  window.addEventListener('mouseup', function(event){
+
+	for(var i = 0; i < popupArray.length; i++) {
+		var popup = document.getElementById(popupArray[i]);
+		if(event.target != popup && event.target.parentNode != popup) {
+			popup.style.transform = 'translateY(35vh)'
+		}
+	}
+  })
+
+  
+
   var section = document.querySelector('.section.collapsible');
   collapseSection(section);
+
+  //GALLERY OPENING FN FOR MOBILE
+  var galleryBar = document.getElementsByClassName("ap_gallery_bar")
+  var galleryWindow = document.getElementById("ap_gallery_mobile")
+
+  for(var i = 0; i < galleryBar.length; i++) {
+	  galleryBar[i].addEventListener("click", galleryOpen(i));
+  }
+
+  function galleryOpen(i) {
+	  return function() {
+		  galleryWindow.classList.toggle("open_gallery");
+	  };
+  }
+
+  //POP OUT IMAGES GALLERY MOBILE
+
+//   var galleryImgs = document.getElementsByClassName("gallery_img");
+//   var background = document.getElementById("expanded_view");
+//   var galleryClose = document.getElementById("close_btn");
+
+//   for(var i = 0; i < galleryImgs.length; i++) {
+// 	  galleryImgs[i].addEventListener("click", imgExpand(i));
+//   }
+
+//   function imgExpand(i) {
+// 	  return function() {
+// 		background.style.opacity = "100%";
+// 		background.style.pointerEvents = "all";
+// 		galleryImgs[i].id = "img_expand"
+// 		galleryWindow.style.overflowY = "hidden"
+// 		galleryBar[1].style.pointerEvents = "none"
+// 	  }
+//   }
+
+//   galleryClose.addEventListener("click", imgShrink(i));
+
+//   function imgShrink(i) {
+// 	return function() {
+// 		background.style.opacity = "0%";
+// 		galleryImgs[i].removeAttribute('id')
+// 		galleryWindow.style.overflowY = "scroll"
+// 		galleryBar[1].style.pointerEvents = "all"
+// 	  }
+//   }
+
+
+
 

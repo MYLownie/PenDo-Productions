@@ -455,29 +455,46 @@
             <h2>Cast</h2>
             <div class="ap_hs_cast_container">
                 <div class="scrolling_cast">
-                    <div class="cast_member">
+                    <div class="cast_member" onclick="document.getElementById('charaModal_1').style.transform = 'translateY(0)'" id="activeChara_1">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
-                    <div class="cast_member">
+                    <div class="cast_member" onclick="document.getElementById('charaModal_2').style.transform = 'translateY(0)'" id="activeChara_2">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
-                    <div class="cast_member">
+                    <div class="cast_member" onclick="document.getElementById('charaModal_3').style.transform = 'translateY(0)'" id="activeChara_3">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
-                    <div class="cast_member">
+                    <div class="cast_member ap_unknownChara">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
-                    <div class="cast_member">
+                    <div class="cast_member ap_unknownChara">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
-                    <div class="cast_member">
+                    <div class="cast_member ap_unknownChara">
                         <img src =img/RoanCh.Sh.Teaser.png>
                     </div>
                 </div>
             </div>
 
             <div class="cast_modals">
-                
+                <div class = "cast_popup" id="charaModal_1">
+                    <img src =img/RoanCh.Sh.Teaser.png>
+                    <h5>Character Name</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit chae. Pellentesque eget dui in urna malesuada venenatis ent
+                    </p>
+                </div>
+                <div class = "cast_popup" id="charaModal_2">
+                    <img src =img/RoanCh.Sh.Teaser.png>
+                    <h5>Another Name</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit chae. Pellentesque eget dui in urna malesuada venenatis ent
+                    </p>
+                </div>
+                <div class = "cast_popup" id="charaModal_3">
+                    <img src =img/RoanCh.Sh.Teaser.png>
+                    <h5>A Third Name</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit chae. Pellentesque eget dui in urna malesuada venenatis ent
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -485,6 +502,25 @@
             <h2>Gallery</h2>
             <span class="material-icons">arrow_forward</span>
         </div>
+
+        <div id="ap_gallery_mobile">
+            <div class="ap_gallery_bar" id="gallery_return">
+                <span class="material-icons">arrow_back</span>
+                <h2>Gallery</h2>
+            </div>
+            <div class="ap_gallery_container">
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+                <img class="gallery_img" src =img/RoanCh.Sh.Teaser.png>
+            </div>
+            <!-- <div id="expanded_view">
+                    <span id="close_btn" class="material-icons">close</span></div>
+            </div> -->
 
         <div class="ap_mobile_footer">
             <div class="ap_mobile_footcopyright">

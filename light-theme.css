@@ -30,7 +30,7 @@ html {
         height: 100%;
         position: fixed;
         background-color: rgba(0, 0, 0, .70);
-        
+        z-index: 1500;
     }
 
       /* TOP NAVIGATION BAR - includes burger svg, burger menu, logo, dark mode svg */
@@ -38,14 +38,15 @@ html {
         position: fixed;
         top: 0;
         width: 100%;
-        height: 15vw;
+        height: 8vh;
         display: inline-grid;
         background-color: #512CA8;
         grid-template-columns: 10% 20% 60% 10%;
         grid-template-rows: auto;
         padding: 0 2vw 0 2vw;
         box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-        transition: 0.3s
+        transition: 0.3s;
+        z-index: 950;
     }
 
     .nav-up {
@@ -103,7 +104,7 @@ html {
         height: 100%;
         transform: translateX(-100%);
         transition: all 0.4s ease;
-        z-index: 1000;
+        z-index: 2000;
     }
 
     .is-open {
@@ -202,6 +203,7 @@ html {
 
     .open-drawer {
         transform: translateX(0);
+        z-index: 2001;
     }
 
     .story1-menu-mobile .title, .story2-menu-mobile .title {
@@ -657,7 +659,7 @@ html {
 
     .mobile_spacer {
         width: 100%;
-        height: 15vw;
+        height: 8vh;
     }
 
     .ap_overview_container .section {
@@ -707,7 +709,9 @@ html {
       }
 
 
-    /* AP Chapter Scroller MOBILE */
+    /* AP Chapter and CAST Scroller MOBILE */
+    /* AP Chapter and CAST Scroller MOBILE */
+    /* AP Chapter and CAST Scroller MOBILE */
 
     .ap_chapters_mobile {
         display: flex;
@@ -801,7 +805,7 @@ html {
     }
 
     .ap_cast h2 {
-        font-size: 2.7rem;
+        font-size: 2rem;
         padding: 0 25px 2rem;
         color: rgba(0, 0, 0, 0.5);
     }
@@ -820,16 +824,65 @@ html {
         height: 100%;
     }
 
+    .ap_unknownChara > img {
+        filter: brightness(25%);
+        pointer-events: none;
+    }
+
+    /* CAST POPUPS */
+    .cast_popup {
+        display: flex;
+        flex-flow: column wrap;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 30vh;
+        min-width: 100vw;
+        border-radius: 5% 5% 0 0;
+        background-color: white;
+        box-shadow: 0px -3px 1px -2px rgba(0, 0, 0, 0.2), 0px -2px 2px 1px rgba(0, 0, 0, 0.14), 0px -2px 5px 0 rgba(0, 0, 0, 0.12);
+        transform: translateY(35vh);
+        transition: all 0.3s ease;
+    }
+
+    .cast_modals div > img {
+        margin: 2rem 1rem 2rem 2rem;
+        height: 80%;
+        max-width: 40%;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+    .cast_modals div > h5 {
+        font-size: 2.2rem;
+        padding: 4rem 2rem 2rem 0;
+    }
+
+    .cast_modals div > p {
+        font-size: 1.3rem;
+        flex-grow: 2;
+        max-width: 40%;
+    }
+
+    /* AP GALLERY
+    AP GALLERY
+    AP GALLERY */
+
     .ap_gallery_bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 25px 2rem;
+        pointer-events: all;
     }
 
     .ap_gallery_bar h2, .ap_gallery_bar span {
-        font-size: 2.7rem;
+        font-size: 2rem;
         color: rgba(0, 0, 0, 0.5);
+    }
+
+    .ap_gallery_bar span {
+        font-size: 2.5rem;
     }
 
     .ap_mobile_footer {
@@ -857,6 +910,77 @@ html {
        height: 1.2rem;
        padding-right: .2rem;
     }
+
+    #ap_gallery_mobile {
+        width: 100vw;
+        top: 7.8vh;
+        max-height: 92.2vh;
+        position: fixed;
+        background-color: white;
+        z-index: 900;
+        overflow-y: scroll;
+        transform: translatex(100vw);
+        transition: all 0.4s ease;
+    }
+
+    #gallery_return {
+        justify-content: flex-start;
+        margin-top: 2rem;
+        padding: 0 10px 2rem;
+    }
+
+    #gallery_return span {
+        padding-right: 1.8rem;
+    }
+
+    .ap_gallery_container {
+        width: 100%;
+        padding: 0 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .open_gallery {
+        transform:translateX(0) !important;
+    }
+
+    #img_expand {
+            width: 95%;
+            height: auto;
+            max-height: 76vh;
+            z-index: 6000;
+            top: 50%;
+            object-fit: contain;
+        }
+
+    .ap_gallery_container img {
+        width: 48vw;
+        height: 48vw;
+        padding: 2px;
+        object-fit: cover;
+    }
+
+    /* #expanded_view {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 92.2vh;
+        background-color: #200f47;
+        z-index: 5000;
+        overflow-y: hidden;
+        opacity: 0%;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    #expanded_view > span {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        font-size: 2.7rem;
+        padding: 0.7rem;
+        margin: 2rem;
+    } */
 }
 
 
