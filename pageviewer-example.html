@@ -12,132 +12,368 @@
     <script src="https://kit.fontawesome.com/576c267623.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class ="ap_nav">
-        <div id=logo>
-            <a href="index.html">
-            <img id="dark" src ="img/NewLogo.png">
-            <img id="invert" src ="img/NewLogoInvert.png">
-            </a>
-        </div>
-
-
-        <div class="hidden-menu">
-            <div class="fusion-comic">
-                <button class="hidmenu_but">PenDo Academy 
-                    <i class="im im-care-down"></i>
-                </button>
-                    <ul class=menu-content>
-                        <a href="Infopage_1.html"><li>About / Cast</li></a>
-                        <a href="pageviewer-example.html"><li>Chapter 1</li></a>
-                    </ul>
+    <div class="closed-scrim scrim"></div>
+    <header>
+        <nav class ="ap_nav">
+            <div id=logo>
+                <a href="index.html">
+                <img id="dark" src ="img/NewLogo.png">
+                <img id="invert" src ="img/NewLogoInvert.png">
+                </a>
             </div>
 
-            <div class="one-story">
-                <button class="hidmenu_but">Banana Bread
-                    <i class="im im-care-down"></i>
-                </button>
-                    <ul class=menu-content>
-                        <a href="Infopage_1.html"><li>About / Cast</li></a>
-                        <a href="pageviewer-example.html"><li>Chapter 1</li></a>
-                    </ul>
-            </div>
-        </div>
-            <svg id="burger" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-            </svg>
+            <div class="hidden-menu">
+                <div class="fusion-comic">
+                    <button class="hidmenu_but">PenDo Academy 
+                        <i class="im im-care-down"></i>
+                    </button>
+                        <ul class=menu-content>
+                            <a href="Infopage_1.html"><li>About / Cast</li></a>
+                            <a href="pageviewer-example.html"><li>Chapter 1</li></a>
+                        </ul>
+                </div>
 
-            <svg id="sun" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12.29 7c-.74 0-1.45.17-2.08.46 1.72.79 2.92 2.53 2.92 4.54s-1.2 3.75-2.92 4.54c.63.29 1.34.46 2.08.46 2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
-            </svg>
-        </nav>
-
-        <div class= pv-comic-heading>
-            <h1>PenDo Academy</h1>
-            <h3>Chapter 2: The Awakening</h3>
-        </div>
-
-        <div class ="pv-toolbar">
-            <div class="pv-chap-dropdown">
-                <button>Chapter 1
-                    <i class="im im-care-down"></i>
-                </button>
-                    <ul class=pv-menu-content>
-                        <li><a href="#">Chapter 1</a></li>
-                        <li><a href="#">Chapter 2</a></li>
-                        <li><a href="#">Chapter 3</a></li>
-                        <li><a href="#">Chapter 4</a></li>
-                        <li><a href="#">Chapter 5</a></li>
-                    </ul>
-            </div>
-            <button type="button" id='pv-btn' onclick="setView()">SCROLL</button>
-        </div>
-
-        <div class='click-nav' id='page-viewer'>
-            <div class="pv-carousel-container">
-                <button class="inv-leftbtn" id="inv-leftbtn" type="button" onclick="setSliderValue(-1)"></button>
-                <button class="inv-rightbtn" id="inv-rightbtn" type="button" onclick="setSliderValue(1)"></button>
-                <div class="pv-carousel-slide">
-                    <img class="pages" src="img/Chapter 1/sample-cov.jpg" alt=""/>
-                    <img class="pages" src="img/Chapter 1/001.png" alt=""/>
-                    <img class="pages" src="img/Chapter 1/002.png" alt=""/>
-                    <img class="pages" src="img/Chapter 1/003.png" alt=""/>
-                    <img class="pages" src="img/Chapter 1/004.png" alt=""/>
-                    <img class="pages" src="img/Chapter 1/005.png" alt=""/>
-                    <img class="pages" src="img/Chapter 1/006.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg1.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg2.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg3.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg4.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg5.png" alt=""/>
-                    <img class="pages" src="Chapter8/chp8Pg6.png" alt=""/>
+                <div class="one-story">
+                    <button class="hidmenu_but">Banana Bread
+                        <i class="im im-care-down"></i>
+                    </button>
+                        <ul class=menu-content>
+                            <a href="Infopage_1.html"><li>About / Cast</li></a>
+                            <a href="pageviewer-example.html"><li>Chapter 1</li></a>
+                        </ul>
                 </div>
             </div>
-            
-            <div class="pv-nav-btn-container">
-                <button class="pv-nav-btns ripple" id="prevBtn" onclick="setSliderValue(-1)">Previous</button>
-                <button class="pv-nav-btns ripple" id="nextBtn" onclick="setSliderValue(1)">Next</button>
-            </div>
-            
-            <div class="pv-range-wrap">
-                <div class="middle">
-                <span class="bar"><span id='fill' class="fill"></span></span>
-                <input id="slider" class="slider" type="range" class="range" min="0" max="10" step="1" value="0">
-                <output class="bubble" id="bubble"></output>
+                <svg id="burger" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+
+                <svg id="sun" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zm-2 5.79V18h-3.52L12 20.48 9.52 18H6v-3.52L3.52 12 6 9.52V6h3.52L12 3.52 14.48 6H18v3.52L20.48 12 18 14.48zM12.29 7c-.74 0-1.45.17-2.08.46 1.72.79 2.92 2.53 2.92 4.54s-1.2 3.75-2.92 4.54c.63.29 1.34.46 2.08.46 2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+                </svg>
+            </nav>
+
+            <div class="hidden-menu-mobile">
+                <div class="title">
+                    <img id="dark" src="img/NewLogo.png">
+                    <img id="invert" src ="img/NewLogoInvert.png">
+                </div>
+                <div class="comics">
+                    <h6>Comics</h6>
+                    <div class="line story1">
+                        <div class="iden">
+                            <img class="comic-icon" src="img/RoanCh.Sh.Teaser.png">
+                            <p>PenDo Academy</p>
+                        </div>
+                        <i class="im im-angle-right"></i>
+                    </div>
+                    <div class="line story2">
+                        <div class="iden">
+                            <img class="comic-icon" src="img/TatiChShTeaser.png">
+                            <p>Banana Bread</p>
+                        </div>
+                        <i class="im im-angle-right"></i>
+                    </div>
+                </div>
+                <div class="social-media-mobile">
+                    <h6>Connect with us</h6>
+                    <div class="twitter line">
+                        <div class="iden">
+                            <i class="im im-twitter"></i>
+                            <p>Twitter</p>
+                        </div>
+                        <span class="material-icons">exit_to_app</span>
+                    </div>
+                    <div class="instagram line">
+                        <div class="iden">
+                            <i class="im im-instagram"></i>
+                            <p>Instagram</p>
+                        </div>
+                        <span class="material-icons">exit_to_app</span>
+                    </div>
+                    <div class="facebook line">
+                        <div class="iden">
+                            <i class="im im-facebook"></i>
+                            <p>Facebook</p>
+                        </div>
+                        <span class="material-icons">exit_to_app</span>
+                    </div>
+                    <div class="linkedin line">
+                        <div class="iden">
+                            <i class="im im-linkedin"></i>
+                            <p>LinkedIn</p>
+                        </div>
+                        <span class="material-icons">exit_to_app</span>
+                    </div>
                 </div>
             </div>
 
-            <button class="pv_rtt" id="pv_rtt" type="button" onclick ="returnToTop()">
-                <i class="fas fa-arrow-up"></i>
-            </button>
-
-          <div class="linebreak"></div>
-
-          <div class="pv-chapter-btns-container">
-              <button type="button" class="pv-chapter-btns" id="prevChap"><span class="material-icons">
-                skip_previous
-                </span>Chapter 1</button>
-
-              <button type="button" class="pv-chapter-btns" id="nextChap">
-                  Chapter 3<span class="material-icons">
-                    skip_next
-                    </span>
-              </button>
+            <div class="story1-menu-mobile">
+                <div class="title">
+                    <h5>PenDo Academy</h5>
+                    <button type="button" class="drawer-back">Back</button>
+                </div>
+                <div class="chapters">
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">list_alt</span>
+                                <p>Comic Overview</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 1 : All Might</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 2 : Bakugo</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 3 : Shigaraki</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 4 : Class 1-A</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-
-        <div class="pv-footer">
-            <div class="pv-icons">
-                <i class="im im-twitter"></i> 
-                <i class="im im-instagram"></i>
-                <i class="fab fa-patreon"></i>
-                <i class="im im-facebook"></i>
-                <i class="im im-linkedin"></i>
+            <div class="story2-menu-mobile">
+                <div class="title">
+                    <h5>Banana Bread</h5>
+                    <button type="button" class="drawer-back">Back</button>
+                </div>
+                <div class="chapters">
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">list_alt</span>
+                                <p>Comic Overview</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 1 : All Might</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 2 : Bakugo</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 3 : Shigaraki</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="iden">
+                            <div>
+                                <span class="material-icons">book</span>
+                                <p>Chapter 4 : Class 1-A</p>
+                            </div>
+                            <i class="im im-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="copyright">
-                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 15.781c-2.084 0-3.781-1.696-3.781-3.781s1.696-3.781 3.781-3.781c1.172 0 2.306.523 3.136 1.669l1.857-1.218c-1.281-1.826-3.133-2.67-4.993-2.67-3.308 0-6 2.692-6 6s2.691 6 6 6c1.881 0 3.724-.859 4.994-2.67l-1.857-1.218c-.828 1.14-1.959 1.669-3.137 1.669z"/></svg>
-                <p>PENDO STUDIO</p>
-            </div>
-        </div>
+        </header>
 
-        <div id="pv_btn_gap"></div>
+        <main id="pgv_main">
+            <div class= pv-comic-heading>
+                <h1>PenDo Academy</h1>
+                <h3>Chapter 2: The Awakening</h3>
+            </div>
+
+            <div class ="pv-toolbar">
+                <div class="pv-chap-dropdown">
+                    <button>Chapter 1
+                        <i class="im im-care-down"></i>
+                    </button>
+                        <ul class=pv-menu-content>
+                            <li><a href="#">Chapter 1</a></li>
+                            <li><a href="#">Chapter 2</a></li>
+                            <li><a href="#">Chapter 3</a></li>
+                            <li><a href="#">Chapter 4</a></li>
+                            <li><a href="#">Chapter 5</a></li>
+                        </ul>
+                </div>
+                <button type="button" id='pv-btn' onclick="setView()">SCROLL</button>
+            </div>
+
+            <div class='click-nav' id='page-viewer'>
+                <div class="pv-carousel-container">
+                    <button class="inv-leftbtn" id="inv-leftbtn" type="button" onclick="setSliderValue(-1)"></button>
+                    <button class="inv-rightbtn" id="inv-rightbtn" type="button" onclick="setSliderValue(1)"></button>
+                    <div class="pv-carousel-slide">
+                        <img class="pages" src="img/Chapter 1/001.png" alt=""/>
+                        <img class="pages" src="img/Chapter 1/002.png" alt=""/>
+                        <img class="pages" src="img/Chapter 1/003.png" alt=""/>
+                        <img class="pages" src="img/Chapter 1/004.png" alt=""/>
+                        <img class="pages" src="img/Chapter 1/005.png" alt=""/>
+                        <img class="pages" src="img/Chapter 1/006.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg1.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg2.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg3.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg4.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg5.png" alt=""/>
+                        <img class="pages" src="Chapter8/chp8Pg6.png" alt=""/>
+                    </div>
+                </div>
+                
+                <div class="pv-nav-btn-container">
+                    <button class="pv-nav-btns ripple" id="prevBtn" onclick="setSliderValue(-1)">Previous</button>
+                    <button class="pv-nav-btns ripple" id="nextBtn" onclick="setSliderValue(1)">Next</button>
+                </div>
+                
+                <div class="pv-range-wrap" id="pv-range-wrap">
+                    <div class="middle">
+                    <span class="bar"><span id='fill' class="fill"></span></span>
+                    <input id="slider" class="slider" type="range" class="range" min="0" max="10" step="1" value="0">
+                    <output class="bubble" id="bubble"></output>
+                    </div>
+                </div>
+
+                <button class="pv_rtt" id="pv_rtt" type="button" onclick ="returnToTop()">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+
+            <div class="linebreak"></div>
+
+            <div class="pv-chapter-btns-container">
+                <button type="button" class="pv-chapter-btns" id="prevChap"><span class="material-icons">
+                    skip_previous
+                    </span>Chapter 1</button>
+
+                <button type="button" class="pv-chapter-btns" id="nextChap">
+                    Chapter 3<span class="material-icons">
+                        skip_next
+                        </span>
+                </button>
+                </div>
+
+
+            <div class="pv-footer">
+                <div class="pv-icons">
+                    <i class="im im-twitter"></i> 
+                    <i class="im im-instagram"></i>
+                    <i class="fab fa-patreon"></i>
+                    <i class="im im-facebook"></i>
+                    <i class="im im-linkedin"></i>
+                </div>
+                <div class="copyright">
+                    <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 15.781c-2.084 0-3.781-1.696-3.781-3.781s1.696-3.781 3.781-3.781c1.172 0 2.306.523 3.136 1.669l1.857-1.218c-1.281-1.826-3.133-2.67-4.993-2.67-3.308 0-6 2.692-6 6s2.691 6 6 6c1.881 0 3.724-.859 4.994-2.67l-1.857-1.218c-.828 1.14-1.959 1.669-3.137 1.669z"/></svg>
+                    <p>PENDO STUDIO</p>
+                </div>
+            </div>
+
+            <div id="pv_btn_gap"></div>
+        </main>
+
+        <main id="pgv_main_mobile">
+            <div class="mobile_spacer"></div>
+
+            <div id="pgv_toptoolbar">
+                <div>
+                   <span id="chapter_drop" class="material-icons">arrow_downward</span>
+                    <div id="pgv_title_info">
+                        <h6>PenDo Academy</h6>
+                        <h3>Chapter 6</h3> 
+                    </div>
+                </div>
+                <button type="button" id='pgv-btn' onclick=setView()>
+                    <span class="material-icons">
+                        swap_horiz
+                        </span>
+                </button>
+            </div>
+
+                <div class="chapters_mobile" id="pgv_chapters">
+
+                    <div class="sticky_chapter" id="pgv_sticky">
+                        <a>
+                            <span id="chapter_up" class="material-icons">arrow_upward</span>
+                        </a>
+                    </div>
+        
+                    <div class="hs_container">
+                        <div class="scrolling_chapter" id="pgv_scroll">
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 6</h2>
+                            </a>
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 5</h2>
+                            </a>
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 4</h2>
+                            </a>
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 3</h2>
+                            </a>
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 2</h2>
+                            </a>
+                            <a>
+                                <img src = img/RoanCh.Sh.Teaser.png>
+                                <h2>ch. 1</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            <div id="pgv_btmtoolbar">
+                <a class="pgv_chapbtn">
+                    <span class="material-icons">arrow_back_ios</span>
+                    <h5>Prev</h5>
+                </a>
+                <a class="pgv_chapbtn">
+                    <span class="material-icons">arrow_forward_ios</span>
+                    <h5>Next</h5>
+                </a>
+                
+            </div>
+        </main>
+
 
 
     <script src="pvapp.js"></script>

@@ -29,6 +29,7 @@ html {
         width: 100%;
         height: 100%;
         position: fixed;
+        top: 0;
         background-color: rgba(0, 0, 0, .70);
         z-index: 1500;
     }
@@ -658,6 +659,8 @@ html {
     }
 
     .mobile_spacer {
+        position: fixed;
+        top: 0;
         width: 100%;
         height: 8vh;
     }
@@ -713,19 +716,19 @@ html {
     /* AP Chapter and CAST Scroller MOBILE */
     /* AP Chapter and CAST Scroller MOBILE */
 
-    .ap_chapters_mobile {
+    .chapters_mobile {
         display: flex;
         border-bottom: 2px solid rgba(145, 145, 145, 0.2);
         height: 125px;
     }
 
-    .ap_chapters_mobile h2 {
+    .chapters_mobile h2 {
         font-size: 1.3rem;
         text-align: center;
         padding-top: 0.5rem;
     }
 
-    #sticky_chapter {
+    .sticky_chapter {
         min-width: 80px;
         height: 80px;
         margin: 0 2rem;
@@ -733,12 +736,12 @@ html {
         margin-right: 8.5px; */
     }
 
-    #sticky_chapter a {
+    .sticky_chapter a {
         justify-self: center;
         text-align: center;
     }
 
-    #sticky_chapter a img{
+    .sticky_chapter a img{
         border-radius: 50%;
         min-width: 100%;
         min-height: 100%;
@@ -746,23 +749,23 @@ html {
         height: 100%;
     }
 
-    .ap_chapters_mobile .linebreak {
+    .chapters_mobile .linebreak {
         width: 5px;
         height: 75px;
         background-color: rgba(0, 0, 0, .20);
         border-radius: 15%;
     }
 
-    .ap_hs_container, .ap_hs_cast_container {
+    .hs_container, .ap_hs_cast_container {
         display: grid;
         grid-template-columns: 20px 1fr 20px;
     }
 
-    .ap_hs_container > *, .ap_hs_cast_container > * {
+    .hs_container > *, .ap_hs_cast_container > * {
         grid-column: 2 / -2;
     }
 
-    .ap_hs_container > .scrolling_chapter, .ap_hs_cast_container > .scrolling_cast {
+    .hs_container > .scrolling_chapter, .ap_hs_cast_container > .scrolling_cast {
         grid-column: 1 / -1;
     }
 
@@ -961,26 +964,265 @@ html {
         object-fit: cover;
     }
 
-    /* #expanded_view {
-        position: fixed;
-        bottom: 0px;
-        width: 100%;
-        height: 92.2vh;
-        background-color: #200f47;
-        z-index: 5000;
-        overflow-y: hidden;
-        opacity: 0%;
-        pointer-events: none;
-        transition: all 0.3s ease;
+    /* PAGEVIEWER MOBILE */
+    /* PAGEVIEWER MOBILE */
+    /* PAGEVIEWER MOBILE */
+
+    .pv-comic-heading, .pv-toolbar, .pv-chapter-btns-container, .pv-nav-btn-container, .pv_rtt, .pv-footer {
+        display: none;
     }
 
-    #expanded_view > span {
-        background-color: rgba(255, 255, 255, 0.5);
+    /* TOP TOOLBAR */
+
+    #pgv_toptoolbar {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .20), 
+                    0px 2px 2px 0 rgba(0, 0, 0, .14),
+                    0px 1px 5px 0 rgba(0, 0, 0, .12);
+        border-radius: 0 0 3em 3em;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.2rem;
+        position: fixed;
+        top: 8vh;
+        width: 100%;
+        height: 8vh;
+        background-color: white;
+        z-index: 800;
+        transition: all 0.3s ease-out;
+    }
+
+    #pgv_toptoolbar > div {
+        display: flex;
+        align-items: center;
+        z-index: 800;
+    }
+
+    #pgv_toptoolbar > div span {
+        font-size: 2.8rem;
+        padding-right: 1rem;
+    }
+
+    #pgv_toptoolbar > div h6 {
+        font-size: 1.2rem;
+        opacity: 75%;
+    }
+
+    #pgv_toptoolbar > div h3 {
+        font-size: 1.8rem;
+    }
+
+    #pgv-btn {
+        border-radius: 30px;
+        height: 4rem;
+        width: 4rem;
+        background-color: #512DA8;
+        color: white;
+        letter-spacing: 0.1rem;
+        border: none;
+        transform: rotate(90deg);
+    }
+
+    #pgv-btn span {
+        font-size: 3rem;
+    }
+
+    /* SCROLLING CHAPTERS */
+
+    #pgv_chapters {
+        transform: translateY(-14vh);
+        position: fixed;
+        top: 8vh;
+        height: 80px;
+        background-color: white;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .20), 
+                    0px 2px 2px 0 rgba(0, 0, 0, .14),
+                    0px 1px 5px 0 rgba(0, 0, 0, .12);
+        border-radius: 0 0 3em 3em;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+        transition: all 0.3s ease-out;
+        z-index: 850;
+    }
+
+    #pgv_sticky {
+        margin: 2rem 1.2rem;
+        min-width: 25px;
+    }
+
+    #pgv_sticky a span {
+        font-size: 2.8rem;
+    }
+
+    #pgv_scroll {
+        margin-top: 1rem;
+    }
+
+    #pgv_scroll a {
+            min-width: 50px;
+            height: 50px;
+    }
+    
+    #pgv_scroll h2 {
+        padding: 0;
+    }
+
+    #pgv_btmtoolbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 7vh;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 0px -3px 1px -2px rgba(0, 0, 0, .20), 
+                    0px -2px 2px 0 rgba(0, 0, 0, .14),
+                    0px -1px 5px 0 rgba(0, 0, 0, .12);
+        border-radius: 3em 3em 0 0;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+        z-index: 850;
+        transition: all 0.3s ease-out;
+    }
+
+    #pgv_btmtoolbar > a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pgv_btmtoolbar h5 {
+        font-size: 1rem;
+    }
+
+    .click-nav .pv-carousel-container {
+        position: relative;
+        width: 70%;
+        margin: 16vh auto 7vh;
+        overflow: hidden;
+    }
+
+    .click-nav .pv-carousel-slide {
+        display: flex;
+        width: 100%;
+    }
+
+    .click-nav .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .click-nav .inv-leftbtn, .click-nav .inv-rightbtn {
+        position: absolute;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        z-index: 600;
+    }
+
+    .click-nav .inv-rightbtn {
+        right: 0;
+        width: 50%;
+    }
+
+    .click-nav .inv-leftbtn {
+        left: 0;
+        width: 30%;
+    }
+
+    /* scroll navigation */
+    .scroll-nav .pv-carousel-container {
+        position: relative;
+        width: 70vw;
+        margin: 16vh auto 7vh;
+    }
+    .scroll-nav .pv-carousel-slide > img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .scroll-nav .inv-leftbtn, .scroll-nav .inv-rightbtn {
+        display: none;
+    }
+
+    /* Range Slider */
+   .click-nav .pv-range-wrap {
+    position: fixed;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 75%;
+    height: 3rem;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    }
+
+    .click-nav .range {
+        width: 100%;
+    }
+
+    .click-nav .pv-range-wrap .bar {
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 7px;
+        border-radius: 5px;
+        background-color: #c6aee7;
+        overflow: hidden;
+    }
+
+    .click-nav .pv-range-wrap .bar .fill {
+        display: block;
+        width: 0;
+        height: 100%;
+        background-color: #512DA8;
+    }
+
+    .click-nav .pv-range-wrap .slider {
+        position: relative;
+        z-index: 2;
+        appearance: none;
+        width: 100%;
+        height: 7px;
+        border-radius: 5px;
+        appearance: none;
+        background-color: transparent;
+    }
+
+    .click-nav .pv-range-wrap .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #512DA8;
         border-radius: 50%;
-        font-size: 2.7rem;
-        padding: 0.7rem;
-        margin: 2rem;
-    } */
+        cursor: pointer;
+        outline: none;
+        box-shadow: 0 0 0 0 rgba(98 ,0 ,238,.1);
+        transition: .3s ease-in-out;
+    }
+
+    .click-nav .pv-range-wrap .slider:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 15px rgba(98,0,238,.2);
+    }
+
+    .click-nav .pv-range-wrap .slider:focus {
+        outline: none;
+    }
+
+    .click-nav .bubble {
+        display: none;
+    } 
+
+    .click-nav .bubble::after {
+        display: none;
+    }
+
+    .scroll-nav .pv-range-wrap {
+        display: none;
+    }
 }
 
 
@@ -1736,6 +1978,10 @@ html {
    /* PAGEVIEWER */
    /* PAGEVIEWER */
 
+   #pgv_main {
+       display: block;
+   }
+
     /* Header */
     .pv-comic-heading {
         width: 100%;
@@ -1861,7 +2107,7 @@ html {
 
       .click-nav .pv-carousel-container {
         position: relative;
-        width: 70vw;
+        width: 70%;
         margin: 0 auto 2rem;
         overflow: hidden;
     }

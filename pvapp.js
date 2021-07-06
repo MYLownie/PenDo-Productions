@@ -45,29 +45,101 @@ sunBtn.addEventListener("click", function() {
 //function must be called
 menuAppear();
 
-//BUTTON RIPPLE EFFECT
-function createRipple(event) {
-    const button = event.currentTarget;
-  
-    const circle = document.createElement("span");
-    const diameter = Math.max(button.clientWidth, button.clientHeight);
-    const radius = diameter / 2;
-  
-    circle.style.width = circle.style.height = `${diameter}px`;
-    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-    circle.classList.add("ripple");
+//Mobile Burger menu appear function
+const mobileBurg = document.getElementById('burger');
+const mobileHidMenu = document.getElementsByClassName('hidden-menu-mobile');
+const backScrim = document.getElementsByClassName('scrim');
+const body = document.getElementsByTagName("BODY");
 
-    console.log(event.clientX, button.offsetLeft, circle.style.left);
-  
-    const ripple = button.getElementsByClassName("ripple")[0];
-  
-    if (ripple) {
-      ripple.remove();
+
+//open the side drawer
+const mobileDrawer = () => {
+burger.addEventListener('click', ()=>{
+    for (a = 0; a <mobileHidMenu.length; a++) {
+        mobileHidMenu[a].classList.toggle('is-open');
+        backScrim[a].classList.toggle('closed-scrim');
+        body[0].classList.toggle('locked-scroll');
     }
+});
+}
+mobileDrawer();
+
+
+const storyOp1 = document.getElementsByClassName('story1');
+const storyOp2 = document.getElementsByClassName('story2');
+const story1Menu = document.getElementsByClassName ('story1-menu-mobile');
+const story2Menu = document.getElementsByClassName ('story2-menu-mobile');
+
+
+const story1Drawer = () => {
+    storyOp1[0].addEventListener('click', ()=>{
+        for(a = 0; a < story1Menu.length; a++)  {
+            story1Menu[a].classList.add('open-drawer');
+        }
+    });
+}
+story1Drawer();
+
+const story2Drawer = () => {
+    storyOp2[0].addEventListener('click', ()=> {
+        for(i = 0; i < story2Menu.length; i++)  {
+            story2Menu[i].classList.add("open-drawer");
+        }
+    });
+}
+story2Drawer();
+
+var backBtn = document.getElementsByClassName('drawer-back');
+
+const goBack = () => {
+    backBtn[0].addEventListener('click', () => {
+        story1Menu[0].classList.remove('open-drawer');
+    });
+    backBtn[1].addEventListener('click', () => {
+        story2Menu[0].classList.remove('open-drawer');
+    });
+}
+goBack();
+
+
+const drawerShut = () => {
+    backScrim[0].addEventListener('click', ()=>{
+    for (a = 0; a <mobileHidMenu.length; a++) {
+        if (story1Menu[0].classList.contains('open-drawer') || story2Menu[0].classList.contains('open-drawer')) {
+            pass
+        } else {
+            mobileHidMenu[a].classList.toggle('is-open');
+            backScrim[a].classList.toggle('closed-scrim');
+            body[0].classList.toggle('locked-scroll');
+        }   
+    }
+});
+}
+drawerShut();
+
+//BUTTON RIPPLE EFFECT
+// function createRipple(event) {
+//     const button = event.currentTarget;
   
-    button.appendChild(circle);
-  }
+//     const circle = document.createElement("span");
+//     const diameter = Math.max(button.clientWidth, button.clientHeight);
+//     const radius = diameter / 2;
+  
+//     circle.style.width = circle.style.height = `${diameter}px`;
+//     circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+//     circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+//     circle.classList.add("ripple");
+
+//     console.log(event.clientX, button.offsetLeft, circle.style.left);
+  
+//     const ripple = button.getElementsByClassName("ripple")[0];
+  
+//     if (ripple) {
+//       ripple.remove();
+//     }
+  
+//     button.appendChild(circle);
+//   }
   
 //Setting Max # of Pages to be = to amount of items with class name Pages
 const sliderMax = document.getElementsByClassName('pages').length -1;
@@ -126,45 +198,56 @@ const invnextBtn = document.getElementById('inv-rightbtn');
 
 //counter - should eventually pull from the slider value
 let counter = 0;
-const size = pages[0].offsetWidth;
+const size = pages[0].naturalWidth;
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+
 
 //set width of viewBox based on width of pages
-viewBox[0].style.width = (size) + 'px';
+if (size > vw) {
+  viewBox[0].style.width = (vw) + 'px';
+  var imgWidth = vw;
+} else {
+  viewBox[0].style.width = (size) + 'px';
+  var imgWidth = size;
+}
+
+console.log(size, vw, imgWidth)
+
 
 //Event Listener to change page with buttons
 nextBtn.addEventListener('click', () => {
-   if(counter >= pages.length -1) return;
+   if(counter >= pages.length -1 && size > vw) return;
    pageSlider[0].style.transition = "transform 0.4s ease-in-out";
    counter++
-   pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+   pageSlider[0].style.transform = 'translateX(' +(-imgWidth * counter) + 'px)';
  });
 
 prevBtn.addEventListener('click', () => {
   if(counter <=0) return;
   pageSlider[0].style.transition = "transform 0.4s ease-in-out";
   counter--
-  pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+  pageSlider[0].style.transform = 'translateX(' +(-imgWidth * counter) + 'px)';
 });
 
 invnextBtn.addEventListener('click', () => {
   if(counter >= pages.length -1) return;
   pageSlider[0].style.transition = "transform 0.4s ease-in-out";
   counter++
-  pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+  pageSlider[0].style.transform = 'translateX(' +(-imgWidth * counter) + 'px)';
 });
 
 invprevBtn.addEventListener('click', () => {
  if(counter <=0) return;
  pageSlider[0].style.transition = "transform 0.4s ease-in-out";
  counter--
- pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+ pageSlider[0].style.transform = 'translateX(' +(-imgWidth * counter) + 'px)';
 });
 
 
 
 function setPage(range) {
   counter = range.value;
-  pageSlider[0].style.transform = 'translateX(' +(-size * counter) + 'px)';
+  pageSlider[0].style.transform = 'translateX(' +(-imgWidth * counter) + 'px)';
   pageSlider[0].style.transition = "transform 0.4s ease-in-out";
 };
 
@@ -191,6 +274,7 @@ function handleScroll() {
 document.addEventListener("scroll", handleScroll)
 
 var pvBtn = document.getElementById("pv-btn")
+var mobBtn = document.getElementById("pgv-btn")
 var footerGap = document.getElementById("pv_btn_gap")
 var pageView = document.getElementById("page-viewer")
 
@@ -200,11 +284,41 @@ function setView() {
     pageView.classList.add("scroll-nav")
     pvBtn.innerHTML = "CLICK"
     footerGap.style.display = "block";
+    mobBtn.style.transform = "rotate(0deg)"
     // pageSlider[0].style.transform = 'translateX(0)';
   } else {
     pageView.classList.remove("scroll-nav")
     pageView.classList.add("click-nav")
     pvBtn.innerHTML = "SCROLL"
     footerGap.style.display = "none";
+    mobBtn.style.transform = "rotate(90deg)"
   }
+}
+
+var pgvChapDown = document.getElementById('chapter_drop')
+var pgvChapUp = document.getElementById('chapter_up')
+var chapScroller = document.getElementById('pgv_chapters')
+
+pgvChapDown.addEventListener("click", function() {
+  chapScroller.style.transform = 'translateY(0)';
+});
+
+pgvChapUp.addEventListener("click", function() {
+  chapScroller.style.transform = 'translateY(-14vh)'
+});
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("pgv_toptoolbar").style.transform = "translateY(0)";
+    document.getElementById("pgv_btmtoolbar").style.transform = "translateY(0)";
+    document.getElementById("pv-range-wrap").style.transform = "translateY(0)";
+  } else {
+    document.getElementById("pgv_toptoolbar").style.transform = "translateY(-8vh)";
+    document.getElementById("pgv_btmtoolbar").style.transform = "translateY(7vh)";
+    document.getElementById("pv-range-wrap").style.transform = "translateY(7vh)";
+  }
+  prevScrollpos = currentScrollPos;
 }
