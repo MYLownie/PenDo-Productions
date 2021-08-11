@@ -665,7 +665,7 @@ html {
     }
 
     /* INFOPAGE MOBILE */
-    #ap_main, .ap_footer {
+    #ap_main {
         display: none;
     }
 
@@ -947,6 +947,7 @@ html {
 
     .ap_gallery_container {
         width: 100%;
+        min-height: 78vh;
         padding: 0 5px;
         display: flex;
         flex-wrap: wrap;
@@ -1999,6 +2000,10 @@ html {
    /* PAGEVIEWER */
    /* PAGEVIEWER */
 
+   #pgv_main_mobile {
+       display: none;
+   }
+
     /* Header */
     .pv-comic-heading {
         width: 100%;
@@ -2462,6 +2467,13 @@ html {
    /* COMIC ABOUT PAGES */
     /* COMIC ABOUT PAGES */
     /* COMIC ABOUT PAGES */
+    #ap_main_mobile {
+        display: none;
+    }
+
+    #ap_main, .ap_footer {
+        display: block;
+    }
 
     body {
         overflow-x: hidden;

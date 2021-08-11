@@ -309,16 +309,22 @@ pgvChapUp.addEventListener("click", function() {
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
+var windowWidth = screen.width
 window.onscroll = function() {
+  if(windowWidth < 767) {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("pgv_toptoolbar").style.transform = "translateY(0)";
-    document.getElementById("pgv_btmtoolbar").style.transform = "translateY(0)";
-    document.getElementById("pv-range-wrap").style.transform = "translateY(0)";
-  } else {
-    document.getElementById("pgv_toptoolbar").style.transform = "translateY(-8vh)";
-    document.getElementById("pgv_btmtoolbar").style.transform = "translateY(7vh)";
-    document.getElementById("pv-range-wrap").style.transform = "translateY(7vh)";
-  }
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("pgv_toptoolbar").style.transform = "translateY(0)";
+      document.getElementById("pgv_btmtoolbar").style.transform = "translateY(0)";
+      document.getElementById("pv-range-wrap").style.transform = "translateY(0)";
+    } else {
+      document.getElementById("pgv_toptoolbar").style.transform = "translateY(-8vh)";
+      document.getElementById("pgv_btmtoolbar").style.transform = "translateY(7vh)";
+      document.getElementById("pv-range-wrap").style.transform = "translateY(7vh)";
+    }
   prevScrollpos = currentScrollPos;
+  }
+  else {
+    pass
+  }
 }
